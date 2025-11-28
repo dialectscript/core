@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Da Aka Rubuta Da HTML CSS & AjamiScript</title>
+    <style>
+        /* Import Google font - Poppins */
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e0e3eb;
+        }
+
+        .container {
+            position: relative;
+            max-width: 300px;
+            width: 100%;
+            border-radius: 12px;
+            padding: 10px 20px 20px;
+            background: #fff;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .display {
+            height: 80px;
+            width: 100%;
+            outline: none;
+            border: none;
+            text-align: right;
+            margin-bottom: 10px;
+            font-size: 25px;
+            color: #000e1a;
+            pointer-events: none;
+        }
+
+        .buttons {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .buttons button {
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #eee;
+        }
+
+        .buttons button:active {
+            transform: scale(0.99);
+        }
+
+        .operator {
+            color: #2f9fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" class="display" />
+
+        <div class="buttons">
+            <button class="operator" data-value="AC">AC</button>
+            <button class="operator" data-value="DEL">DEL</button>
+            <button class="operator" data-value="%">%</button>
+            <button class="operator" data-value="/">/</button>
+
+            <button data-value="7">7</button>
+            <button data-value="8">8</button>
+            <button data-value="9">9</button>
+            <button class="operator" data-value="*">*</button>
+
+            <button data-value="4">4</button>
+            <button data-value="5">5</button>
+            <button data-value="6">6</button>
+            <button class="operator" data-value="-">-</button>
+
+            <button data-value="1">1</button>
+            <button data-value="2">2</button>
+            <button data-value="3">3</button>
+            <button class="operator" data-value="+">+</button>
+
+            <button data-value="0">0</button>
+            <button data-value="00">00</button>
+            <button data-value=".">.</button>
+            <button class="operator" data-value="=">=</button>
+        </div>
+    </div>
+
+
+
+
+    <!-- Custom Script for Drawing Shapes in Yoruba -->
+    <script type="custom-js" data-language="alldialects">
+      //Wannan Calculeta Ne
+madadiTsayayye allo = nemoElement(".display");
+madadiTsayayye maballai = nemoDukaElements("button"); 
+madadiTsayayye alamominLisafi = ["%", "*", "/", "-", "+", "="];
+madadinWucinGadi sakamako = "";
+nuna('Sannu Da Zuwa')
+//Kundin aikin da zai lissafa lambobi dangane da button din da aka danna.
+madadiTsayayye lissafa = (kimarMaballi) => {
+  allo.maiDaHankali();
+  in (kimarMaballi === "=" && sakamako !== "") {
+    //In sakamakon ya kunshi alamar '%', canja shi da '/100' kafin a lissafa.
+    sakamako = eval(sakamako.replace("%", "/100"));
+  } kokuma in (kimarMaballi === "AC") {
+    sakamako = "";
+  } kokuma in (kimarMaballi === "DEL") {
+    //In an danna DEL, cire lamba na karshe daga sakamakon.
+    sakamako = sakamako.juyaZuwaRubutu().yankoRubutu(0, -1);
+  } kokuma {
+    //In ba komai a sakamakon sannan kuma alaman lissafi aka danna to koma tun da ba abin da z a lissafa
+    in (sakamako === "" && alamominLisafi.tambayaKoYaKunshe(kimarMaballi)) mayarDa;
+    sakamako += kimarMaballi;
+  }
+  allo.kima = sakamako;
+};
+
+//faraSauraronAiki idan an danna maballai, sai a kira kundin aikin lissafi().
+maballai.aKowane((maballi) => {
+  //Wannan layin umurni zai kira lissafi() tare da lambobin da aka danna da kuma irin lissafin da ake so ayi.
+  maballi.faraSauraronAiki("dannawa", (e) => lissafa(e.target.dataset.kima));
+});
+  </script>
+
+    <!-- Transpiler Script -->
+    <script src="../src/core/transpiler.js" type="module"></script>
+
+</body>
+
+</html>

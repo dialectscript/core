@@ -1,0 +1,18 @@
+# Node / build
+node_modules/
+dist/
+npm-debug.log
+*.log
+
+# Editor
+.vscode/
+.idea/
+*.sublime-*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+*.tmp
+*.bak
