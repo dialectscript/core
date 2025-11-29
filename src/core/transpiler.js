@@ -1,9 +1,41 @@
 // transpiler.js
+/**
+ * Normalize Nigerian language input – removes diacritics & fixes common phone typing
+ * Works for Yorùbá, Igbo, Hausa
+ */
+function normalizeNigerianText(text) {
+  return text
+    // Yorùbá
+    .replace(/[ẹẸ]/gi, 'e')
+    .replace(/[ọỌ]/gi, 'o')
+    .replace(/[ṣṢ]/gi, 's')
+    .replace(/sh/gi, 'ṣ')        // many type "sh" instead of ṣ
+    .replace(/[áàā]/gi, 'a')
+    .replace(/[éèē]/gi, 'e')
+    .replace(/[íìī]/gi, 'i')
+    .replace(/[óòō]/gi, 'o')
+    .replace(/[úùū]/gi, 'u')
+    .replace(/[ńǹṇ]/gi, 'n')
+
+    // Igbo
+    .replace(/[ịị]/gi, 'i')
+    .replace(/[ụụ]/gi, 'u')
+    .replace(/[ụ]/gi, 'u')
+    .replace(/[ọỌ]/gi, 'o')
+    .replace(/[ẹẸ]/gi, 'e')
+    .replace(/[ṅṄṅ́ǹ]/gi, 'n')
+
+    // Hausa (hooked letters)
+    .replace(/[ɓƁ]/gi, 'b')
+    .replace(/[ɗƊ]/gi, 'd')
+    .replace(/[ƙƘ]/gi, 'k')
+    .replace(/['’]/g, '')       // remove apostrophes in words like ƙarya → karya
+
+    .trim();
+}
 
 /**
  * Load language mappings.
- * @param {string} language - The language to load mappings for.
- * @returns {Object|null} - The mappings object or null if failed to load.
  */
 async function loadMappings(language) {
   try {
@@ -18,125 +50,88 @@ async function loadMappings(language) {
 
 /**
  * Transpile custom script code to JavaScript.
- * @param {string} code - The source code in the custom language.
- * @param {Object} keywordMap - The keyword mapping for the specified language.
- * @param {Object} stringMap - The string mapping for the specified language.
- * @returns {string} - The transpiled JavaScript code.
  */
-function transpileCode(code, keywordMap, stringMap) {
-  // Regex patterns to identify strings and comments
-  const stringRegex = /(['"`])(\\?.)*?\1/gu; // Added 'u' flag for Unicode
-  const commentRegex = /(\/\/.*$)|(\/\*[\s\S]*?\*\/)/gum; // Added 'u' flag
+function transpileCode(code, keywordMap, stringMap, language = '') {
+  // Normalize input for Nigerian languages – kids can type without tone marks!
+  if (['hausa', 'yoruba', 'igbo', 'pidgin','alldialects'].includes(language.toLowerCase())) {
+    code = normalizeNigerianText(code);
+  }
 
-  // Store all strings and comments
+  const stringRegex = /(['"`])(\\?.)*?\1/gu;
+  const commentRegex = /(\/\/.*$)|(\/\*[\s\S]*?\*\/)/gum;
+
   const strings = [];
   const comments = [];
 
-  // Replace strings with placeholders
+  // Replace strings
   code = code.replace(stringRegex, (match) => {
     strings.push(match);
     return `__STRING_${strings.length - 1}__`;
   });
 
-  // Replace comments with placeholders
+  // Replace comments
   code = code.replace(commentRegex, (match) => {
     comments.push(match);
     return `__COMMENT_${comments.length - 1}__`;
   });
 
-  // First, replace member expressions
+  // Member expressions (e.g., document.getElementById)
   Object.keys(keywordMap).forEach(customKeyword => {
     const jsEquivalent = keywordMap[customKeyword];
-    
-    // Handle member expressions with dot notation
     if (customKeyword.includes('.')) {
       const [object, property] = customKeyword.split('.');
       const [jsObject, jsProperty] = jsEquivalent.split('.');
-      const memberRegex = new RegExp(`\\b${object}\\.(${property})\\b`, 'gu'); // Added 'u' flag
+      const memberRegex = new RegExp(`\\b${object}\\.(${property})\\b`, 'gu');
       code = code.replace(memberRegex, `${jsObject}.${jsProperty}`);
-      console.log(`Replaced member expression: ${customKeyword} -> ${jsEquivalent}`);
     }
   });
 
-  // Then, replace other keywords
-  const nonMemberKeywords = Object.keys(keywordMap).filter(k => !k.includes('.'));
-  if (nonMemberKeywords.length > 0) {
-    // Sort keywords by length in descending order to prevent partial replacements
-    nonMemberKeywords.sort((a, b) => b.length - a.length);
-    
-    // Escape special regex characters in keywords
-    const escapedKeywords = nonMemberKeywords.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  // Regular keywords – longest first
+  const nonMemberKeywords = Object.keys(keywordMap)
+    .filter(k => !k.includes('.'))
+    .sort((a, b) => b.length - a.length);
 
-    const pattern = new RegExp(`\\b(${escapedKeywords.join('|')})\\b`, 'gu'); // Added 'u' flag
-    code = code.replace(pattern, (match) => {
-      const replacement = keywordMap[match] || match;
-      console.log(`Replaced keyword: ${match} -> ${replacement}`);
-      return replacement;
-    });
+  if (nonMemberKeywords.length > 0) {
+    const escaped = nonMemberKeywords.map(k => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+    const pattern = new RegExp(`\\b(${escaped.join('|')})\\b`, 'gu');
+    code = code.replace(pattern, (match) => keywordMap[match] || match);
   }
 
-  // Restore strings with string mappings
-  code = code.replace(/__STRING_(\d+)__/gu, (match, index) => { // Added 'u' flag
+  // Restore strings + apply string mappings
+  code = code.replace(/__STRING_(\d+)__/gu, (match, index) => {
     let str = strings[index];
-    // Remove the surrounding quotes
     const quote = str[0];
-    let innerStr = str.slice(1, -1);
+    let inner = str.slice(1, -1);
 
-    console.log(`Original string: ${innerStr}`);
-
-    // Apply string mappings
     Object.keys(stringMap).forEach(key => {
       const value = stringMap[key];
-      // Replace all occurrences of key with value
-      const regex = new RegExp(key, 'gu'); // Added 'u' flag
-      if (regex.test(innerStr)) {
-        console.log(`Replacing string segment: "${key}" -> "${value}"`);
-        innerStr = innerStr.replace(regex, value);
+      const regex = new RegExp(key, 'gu');
+      if (regex.test(inner)) {
+        inner = inner.replace(regex, value);
       }
     });
 
-    console.log(`Transformed string: ${innerStr}`);
-
-    // Re-wrap the string with the original quotes
-    return `${quote}${innerStr}${quote}`;
+    return `${quote}${inner}${quote}`;
   });
 
   // Restore comments
-  code = code.replace(/__COMMENT_(\d+)__/gu, (match, index) => comments[index]); // Added 'u' flag
+  code = code.replace(/__COMMENT_(\d+)__/gu, (match, index) => comments[index]);
 
-  // Now, handle the DOMContentLoaded event listeners
-  // Replace: addEventListener('DOMContentLoaded', functionName);
-  // With:
-  // if (document.readyState === 'loading') {
-  //   addEventListener('DOMContentLoaded', functionName);
-  // } else {
-  //   functionName();
-  // }
-
-  const domContentLoadedRegex = /addEventListener\s*\(\s*['"]DOMContentLoaded['"]\s*,\s*(\w+)\s*\)/gu; // Added 'u' flag
-  code = code.replace(domContentLoadedRegex, (match, functionName) => {
-    console.log(`Replaced DOMContentLoaded listener for: ${functionName}`);
-    return `
+  // DOMContentLoaded fix
+  const domRegex = /addEventListener\s*\(\s*['"]DOMContentLoaded['"]\s*,\s*(\w+)\s*\)/gu;
+  code = code.replace(domRegex, (match, fn) => `
 if (document.readyState === 'loading') {
-  addEventListener('DOMContentLoaded', ${functionName});
+  addEventListener('DOMContentLoaded', ${fn});
 } else {
-  ${functionName}();
-}`;
-  });
+  ${fn}();
+}`);
 
   return code;
 }
 
-/**
- * Execute JavaScript code dynamically.
- * @param {string} jsCode - The JavaScript code to execute.
- * @param {string} originalCode - The original custom script code (for debugging).
- */
 function executeJS(jsCode, originalCode) {
   try {
-    // For debugging: log the transpiled code
     console.log('Transpiled Code:', jsCode);
-
     new Function(jsCode)();
   } catch (error) {
     console.error('Error executing transpiled JavaScript:', error);
@@ -144,42 +139,14 @@ function executeJS(jsCode, originalCode) {
   }
 }
 
-/**
- * Process all custom scripts in the document.
- */
-async function processCustomScripts_() {
-  const customScripts = document.querySelectorAll('script[type="custom-js"]');
-
-  for (const script of customScripts) {
-    const language = script.getAttribute('data-language').toLowerCase();
-    const mappings = await loadMappings(language);
-
-    if (!mappings) {
-      console.error(`No mappings found for language: ${language}`);
-      continue;
-    }
-
-    const { keywordMappings, stringMappings } = mappings;
-
-    const customCode = script.textContent;
-    const transpiledCode = transpileCode(customCode, keywordMappings, stringMappings);
-    
-    // Execute the transpiled JavaScript code
-    executeJS(transpiledCode, customCode);
-  }
-}
-
-
-/**
- * Process all custom scripts in the document.
- */
 async function processCustomScripts() {
   const customScripts = document.querySelectorAll('script[type="custom-js"]');
 
   for (const script of customScripts) {
-    const language = script.getAttribute('data-language').toLowerCase();
-    const mappings = await loadMappings(language);
+    let language = script.getAttribute('data-language') || 'hausa';
+    language = language.toLowerCase();
 
+    const mappings = await loadMappings(language);
     if (!mappings) {
       console.error(`No mappings found for language: ${language}`);
       continue;
@@ -187,37 +154,27 @@ async function processCustomScripts() {
 
     const { keywordMappings, stringMappings } = mappings;
 
-    // Check if the script has a 'src' attribute
-    const src = script.getAttribute('src');
-    
     let customCode = '';
-
+    const src = script.getAttribute('src');
     if (src) {
-      // Fetch external file content
-      console.log('External');
       try {
         const response = await fetch(src);
-        if (!response.ok) throw new Error(`Failed to load script: ${src}`);
+        if (!response.ok) throw new Error(`Failed to load: ${src}`);
         customCode = await response.text();
-      } catch (error) {
-        console.error(error.message);
+      } catch (e) {
+        console.error(e.message);
         continue;
       }
     } else {
-      // Use inline script content
-      console.log('Inline');
       customCode = script.textContent;
     }
 
-    const transpiledCode = transpileCode(customCode, keywordMappings, stringMappings);
-
-    // Execute the transpiled JavaScript code
+    const transpiledCode = transpileCode(customCode, keywordMappings, stringMappings, language);
     executeJS(transpiledCode, customCode);
   }
 }
 
-
-// Run the processing after the DOM is fully loaded
+// Run on DOM ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', processCustomScripts);
 } else {

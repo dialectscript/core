@@ -8,10 +8,10 @@
 async function loadMappings(language) {
   try {
     const module = await import(`../mappings/${language}.js`);
-    //debug:console.log(`Loaded mappings for language: ${language}`, module[language]);
+    console.log(`Loaded mappings for language: ${language}`, module[language]);
     return module[language];
   } catch (error) {
-    //debug:console.error(`Failed to load mappings for language: ${language}`, error);
+    console.error(`Failed to load mappings for language: ${language}`, error);
     return null;
   }
 }
@@ -54,7 +54,7 @@ function transpileCode(code, keywordMap, stringMap) {
       const [jsObject, jsProperty] = jsEquivalent.split('.');
       const memberRegex = new RegExp(`\\b${object}\\.(${property})\\b`, 'gu'); // Added 'u' flag
       code = code.replace(memberRegex, `${jsObject}.${jsProperty}`);
-      //debug:console.log(`Replaced member expression: ${customKeyword} -> ${jsEquivalent}`);
+      console.log(`Replaced member expression: ${customKeyword} -> ${jsEquivalent}`);
     }
   });
 
@@ -70,7 +70,7 @@ function transpileCode(code, keywordMap, stringMap) {
     const pattern = new RegExp(`\\b(${escapedKeywords.join('|')})\\b`, 'gu'); // Added 'u' flag
     code = code.replace(pattern, (match) => {
       const replacement = keywordMap[match] || match;
-      //debug:console.log(`Replaced keyword: ${match} -> ${replacement}`);
+      console.log(`Replaced keyword: ${match} -> ${replacement}`);
       return replacement;
     });
   }
@@ -82,7 +82,7 @@ function transpileCode(code, keywordMap, stringMap) {
     const quote = str[0];
     let innerStr = str.slice(1, -1);
 
-    //debug:console.log(`Original string: ${innerStr}`);
+    console.log(`Original string: ${innerStr}`);
 
     // Apply string mappings
     Object.keys(stringMap).forEach(key => {
@@ -90,7 +90,7 @@ function transpileCode(code, keywordMap, stringMap) {
       // Replace all occurrences of key with value
       const regex = new RegExp(key, 'gu'); // Added 'u' flag
       if (regex.test(innerStr)) {
-        //debug:console.log(`Replacing string segment: "${key}" -> "${value}"`);
+        console.log(`Replacing string segment: "${key}" -> "${value}"`);
         innerStr = innerStr.replace(regex, value);
       }
     });
@@ -115,7 +115,7 @@ function transpileCode(code, keywordMap, stringMap) {
 
   const domContentLoadedRegex = /addEventListener\s*\(\s*['"]DOMContentLoaded['"]\s*,\s*(\w+)\s*\)/gu; // Added 'u' flag
   code = code.replace(domContentLoadedRegex, (match, functionName) => {
-    //debug:console.log(`Replaced DOMContentLoaded listener for: ${functionName}`);
+    console.log(`Replaced DOMContentLoaded listener for: ${functionName}`);
     return `
 if (document.readyState === 'loading') {
   addEventListener('DOMContentLoaded', ${functionName});
@@ -128,53 +128,98 @@ if (document.readyState === 'loading') {
 }
 
 /**
+ * Execute JavaScript code dynamically.
+ * @param {string} jsCode - The JavaScript code to execute.
+ * @param {string} originalCode - The original custom script code (for debugging).
+ */
+function executeJS(jsCode, originalCode) {
+  try {
+    // For debugging: log the transpiled code
+    console.log('Transpiled Code:', jsCode);
+
+    new Function(jsCode)();
+  } catch (error) {
+    console.error('Error executing transpiled JavaScript:', error);
+    console.error('Original Code:', originalCode);
+  }
+}
+
+/**
  * Process all custom scripts in the document.
  */
-async function processCustomScripts(customCode) {
-  //const customScripts = document.querySelectorAll('script[type="custom-js"]');
+async function processCustomScripts_() {
+  const customScripts = document.querySelectorAll('script[type="custom-js"]');
 
-  //for (const script of customScripts) {
-    const language = 'yoruba';// script.getAttribute('data-language').toLowerCase();
+  for (const script of customScripts) {
+    const language = script.getAttribute('data-language').toLowerCase();
     const mappings = await loadMappings(language);
 
     if (!mappings) {
-      //debug:console.error(`No mappings found for language: ${language}`);
-      //continue;
+      console.error(`No mappings found for language: ${language}`);
+      continue;
     }
 
     const { keywordMappings, stringMappings } = mappings;
 
-    //alert('transpillllllllll');
-    
+    const customCode = script.textContent;
     const transpiledCode = transpileCode(customCode, keywordMappings, stringMappings);
     
-    return transpiledCode;
-
-  //}
+    // Execute the transpiled JavaScript code
+    executeJS(transpiledCode, customCode);
+  }
 }
 
 
 /**
  * Process all custom scripts in the document.
  */
-window.transpileAjami = async function (customCode) {
-  //const customScripts = document.querySelectorAll('script[type="custom-js"]');
+async function processCustomScripts() {
+  const customScripts = document.querySelectorAll('script[type="custom-js"]');
 
-  //for (const script of customScripts) {
-    const language = 'alldialects';// script.getAttribute('data-language').toLowerCase();
+  for (const script of customScripts) {
+    const language = script.getAttribute('data-language').toLowerCase();
     const mappings = await loadMappings(language);
 
     if (!mappings) {
-      //debug:console.error(`No mappings found for language: ${language}`);
-      //continue;
-      return `No mappings found for language: ${language}`;
+      console.error(`No mappings found for language: ${language}`);
+      continue;
     }
 
     const { keywordMappings, stringMappings } = mappings;
-    
-    const transpiledCode = transpileCode(customCode, keywordMappings, stringMappings);
-    
-    return transpiledCode;
 
-  //}
+    // Check if the script has a 'src' attribute
+    const src = script.getAttribute('src');
+    
+    let customCode = '';
+
+    if (src) {
+      // Fetch external file content
+      console.log('External');
+      try {
+        const response = await fetch(src);
+        if (!response.ok) throw new Error(`Failed to load script: ${src}`);
+        customCode = await response.text();
+      } catch (error) {
+        console.error(error.message);
+        continue;
+      }
+    } else {
+      // Use inline script content
+      console.log('Inline');
+      customCode = script.textContent;
+    }
+
+    const transpiledCode = transpileCode(customCode, keywordMappings, stringMappings);
+
+    // Execute the transpiled JavaScript code
+    executeJS(transpiledCode, customCode);
+  }
+}
+
+
+// Run the processing after the DOM is fully loaded
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', processCustomScripts);
+} else {
+  processCustomScripts();
 }

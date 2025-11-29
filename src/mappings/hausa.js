@@ -1,21 +1,23 @@
-// mappings/hausa.js
+// src/mappings/hausa.js
+// Hausa mappings – waiting for native speakers!
+// Help us: https://github.com/dialectscript/core/issues
 
 export const hausa = {
     // Keyword Mappings
     keywordMappings:
     {
 
+
         // Declarations and Scoping
         "sabo": "new",
-        "var": "var",
-        "let": "let",
-        "const": "const",
+        "madadi": "var",
+        "madadinWucinGadi": "let",
+        "madadiTsayayye": "const",
         "aiki": "function",
         "aji": "class",
         "bunkasaAji": "extends",
         "shigoDa": "import",
         "fitarDa": "export",
-
 
         // Data Types
         "rubutu": "string",
@@ -142,8 +144,10 @@ export const hausa = {
         // DOM Manipulation and Events
         "samoElementTaId": "document.getElementById",
         "nemoElement": "document.querySelector",
-        "cikinElement": "element.innerHTML",
-        "salonElement": "element.style",
+        "nemoDukaElements": "document.querySelectorAll",
+        "HTMLDinCiki": "innerHTML",
+        "rubutunCiki": "innerText",
+        "salo": "style",
         "jerinSalonElement": "element.classList",
 
 
@@ -159,19 +163,6 @@ export const hausa = {
         "akanShigarwa": "oninput",          // Triggered when user inputs data
         "akanCikakkenShiga": "onload",      // Triggered when the page or element finishes loading
         "akanGungurawa": "onscroll",          // Triggered when the page or element is scrolled
-
-        // ── Events (natural spoken style) ─────
-        "idanAnDanna": "onclick",
-        "idanAnLatsa": "onkeydown",
-        "idanAnSake": "onkeyup",
-        "idanAnShiga": "onfocus",
-        "idanAnFita": "onblur",
-        "idanAnCanja": "onchange",
-        "idanAnRubuta": "oninput",
-        "idanAnKammala": "onload",
-        "idanAnGungura": "onscroll",
-        "saurara": "addEventListener",     // element.saurara("click", aiki)
-        "dainaSaurara": "removeEventListener",
 
 
         //Built-in JavaScript Objects and Methods
@@ -248,14 +239,6 @@ export const hausa = {
         "cireJinkiri": "clearTimeout",
         "cireLokaciTsayawa": "clearInterval",
         "shafi": "location",
-
-        // ── Window & Timing ───────────────────
-        "taga": "window",
-        "wajen": "location",
-        "jiraSekan": "setTimeout",
-        "jiraKowace": "setInterval",
-        "dakatar": "clearTimeout",
-        "dakko": "clearInterval",
 
 
         // Graphics (Canvas and SVG)
@@ -344,6 +327,7 @@ export const hausa = {
         "kirkirarSVGPoint": "createSVGPoint",    // Creates an SVG point
 
 
+        //V2
         // ── CANVAS 2D CONTEXT – Ajami Hausa (perfect for kids & beginners) ──
         "mahalli": "getContext",                  // ctx = canvas.mahalli("2d")
 
@@ -406,12 +390,97 @@ export const hausa = {
         "samoHotonPixel": "getImageData",
         "sanyaHotonPixel": "putImageData",
         "kirkiraHotonPixel": "createImageData",
-        "aunaRubutu": "measureText"             // ctx.aunaRubutu("Sannu!").width
+        "aunaRubutu": "measureText",              // ctx.aunaRubutu("Sannu!").width
+
+
+        // ── WEB AUDIO API – Ajami Hausa (perfect for games, Qur’an apps, talking bots) ──
+
+        "maiSauti": "AudioContext",                  // let sauti = sabo maiSauti()
+        "sakeSauti": "resume",                        // sauti.sakeSauti()
+        "dakataSauti": "suspend",                     // sauti.dakataSauti()
+        "rufeSauti": "close",
+        "cigabaDaSauti": "resume",                     // sauti.rufeSauti()
+
+        // Nodes (the building blocks)
+        "kaka": "createOscillator",                     // sauti.kaka()
+        "kakaSin": "sine",                            // type: "sine" → "kakaSin"
+        "kakaSquare": "square",
+        "kakaSaw": "sawtooth",
+        "kakaTriangle": "triangle",
+
+        "muryarFata": "createGain",                     // volume control
+        "karaMurya": "gain",                          // muryarFata.karaMurya.value = 0.5
+        "kara": "connect",                            // node.kara(anotherNode)
+        "fitar": "disconnect",
+
+        "maiKidayawa": "BiquadFilterNode",            // low-pass, high-pass, etc.
+        "taceBass": "lowpass",
+        "taceTreble": "highpass",
+        "taceMid": "bandpass",
+
+        "maikirkiraSauti": "AudioBufferSourceNode",   // for playing loaded sound files
+        "faraSauti": "start",                         // node.faraSauti()
+        "tsayaSauti": "stop",
+
+        "maikaraLokaci": "DelayNode",                 // echo!
+        "jinkiri": "delayTime",                       // node.jinkiri.value = 0.3
+
+        "maikwazo": "StereoPannerNode",               // left-right
+        "matsaHagu": "pan",                           // -1 = full left, +1 = full right
+
+        "maikirkiraDaHoto": "MediaElementAudioSourceNode",  // connect <audio> tag
+        "maikirkiraDaMic": "MediaStreamAudioSourceNode",    // use microphone
+
+        // Loading sounds (most common pattern for kids)
+        "samoSauti": "fetch",                         // samoSauti("buzu.mp3")
+        "sautiYaIso": "then",                         // .sautiYaIso(resp => resp.arrayBuffer())
+        "saukarDaSauti": "arrayBuffer",
+        "bayyanaSauti": "decodeAudioData",           // sauti.bayyanaSauti(buffer)
+
+        // Destination (speakers/headphone)
+        "lasifika": "destination",                    // sauti.lasifika
+
+        // AnalyserNode – for beautiful visualisers (kids go crazy for this)
+        "maiDubaSauti": "AnalyserNode",
+        "samoBayani": "getByteFrequencyData",
+        "samoBayaniNaLokaci": "getByteTimeDomainData",
+        "fftSize": "fftSize",                         // common, leave as-is or → "girmanDuba"
+
+        // ConvolverNode – reverb (masallaci effect!)
+        "maiSanyaSauti": "ConvolverNode",
+        "sautiNaMasallaci": "impulse",                // buffer with masjid reverb
 
 
 
+        //V2
 
 
+        // String Methods and Properties
+        "tsawo": "length",                    // Returns the length of a string
+        "mayarBabba": "toUpperCase",               // Converts all characters in the string to uppercase
+        "mayarKarami": "toLowerCase",              // Converts all characters in the string to lowercase
+        "zabiHarafinDake": "charAt",                     // Returns the character at a specified index
+        "zabiLambarHarafinDake": "charCodeAt",             // Returns the Unicode of the character at a specified index
+        "hade": "concat",                 // Joins two or more strings
+        "farawaDa": "startsWith",             // Checks if the string starts with specified characters
+        "karewaDa": "endsWith",               // Checks if the string ends with specified characters
+        "samoIndexNa": "indexOf",             // Returns the index of the first occurrence of a specified value
+        "samoIndexNaKarshe": "lastIndexOf",   // Returns the index of the last occurrence of a specified value
+        "canjaRubutu": "replace",       // Replaces specified value with a new value in the string
+        "yankoRubutu": "slice",                 // Extracts a part of a string and returns it as a new string
+        "rabaRubutu": "split",                      // Splits a string into an array of substrings
+        "cireFaragaDagaFarkonRubutu": "trim",                 // Removes whitespace from both ends of a string
+        "dakkoTsakaninRubutu": "substring",          // Extracts characters between two indices
+        "dakkoDagaTsakaninRubutu": "substr",                     // Extracts characters from a specified index for a specified length
+        "tambayaKoYaKunshe": "includes",      // Checks if the string contains specified characters
+        "samoRubutuDaidaiDa": "match",         // Finds matches based on a pattern
+        "nemoRubutuIrin": "search",          // Searches for a match and returns the index
+        "juyaZuwaRubutu": "toString",         // Converts an object to a string
+        "karaHarruffaAFarko": "padStart",               // Pads the start of a string with specified characters
+        "karaHarruffaAKarshe": "padEnd",                 // Pads the end of a string with specified characters
+        "samoRubutuDagaLamba": "fromCharCode", // Converts Unicode values to characters
+
+        "kima": "value"
     },
 
 
@@ -443,6 +512,45 @@ export const hausa = {
         "baki mai kyau": "charcoal",     // Hausa for charcoal
         "marmara": "maroon",     // Hausa for maroon
         "lilac": "lilac",         // Lilac stays the same in both languages
+
+
+        //Events
+        "latsa": "click",
+        "danni": "click",
+        "latsi": "click",
+        "dannawa": "click",
+        "danna": "click",
+        "dannaSauBiyu": "dblclick",
+        "dannaLinzami": "mousedown",
+        "sakiLinzami": "mouseup",
+        "motsinLinzami": "mousemove",
+        "shiganLinzami": "mouseenter",
+        "fitarLinzami": "mouseleave",
+        "matsaMaballi": "keydown",
+        "sakiMaballi": "keyup",
+        "dannaMaballi": "keypress",
+        "mika": "submit",
+        "canji": "change",
+        "shigarwa": "input",
+        "mayarDaHankali": "focus",
+        "barinLura": "blur",
+        "sakeSaiti": "reset",
+        "dauko": "load",
+        "ajiye": "unload",
+        "canjaGirma": "resize",
+        "gangarawa": "scroll",
+        "kuskure": "error",
+        "faraTabawa": "touchstart",
+        "barTabawa": "touchend",
+        "motsaTabawa": "touchmove",
+        "fara mayar da hankali": "focusin",
+        "kare mayar da hankali": "focusout",
+        "janAbu": "drag",
+        "sakarAbu": "drop",
+        "kwaikwayi": "copy",
+        "yanke": "cut",
+        "lika": "paste",
+
 
     }
     ,

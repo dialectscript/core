@@ -7,17 +7,23 @@
 nuna("Sannu Duniya! Nigeria")
 
 // Yorùbá
-ìkilo("Ẹ káàbọ̀ sí ayé mi!")
+ikilo("Ẹ káàbọ̀ sí ayé mi!")
+```
 
-→ Runs in every browser · No build step · No npm required
-Live Playground: https://ajami.codeunit.org
+Runs in every browser • No build step • No npm required
 
-Why Dialect Script Exists
+**Live Playground:** https://ajami.codeunit.org
+
+## Why Dialect Script Exists
+
 Because no child should need English to build the future.
-Inspired by 500 years of Ajami — writing our languages in borrowed scripts.
-Now we write code in our own.
 
-Quick Start (copy-paste)
+Inspired by 500 years of Ajami — writing our languages in borrowed scripts.  
+Now we write **code** in our own.
+
+## Quick Start (copy-paste)
+
+```html
 <!DOCTYPE html>
 <html>
 <body>
@@ -27,21 +33,27 @@ Quick Start (copy-paste)
   <script src="src/core/transpiler.js" type="module"></script>
 </body>
 </html>
+```
 
+See full examples → [`/examples`](examples)
 
-See full examples in /examples
-Supported Languages
+## Supported Languages
 
-Hausa – 100% ready
-Yorùbá – growing fast
-Igbo – waiting for you
-Pidgin – waiting for you
+| Language | Status             |
+|----------|--------------------|
+| Hausa    | Growing fast       |
+| Yorùbá   | Growing fast       |
+| Igbo     | Waiting for you    |
+| Pidgin   | Waiting for you    |
 
-How to Help (you don’t need to code)
-Just edit one file in src/mappings/
-→ See docs/MAPPINGS_GUIDE.md
+## How to Help (you don’t need to code)
 
+Just edit one file in `src/mappings/`  
+→ Full guide: [docs/MAPPINGS_GUIDE.md](docs/MAPPINGS_GUIDE.md)
 
-License
+## License
+
 MIT © 2025 Dialect Script Community – Free forever for everyone.
-"Harshenmu, makomar mu." · Our language, our future.
+
+**"Harshenmu, makomar mu."**  
+*Our language, our future.*

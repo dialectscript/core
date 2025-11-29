@@ -13,9 +13,9 @@ Go to `src/mappings/` and open:
 
 ### Step 2: Add one line (example)
 ```js
-"fiHàn": "console.log",     // Yorùbá: show on screen
-"jẹ́": "let",               // Yorùbá: be / let
-"ìfihan": "alert",          // Yorùbá: display message
+"fihan": "console.log",     // Yorùbá: show on screen
+"jẹe": "let",               // Yorùbá: be / let
+"ifihan": "alert",          // Yorùbá: display message
 
 Step 3: Test it!
 Open playground → type your new word → it works instantly!

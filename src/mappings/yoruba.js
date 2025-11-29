@@ -1,10 +1,12 @@
-// mappings/yoruba.js
+// src/mappings/yoruba.js
+// Yoruba mappings – waiting for native speakers!
+// Help us: https://github.com/dialectscript/core/issues
 
 export const yoruba = {
   // Keyword Mappings
   keywordMappings: {
     // Control Structures
-    "iṣẹ_": "function",
+"iṣẹ_": "function",
     "ti": "if",
     "yato": "else",
     "fun": "for",
