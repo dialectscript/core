@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Dialect Script signature -->
+    <meta name="generator" content="Dialect Script v1.0 – Code in Hausa, Yorùbá, Igbo, Pidgin">
+
+    <!-- Essential -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description"
+        content="Write real JavaScript in Hausa, Yorùbá, Igbo and Pidgin. No English keywords needed. Works on any phone.">
+    <meta name="theme-color" content="#0066ff">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Dialect Script – Code in Your Mother Tongue">
+    <meta property="og:description"
+        content="Real JavaScript in Hausa, Yorùbá, Igbo and Pidgin. Works offline. No build step. Try it now.">
+    <meta property="og:image" content="https://dialect-script.github.io/core/website/assets/images/screenshot.png">
+    <meta property="og:url" content="https://dialect-script.github.io/core/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_NG">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dialect Script – Code in Hausa, Yorùbá, Igbo, Pidgin">
+    <meta name="twitter:description"
+        content="Kids in Nigeria just wrote their first program in pure mother tongue. No English. No tone marks needed.">
+    <meta name="twitter:image" content="https://dialect-script.github.io/core/website/assets/images/screenshot.png">
+    <meta name="twitter:url" content="https://dialect-script.github.io/core/website/">
+    <meta name="twitter:site" content="@CodeunitSITTE">
+
+    <!-- Favicon (replace later with real logo) -->
+    <link rel="icon" href="https://dialect-script.github.io/core/website/assets/images/apple-launch-640x1136.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://dialect-script.github.io/core/website/assets/images/apple-launch-640x1136.jpg">
+
+    <title>Dialect Script – Code in Your Language</title>
+
+
+
+    <link rel="stylesheet" href="https://dialect-script.github.io/core/website/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://dialect-script.github.io/core/website/assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://dialect-script.github.io/core/website/assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="https://dialect-script.github.io/core/website/assets/web/assets/gdpr-plugin/gdpr-styles.css">
+    <link rel="stylesheet" href="https://dialect-script.github.io/core/website/assets/animatecss/animate.css">
+    <link rel="stylesheet" href="https://dialect-script.github.io/core/website/assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="https://dialect-script.github.io/core/website/assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="https://dialect-script.github.io/core/website/assets/theme/css/style.css?v=3">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap">
+    </noscript>
+    <link rel="preload" as="style" href="https://dialect-script.github.io/core/website/assets/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="https://dialect-script.github.io/core/website/assets/mobirise/css/mbr-additional.css" type="text/css">
+
+
+
+
+
+    <meta name="theme-color" content="#6592e6">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://dialect-script.github.io/core/website/sw-connect.js"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="https://dialect-script.github.io/core/website/assets/images/apple-launch-640x1136.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="https://dialect-script.github.io/core/website/assets/images/apple-launch-750x1334.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="https://dialect-script.github.io/core/website/assets/images/apple-launch-1242x2208.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="https://dialect-script.github.io/core/website/assets/images/apple-launch-1125x2436.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="https://dialect-script.github.io/core/website/assets/images/apple-launch-1536x2048.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="https://dialect-script.github.io/core/website/assets/images/apple-launch-1668x2224.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="https://dialect-script.github.io/core/website/assets/images/apple-launch-2048x2732.jpg">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="">
+    <link rel="apple-touch-icon" href="https://dialect-script.github.io/core/website/assets/images/apple-touch-icon.jpg">
+    <link rel="icon" href="https://dialect-script.github.io/core/website/assets/images/apple-touch-icon.jpg">
+
+
+    <!-- Custom CSS -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .ibm-plex-mono-thin {
+            font-family: "IBM Plex Mono", serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .ibm-plex-mono-extralight {
+            font-family: "IBM Plex Mono", serif;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        .ibm-plex-mono-light {
+            font-family: "IBM Plex Mono", serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .ibm-plex-mono-regular {
+            font-family: "IBM Plex Mono", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .ibm-plex-mono-medium {
+            font-family: "IBM Plex Mono", serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .ibm-plex-mono-semibold {
+            font-family: "IBM Plex Mono", serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .ibm-plex-mono-bold {
+            font-family: "IBM Plex Mono", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .ibm-plex-mono-thin-italic {
+            font-family: "IBM Plex Mono", serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+
+        .ibm-plex-mono-extralight-italic {
+            font-family: "IBM Plex Mono", serif;
+            font-weight: 200;
+            font-style: italic;
+        }
+
+        .ibm-plex-mono-light-italic {
+            font-family: "IBM Plex Mono", serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .ibm-plex-mono-regular-italic {
+            font-family: "IBM Plex Mono", serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .ibm-plex-mono-medium-italic {
+            font-family: "IBM Plex Mono", serif;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .ibm-plex-mono-semibold-italic {
+            font-family: "IBM Plex Mono", serif;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .ibm-plex-mono-bold-italic {
+            font-family: "IBM Plex Mono", serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+    </style>
+
+    <style>
+        /* Custom styles for video presentation */
+        .intro-video {
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            max-height: 400px;
+            cursor: pointer;
+            /* Shows a pointer when hovering over the video */
+        }
+
+        /* Ensure proper alignment on smaller devices */
+        @media (max-width: 768px) {
+            .intro-video {
+                max-height: 250px;
+                /* Reduce the height on smaller screens */
+            }
+        }
+
+
+
+
+
+        .jumbotron video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(50%);
+        }
+
+        .jumbotron .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+
+        .section-content {
+            background-color: #f9f9f9;
+            padding: 60px 20px;
+        }
+
+        .section-content h4 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .section-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 0;
+        }
+    </style>
+
+    <style>
+        /* General styling for all radio buttons within .radio-group */
+        .radio-group input[type="radio"] {
+            margin-right: 10px;
+            /* Space between the radio button and label */
+        }
+
+        /* Styling for groups of radio buttons */
+        .radio-group {
+            display: flex;
+            flex-direction: row;
+            /* Align radio buttons horizontally */
+            gap: 20px;
+            /* Space between radio buttons */
+            flex-wrap: wrap;
+            /* Allow wrapping on smaller screens */
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 576px) {
+            .radio-group {
+                flex-direction: row;
+                /* Keep horizontal on small screens */
+            }
+        }
+    </style>
+
+    <style>
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            align-items: start;
+        }
+
+        @media (max-width: 576px) {
+            .checkbox-grid {
+                grid-template-columns: repeat(2, 1fr);
+                /* Two options on small screens */
+            }
+        }
+    </style>
+
+    <style>
+        /* Navbar styling */
+        .navbar {
+            background-color: white !important;
+            /* Sets navbar background to white */
+            box-shadow: none !important;
+            /* Removes shadow if applied */
+        }
+
+        .navbar .nav-link {
+            color: black !important;
+            /* Makes nav link text black */
+            position: relative;
+            font-weight: bold;
+            /* Makes nav link text bold */
+        }
+
+        .navbar .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 3px;
+            /* Thickness of underline */
+            background-color: transparent;
+            /* Transparent underline initially */
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar .nav-link:hover::after {
+            background-color: black;
+            /* Black underline on hover */
+        }
+
+        /* Jumbotron styling */
+        .jumbotron {
+            background-color: white;
+            /* Sets jumbotron background to white */
+            color: black;
+            /* Sets text color to black */
+            text-align: left;
+            /* Aligns text to the left */
+            padding: 2rem 1rem;
+        }
+
+        .jumbotron h3,
+        .jumbotron h4 {
+            color: black;
+
+        }
+
+        .jumbotron h3 {
+            font-size: 4rem;
+            /* Sets the main title text size */
+        }
+
+        .jumbotron h4 {
+            font-size: 2rem;
+            /* Sets the subtitle text size */
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <!-- Nav Section -->
+    <section data-bs-version="5.1" class="menu menu1 cid-ueXmJUWkX2" once="menu" id="menu1-9">
+
+
+        <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg navbar-transparent">
+            <div class="container">
+                <div class="navbar-brand">
+                    <span class="navbar-logo">
+                        <a href="index.html">
+                            <img src="https://dialect-script.github.io/core/website/theme/images/49-logo-code1.jpg" alt="Dialect" style="height: 2rem;">
+                        </a>
+                    </span>
+                    <span class="navbar-caption-wrap"><a
+                            class="navbar-caption text-black text-primary display-7 ibm-plex-mono-bold"
+                            href="index.html"><b>Dialectscript</b></a></span>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+                    data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                        <li class="nav-item"><a class="nav-link link display-4" href="index.html">Home</a></li>
+
+                        <!--li class="nav-item"><a class="nav-link link display-4" href="articles.php">About</a></li-->
+                        <li class="nav-item"><a target="_blank" class="nav-link link display-4"
+                                href="https://github.com/dialectscript/core?tab=readme-ov-file#readme">Documentation</a>
+                        </li>
+                    </ul>
+
+                    <div class="navbar-buttons mbr-section-btn">
+                        <a target="_blank" class="btn btn-warning display-4"
+                            href="https://dialect-script.github.io/core/playground/">
+                            Playground</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- Jumbotron with Background Video and Image -->
+    <section class="jumbotron" style="">
+        <div class="container p-5 m-5  d-none d-lg-block">
+            <div class="text-white" style="">
+                <div class="">
+                    <h3 class="mbr-section-title mbr-fonts-style align-left mb-4 display-1 ibm-plex-mono-bold d-none d-lg-block"
+                        style="font-weight:bold">
+                        Dialect Scripting Language </h3>
+                    <h4 class="mbr-section-subtitle align-left mbr-fonts-style mb-4 display-5 ibm-plex-mono-bold d-none d-lg-block"
+                        style="font-weight:boldx">
+                        Empowering you to learn, teach &amp; code in your native language
+                    </h4>
+                </div>
+
+                <!--div class="">
+
+                <h4 class="mbr-section-title mbr-fonts-style align-left mb-4 display-1 ibm-plex-mono-bold d-block d-lg-none" style="font-weight:bold">
+                    Dialect Scripting Language                </h4>
+                <h4 class="mbr-section-subtitle align-left mbr-fonts-style mb-4 display-5 ibm-plex-mono-regular d-block d-lg-none" style="font-weight:boldx">
+                Empowering you to learn, teach &amp; code in your native language
+                </h4>
+            </div-->
+
+            </div>
+        </div>
+
+        <div class="container p-0 m-0 pt-5  d-block d-lg-none">
+            <div class="text-white" style="">
+
+
+                <div class="">
+
+                    <h4 class="mbr-section-title mbr-fonts-style align-left mb-4 display-1 ibm-plex-mono-bold d-block d-lg-none"
+                        style="font-weight:bold">
+                        Dialect Scripting Language </h4>
+                    <h4 class="mbr-section-subtitle align-left mbr-fonts-style mb-4 display-5 ibm-plex-mono-regular d-block d-lg-none"
+                        style="font-weight:boldx">
+                        Empowering you to learn, teach &amp; code in your native language
+                    </h4>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Hackathon -->
+    <section class="section-content">
+        <div class="container">
+            <h2 class="section-title">Why?</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>A bridge that connects cultures, ideas, and knowledge across linguistic divides. By breaking down
+                        language barriers, <b>Dialectscript</b> brings programming closer to home, fostering innovation
+                        and expanding the horizons of what is possible. The future is inclusive, and with
+                        <b>Dialectscript</b>, it’s <strong>multilingual</strong>.
+                    </p>
+                    <p>We developed <b>Dialectscript</b> with one goal in mind: <strong>to make programming accessible
+                            to everyone</strong>, regardless of language or background. This powerful tool is a
+                        <strong>transpiler</strong>—software that converts code written in local languages into
+                        JavaScript. JavaScript was chosen because it’s the language of the web, the backbone of modern
+                        development. This means users of <b>Dialectscript</b> can tap into the full power of web
+                        development while writing in a syntax that feels familiar to them.
+                    </p>
+
+                    <a href="https://dialect-script.github.io/core/playground/" target="_blank"
+                        class="btn btn-lg btn-warning">Get Started</a>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center">
+                    <video class="intro-video w-100" controls playsinline preload="metadata">
+                        <source src="https://dialect-script.github.io/core/website/logos/asl-presentation.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const video = document.querySelector('.intro-video');
+
+            // Check if the video is in view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.play(); // Play when in view
+                    } else {
+                        video.pause(); // Pause when out of view
+                    }
+                });
+            }, { threshold: 0.5 }); // 50% of the video must be in view to play
+
+            observer.observe(video);
+        });
+
+    </script>
+
+
+
+
+
+
+    <a href="https://dialect-script.github.io/core/playground/">
+        <img src="https://dialect-script.github.io/core/website/theme/images/screenshot.png">
+    </a>
+
+    <!--iframe 
+    src="../playground/index.html"
+    id="render-iframe"
+    style="width:100vw; height:100vh; border:0;"
+    sandbox="allow-scripts allow-forms allow-same-origin">
+</iframe-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Sponsors Section -->
+    <style>
+        /* Styling for the scrolling sponsor section */
+        .sponsors-scroll-wrapper {
+            overflow: hidden;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .sponsors-scroll {
+            display: flex;
+            animation: scroll 20s linear infinite;
+        }
+
+        /* Define each sponsor card */
+        .sponsor-card {
+            flex: 0 0 auto;
+            margin: 0 10px;
+            /* Space between each sponsor card */
+        }
+
+        /* Animation for scrolling effect */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            //const scrollContainer = document.querySelector('.sponsors-scroll');
+            //const cards = scrollContainer.innerHTML;
+
+            // Duplicate the cards to create a seamless loop
+            //scrollContainer.innerHTML += cards;
+        });
+
+    </script>
+    <section class="section-content">
+        <div class="container">
+            <h2 class="section-title text-center">Inspirations</h2>
+            <br>
+            <!-- fixxed -->
+            <div class="row justify-content-center">
+                <!-- Sample Sponsor Card -->
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card text-center border-0">
+                        <!--img src="assets/images/512x512.png" class="card-img-top img-fluid" alt="" width="50"-->
+                        <img src="logos/cla.png" class="card-img-top img-fluidx" alt=""
+                            style="width:155px !important;margin: 0 auto;">
+                        <div class="card-bodyx text-centerx">
+                            <p class="card-title">Crown Lead Academy</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sample Sponsor Card -->
+                <div class="col-6 col-md-3 col-lg-2 mb-4">
+                    <div class="card text-center border-0">
+                        <!--img src="assets/images/512x512.png" class="card-img-top img-fluid" alt="" width="50"-->
+                        <img src="logos/codeunit.png" class="card-img-top img-fluidx" alt=""
+                            style="width:75px !important;margin: 0 auto;">
+                        <div class="card-bodyx text-centerx">
+                            <p class="card-title">CodeUnit SITTE</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Sponsor Card -->
+                <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card text-center border-0">
+                        <!--img src="assets/images/512x512.png" class="card-img-top img-fluid" alt="" width="50"-->
+                        <img src="logos/kmnl.png" class="card-img-top img-fluidx" alt=""
+                            style="width:35px !important;margin: 0 auto;">
+                        <div class="card-bodyx text-centerx">
+                            <p class="card-title">Kaura Motors Nig. Ltd</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more sponsor cards as needed -->
+            </div>
+
+
+            <div class="d-none sponsors-scroll-wrapper">
+                <div class="sponsors-scroll">
+
+                    <!-- Sample Sponsor Card -->
+                    <div class="sponsor-card">
+                        <div class="card text-center border-0">
+                            <img src="logos/ncoa.png" class="card-img-top img-fluidx" alt=""
+                                style="width:28px !important; margin: 0 auto;">
+                            <div class="card-bodyx text-centerx">
+                                <p class="card-title">Ministry of Youths & Culture</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sample Sponsor Card -->
+                    <div class="sponsor-card">
+                        <div class="card text-center border-0">
+                            <img src="logos/ncoa.png" class="card-img-top img-fluidx" alt=""
+                                style="width:28px !important; margin: 0 auto;">
+                            <div class="card-bodyx text-centerx">
+                                <p class="card-title">Min. of Education</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sample Sponsor Card -->
+                    <div class="sponsor-card">
+                        <div class="card text-center border-0">
+                            <img src="logos/ncoa.png" class="card-img-top img-fluidx" alt=""
+                                style="width:28px !important; margin: 0 auto;">
+                            <div class="card-bodyx text-centerx">
+                                <p class="card-title">Min. of Communications &amp; Digital Economy</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sample Sponsor Card -->
+                    <div class="sponsor-card">
+                        <div class="card text-center border-0">
+                            <img src="logos/ncoa.png" class="card-img-top img-fluidx" alt=""
+                                style="width:28px !important; margin: 0 auto;">
+                            <div class="card-bodyx text-centerx">
+                                <p class="card-title">Kano Emirate</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sample Sponsor Card -->
+                    <div class="sponsor-card">
+                        <div class="card text-center border-0">
+                            <img src="logos/ncoa.png" class="card-img-top img-fluidx" alt=""
+                                style="width:28px !important; margin: 0 auto;">
+                            <div class="card-bodyx text-centerx">
+                                <p class="card-title">NITDA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sample Sponsor Card -->
+                    <div class="sponsor-card">
+                        <div class="card text-center border-0">
+                            <img src="logos/ncoa.png" class="card-img-top img-fluidx" alt=""
+                                style="width:28px !important; margin: 0 auto;">
+                            <div class="card-bodyx text-centerx">
+                                <p class="card-title">NCAIR</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sample Sponsor Card -->
+                    <div class="sponsor-card">
+                        <div class="card text-center border-0">
+                            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.D6P-BO32wCApcPIIjt6p5wHaHa%26pid%3DApi&f=1&ipt=aa738abb9ae207c3233bdcc3161b127a01cb1ebd73340c2eb94c62b9108c54a1&ipo=images"
+                                class="card-img-top img-fluidx" alt="" style="width:28px !important; margin: 0 auto;">
+                            <div class="card-bodyx text-centerx">
+                                <p class="card-title">Google</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sample Sponsor Card -->
+                    <div class="sponsor-card">
+                        <div class="card text-center border-0">
+                            <img src="logos/msft.jpg" class="card-img-top img-fluidx" alt=""
+                                style="width:28px !important; margin: 0 auto;">
+                            <div class="card-bodyx text-centerx">
+                                <p class="card-title">Microsoft</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sample Sponsor Card -->
+                    <div class="sponsor-card">
+                        <div class="card text-center border-0">
+                            <img src="l./assets/images/about-amazon.png" class="card-img-top img-fluidx" alt=""
+                                style="width:28px !important; margin: 0 auto;">
+                            <div class="card-bodyx text-centerx">
+                                <p class="card-title">Amazon Web Services</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sample Sponsor Card -->
+                    <div class="sponsor-card">
+                        <div class="card text-center border-0">
+                            <img src="./assets/images/about-facebook.png" class="card-img-top img-fluidx" alt=""
+                                style="width:28px !important; margin: 0 auto;">
+                            <div class="card-bodyx text-centerx">
+                                <p class="card-title">Meta (Facebook)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sample Sponsor Card -->
+                    <div class="sponsor-card">
+                        <div class="card text-center border-0">
+                            <img src="./assets/images/about-ibm.png" class="card-img-top img-fluidx" alt=""
+                                style="width:28px !important; margin: 0 auto;">
+                            <div class="card-bodyx text-centerx">
+                                <p class="card-title">IBM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sample Sponsor Card -->
+                    <div class="sponsor-card">
+                        <div class="card text-center border-0">
+                            <img src="./assets/images/about-apple.png" class="card-img-top img-fluidx" alt=""
+                                style="width:28px !important; margin: 0 auto;">
+                            <div class="card-bodyx text-centerx">
+                                <p class="card-title">Apple</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sample Sponsor Card -->
+                    <div class="sponsor-card">
+                        <div class="card text-center border-0">
+                            <img src="./assets/images/about-oracle.png" class="card-img-top img-fluidx" alt=""
+                                style="width:28px !important; margin: 0 auto;">
+                            <div class="card-bodyx text-centerx">
+                                <p class="card-title">Oracle</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <section data-bs-version="5.1" class="footer5 cid-ueXxj4mRMZ" once="footers" id="footer5-8">
+
+
+        <div class="container">
+            <div class="media-container-row">
+                <div class="col-md-1 col-6">
+                    <div class="media-wrap">
+                        <a href="">
+                            <img style="height:2rem;width:2rem" src="https://dialect-script.github.io/core/website/theme/images/49-logo-code1.jpg"
+                                alt="Dialectscript">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-11 col-6">
+                    <p class="mbr-text align-right links mbr-fonts-style display-7">
+                        <a href="about.php" class="text-black">About</a> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="terms.php" class="text-black">Terms</a> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <!--a href="#" class="text-black">Careers</a--> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="index.html#form5-5" class="text-black">Contact</a>
+                    </p>
+                </div>
+            </div>
+            <!-- <div class="media-container-row">
+            <div class="col-md-12"> -->
+            <div class="footer-lower">
+                <div class="media-container-row">
+                    <div class="col-md-12">
+                        <hr>
+                    </div>
+                </div>
+                <div class="media-container-row">
+                    <div class="col-md-6 copyright">
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            © Copyright Dialect Scripting Language, Nigeria. - All Rights Reserved
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="social-list align-right d-none">
+                            <div class="soc-item">
+                                <a href="https://twitter.com/mobirise" target="_blank">
+                                    <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                            </div>
+                            <div class="soc-item">
+                                <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                                    <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                            </div>
+                            <div class="soc-item">
+                                <a href="https://www.youtube.com/c/mobirise" target="_blank">
+                                    <span class="socicon-youtube socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                            </div>
+                            <div class="soc-item">
+                                <a href="https://instagram.com/mobirise" target="_blank">
+                                    <span class="socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                            </div>
+                            <div class="soc-item">
+                                <a href="https://www.behance.net/Mobirise" target="_blank">
+                                    <span class="socicon-behance socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                            </div>
+                            <div class="soc-item">
+                                <a href="https://vimeo.com/mobirise" target="_blank">
+                                    <span class="socicon-vimeo socicon mbr-iconfont mbr-iconfont-social"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div>
+            </div> -->
+            </div>
+
+        </div>
+    </section>
+
+    <section class="display-7"
+        style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;">
+        <a href="" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt=""
+                style="height: 4rem;"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a>
+        <p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href=""></a>
+    </section>
+
+
+
+    <script src="https://dialect-script.github.io/core/website/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://dialect-script.github.io/core/website/assets/web/assets/cookies-alert-plugin/cookies-alert-core.js"></script>
+    <script src="https://dialect-script.github.io/core/website/assets/web/assets/cookies-alert-plugin/cookies-alert-script.js"></script>
+    <script src="https://dialect-script.github.io/core/website/assets/smoothscroll/smooth-scroll.js"></script>
+    <script src="https://dialect-script.github.io/core/website/assets/ytplayer/index.js"></script>
+    <!--script src="assets/dropdown/js/navbar-dropdown.js"></script-->
+    <script src="https://dialect-script.github.io/core/website/assets/theme/js/script.js"></script>
+
+
+    <input name="cookieData" type="hidden" data-cookie-cookiesAlertType='false' data-cookie-customDialogSelector='null'
+        data-cookie-colorText='#424a4d' data-cookie-colorBg='rgb(255, 255, 255)' data-cookie-opacityOverlay='0'
+        data-cookie-bgOpacity='100' data-cookie-textButton='GOT IT' data-cookie-rejectText='REJECT'
+        data-cookie-colorButton='#6592e6' data-cookie-rejectColor='#ffffff' data-cookie-colorLink='#424a4d'
+        data-cookie-underlineLink='true'
+        data-cookie-text="We use cookies to give you the best experience. Read our <a href='privacy.php'>cookie policy</a>.">
+    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i
+                class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+    <input name="animation" type="hidden">
+
+
+
+
+
+</body>
+
+</html>

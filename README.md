@@ -1,6 +1,14 @@
-# Dialect Script Core
+# Dialect Script [![Stars](https://img.shields.io/github/stars/dialectscript/core?style=social)](https://github.com/dialectscript/core)
 
-**Write real JavaScript in Hausa, Yorùbá, Igbo, Pidgin and more.**
+**Code in Hausa • Yorùbá • Igbo • Pidgin and more**  
+
+Real JavaScript. No English keywords. Works on any phone.
+
+Live Website → https://dialectscript.github.io/core/website/  
+Playground → Coming Soon
+
+Try it now → open the website above and click "Playground"
+
 
 ```js
 // Hausa
@@ -12,7 +20,7 @@ ikilo("Ẹ káàbọ̀ sí ayé mi!")
 
 Runs in every browser • No build step • No npm required
 
-**Live Playground:** https://ajami.codeunit.org
+**Live Playground:** Coming Soon
 
 ## Why Dialect Script Exists
 
@@ -50,6 +58,11 @@ See full examples → [`/examples`](examples)
 
 Just edit one file in `src/mappings/`  
 → Full guide: [docs/MAPPINGS_GUIDE.md](docs/MAPPINGS_GUIDE.md)
+
+**Live Playground** → https://dialectscript.github.io/core/playground/  
+**Website** → https://dialectscript.github.io/core/website/  
+**Examples** → https://dialectscript.github.io/core/examples/
+**Transpiler** <script src="https://dialectscript.github.io/core/src/core/transpiler.js" type="module"></script>
 
 ## License
 
