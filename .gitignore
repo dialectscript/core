@@ -16,3 +16,5 @@ Thumbs.db
 # Temporary
 *.tmp
 *.bak
+*.bat
+git-verify-user.bat
