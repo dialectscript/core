@@ -325,3 +325,9 @@ pre {
     justify-content: center !important;
     align-items: center !important;
 }
+
+
+.text-muted {
+  --bs-text-opacity: 1;
+  color: rgba(160, 164, 169, 0.75) !important;
+}
