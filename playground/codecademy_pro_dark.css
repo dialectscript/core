@@ -328,6 +328,5 @@ pre {
 
 
 .text-muted {
-  --bs-text-opacity: 1;
   color: rgba(160, 164, 169, 0.75) !important;
 }
