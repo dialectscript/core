@@ -1,0 +1,34 @@
+{
+    "id": "game_sandbox",
+    "title_key": "GAME_SANDBOX_TITLE",
+    "description_key": "GAME_SANDBOX_DESC",
+    "current_file": "game.js",
+    "file_type": "javascript",
+    "isSandboxMode": true,
+    "default_language": "en",
+    "available_languages": [
+        { "code": "en", "name": "English" },
+        { "code": "ar", "name": "العربية" },
+        { "code": "ha", "name": "Hausa" }
+    ],
+    "files": {
+        "game.js": {
+            "mode": "javascript",
+            "initial_content_key": "GAME_SANDBOX_TASK_INITIAL",
+            "solution_content_key": "GAME_SANDBOX_TASK_SOLUTION"
+        }
+    },
+    "tasks": [
+        {
+            "id": "GAME_SANDBOX_TASK",
+            "title_key": "GAME_SANDBOX_TASK_TITLE",
+            "description_key": "GAME_SANDBOX_TASK_DESC",
+            "initial_content_key": "GAME_SANDBOX_TASK_INITIAL",
+      "solution_content_key": "GAME_SANDBOX_TASK_SOLUTION",
+            "checker_function": "sandbox",
+             "hints": [
+        { "text_key": "GAME_SANDBOX_TASK_HINT_1" }
+      ]
+        }
+    ]
+}

@@ -1,0 +1,4213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Dialect Script signature -->
+    <meta name="generator" content="Dialect Script v1.0 – Code in Hausa, Yorùbá, Igbo, Pidgin">
+
+    <!-- Essential -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description"
+        content="Write real JavaScript in Hausa, Yorùbá, Igbo and Pidgin. No English keywords needed. Works on any phone.">
+    <meta name="theme-color" content="#0066ff">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Dialect Script – Code in Your Mother Tongue">
+    <meta property="og:description"
+        content="Real JavaScript in Hausa, Yorùbá, Igbo and Pidgin. Works offline. No build step. Try it now.">
+    <meta property="og:image" content="https://dialectscript.github.io/core/website/assets/images/screenshot.png">
+    <meta property="og:url" content="https://dialectscript.github.io/core/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_NG">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dialect Script – Code in Hausa, Yorùbá, Igbo, Pidgin">
+    <meta name="twitter:description"
+        content="Kids in Nigeria just wrote their first program in pure mother tongue. No English. No tone marks needed.">
+    <meta name="twitter:image" content="https://dialectscript.github.io/core/website/assets/images/screenshot.png">
+    <meta name="twitter:url" content="https://dialectscript.github.io/core/website/">
+    <meta name="twitter:site" content="@CodeunitSITTE">
+
+    <!-- Favicon (replace later with real logo) -->
+    <link rel="icon" href="https://dialectscript.github.io/core/website/assets/images/apple-launch-640x1136.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://dialectscript.github.io/core/website/assets/images/apple-launch-640x1136.jpg">
+
+    <title>Dialect Script – Code in Your Language</title>
+
+
+
+    <link rel="stylesheet" href="https://dialectscript.github.io/core/website/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://dialectscript.github.io/core/website/assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://dialectscript.github.io/core/website/assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="https://dialectscript.github.io/core/website/assets/web/assets/gdpr-plugin/gdpr-styles.css">
+    <link rel="stylesheet" href="https://dialectscript.github.io/core/website/assets/animatecss/animate.css">
+    <link rel="stylesheet" href="https://dialectscript.github.io/core/website/assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="https://dialectscript.github.io/core/website/assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="https://dialectscript.github.io/core/website/assets/theme/css/style.css?v=3">
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap">
+    </noscript>
+    <link rel="preload" as="style" href="https://dialectscript.github.io/core/website/assets/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="https://dialectscript.github.io/core/website/assets/mobirise/css/mbr-additional.css" type="text/css">
+
+
+
+
+
+    <meta name="theme-color" content="#6592e6">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://dialectscript.github.io/core/website/sw-connect.js"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-640x1136.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-750x1334.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-1242x2208.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-1125x2436.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-1536x2048.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-1668x2224.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-2048x2732.jpg">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="">
+    <link rel="apple-touch-icon" href="https://dialectscript.github.io/core/website/assets/images/apple-touch-icon.jpg">
+    <link rel="icon" href="https://dialectscript.github.io/core/website/assets/images/apple-touch-icon.jpg">
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   
+    <style>
+        :root {
+            /* The Codecademy Palette */
+            --ca-dark-navy: #10162f;
+            /* The editor background */
+            --ca-black: #000000;
+            /* The terminal background */
+            --ca-yellow: #ffd300;
+            /* The iconic yellow buttons */
+            --ca-light: #ffffff;
+            /* The instruction panel */
+            --ca-text-gray: #4a4a4a;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow: hidden;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            /* Add padding bottom for mobile footer */
+            padding-bottom: 0;
+        }
+
+        .full-height {
+            height: 100%;
+        }
+
+        /* 1. LEFT PANEL (Instructions) */
+        .panel-left {
+            background-color: var(--ca-light);
+            overflow-y: auto;
+        }
+
+        /* The "AI Hint" Card styling */
+        .hint-card {
+            border: 1px solid #e0e0e0;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 4px solid #6c63ff;
+            /* Purple accent line */
+        }
+
+        /* 2. CENTER PANEL (Editor) */
+        .panel-center {
+            background-color: var(--ca-dark-navy);
+            color: #d0d0d0;
+        }
+
+        /* 3. RIGHT PANEL (Terminal) */
+        .panel-right {
+            background-color: var(--ca-black);
+            color: #fff;
+            border-left: 1px solid #333;
+        }
+
+        /* 4. FOOTER BAR */
+        .footer-bar {
+            height: 60px;
+            background-color: var(--ca-dark-navy);
+            border-top: 1px solid #333;
+            z-index: 1030;
+        }
+
+        /* CUSTOM SCROLLBAR (Make it subtle) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+
+        .panel-center ::-webkit-scrollbar-thumb {
+            background: #444;
+        }
+
+        /* Mobile-specific adjustments to push content up when mobile-nav is visible */
+        @media (max-width: 991.98px) {
+            body {
+                padding-bottom: 60px;
+            }
+        }
+
+        /* Added to make the mobile tabs feel interactive */
+        .active-mobile-tab {
+            color: var(--ca-yellow) !important;
+            border-bottom: 2px solid var(--ca-yellow);
+            padding-bottom: 5px;
+        }
+
+        /* ADD THIS TO YOUR <style> BLOCK IN index.html */
+
+        /* Ensure the Ace Editor body uses the dark navy background */
+        #main_codeeditor {
+            /* Use the same dark color defined for panel-center */
+            background-color: var(--ca-dark-navy) !important;
+            color: #d0d0d0;
+            /* Match the text color */
+        }
+
+        /* Force the gutter (line numbers area) to match the background */
+        .ace_editor,
+        .ace_gutter {
+            background-color: var(--ca-dark-navy) !important;
+        }
+
+        /* Style the gutter numbers for better contrast */
+        .ace_gutter-cell {
+            color: #4a4a4a !important;
+            /* Slightly lighter than Codecademy's standard text gray for visibility */
+            background-color: var(--ca-dark-navy) !important;
+        }
+
+        /* Style the cursor for high visibility (Codecademy often uses a light cursor) */
+        .ace_cursor {
+            border-left-color: var(--ca-light) !important;
+        }
+
+        /* Ensure the status bar matches the dark theme (if using Ace's built-in status bar) */
+        /* (Note: We built a custom status bar below the editor, but these are good for safety) */
+        .ace_statusbar {
+            background: #0b1123 !important;
+            /* Slightly darker bottom bar */
+            color: #aaa;
+        }
+
+
+        #hint-card-injected {
+            /*border-left: 4px solid #0d6efd !important;
+    background-color: #f8f9fa !important;
+    border-radius: 8px;
+            animation: fadeIn 0.4s ease-out;
+            */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /*   .ace_editor .ace_cursor {
+    border-left: 2px solid #0d6efd !important;
+    animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}*/
+    </style>
+
+    <!-- Highlight.js CSS (choose a theme you like) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+    <!-- Or try: atom-one-dark, github, dracula, etc. -->
+
+    <!-- Highlight.js Core + Auto Detection -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/php.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/xml.min.js"></script>
+    <!-- for HTML -->
+
+    <style>
+        .code-block {
+            position: relative;
+            margin: 1em 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .code-block pre {
+            margin: 0 !important;
+            padding: 1.2em !important;
+            overflow-x: auto;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+            z-index: 10;
+        }
+
+        .copy-btn:hover {
+            background: #ffd300 !important;
+            font-weight: bold !important;
+        }
+
+        .copy-btn.copied {
+            background: #473c03ff !important;
+            color: white;
+
+        }
+    </style>
+    <style>
+        #language-menu-mobile .list-group-item.active {
+            background-color: #f2f2f2;
+            /* custom background */
+            border-color: #f2f2f2;
+        }
+
+        /* Make the link readable when the li is active */
+        #language-menu-mobile .list-group-item.active a {
+            color: #222 !important;
+            text-decoration: none;
+        }
+
+        .btn-round {
+            width: 40px;
+            /* make equal */
+            height: 40px;
+            /* make equal */
+            padding: 0;
+            /* center icon */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+
+
+    <!--link rel="stylesheet" href="vscode_theme.css"-->
+    <!--link rel="stylesheet" href="vscode_light_theme.css"-->
+    <!--link rel="stylesheet" href="sublime_text_default.css"-->
+    <!--link rel="stylesheet" href="codecademy.css"-->
+    <!--link rel="stylesheet" href="codecademy_light.css"-->
+    <!--link rel="stylesheet" href="codecademy_pro_light.css"-->
+    <link rel="stylesheet" href="codecademy_pro_dark.css">
+
+
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+    <script src="https://unpkg.com/acorn@8.11.3/dist/acorn.js"></script>
+    <script src="checktasks.js"></script>
+    <script src="js-extensions.js"></script>
+    <script 
+    src="https://dialectscript.github.io/core/src/core/transpiler_console.js" 
+    type="module">
+    </script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3" style="height: 50px; z-index: 1050;">
+        <a class="navbar-brand fw-bold" href="#" id="nav-title"></a><span id="editor-mode"></span>
+
+        <div class="ms-auto d-flex align-items-center">
+
+            <button class="btn btn-round fw-bold text-dark d-lg-none d-block"
+                style="background-color: var(--ca-yellow);" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#lessonToolsSidebar" aria-controls="lessonToolsSidebar" id="sidebarMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+
+            <!-- Large screens -->
+            <div class="d-none d-lg-block dropdown me-3">
+                <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" id="languageDropdown"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-language me-1"></i> <span id="current-language-display">English</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="languageDropdown" id="language-menu">
+                </ul>
+            </div>
+
+            <div class="d-none d-lg-block">
+
+                <div class="dropdown d-inline-block me-2">
+                    <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" id="toolsDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Tools
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="toolsDropdown">
+                        <li><button class="dropdown-item" id="btn-copy-code"><i class="fa-regular fa-copy me-2"></i>Copy
+                                Code</button></li>
+                        <li>
+                        <li>
+                            <button class="dropdown-item" id="btn-toggle-sandbox" onclick="toggleSandboxMode()">
+                                <i class="fas fa-hammer me-2"></i> <span id="sandbox-menu-text">Free Practice
+                                    Mode</span>
+                            </button>
+                        </li>
+                        <hr class="dropdown-divider">
+                        </li>
+                        <li><button class="dropdown-item text-danger" id="btn-reset-lesson"><i
+                                    class="fa-solid fa-rotate-left me-2"></i>Reset Workspace</button></li>
+                        <li><a href="../website/logout.php" class="dropdown-item text-danger" id="btn-logout"><i
+                                    class="fa-solid fa-rotate-left me-2"></i>Log out</a></li>
+                    </ul>
+                </div>
+
+                <span class="text-white small me-3" id="completion-status">13/13 complete</span>
+
+                <!--button class="btn btn-sm btn-outline-warning" onclick="showHint()">Get Unstuck</button-->
+            </div>
+            <!--_-->
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="lessonToolsSidebar"
+        aria-labelledby="lessonToolsSidebarLabel">
+        <div class="offcanvas-header" style="border-bottom: 1px solid #333;">
+            <h5 class="offcanvas-title text-white" id="lessonToolsSidebarLabel">Workspace Tools</h5>
+            <button type="button" class="btn-close text-reset bg-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <div class="text-white small mb-3 p-2 bg-secondary bg-opacity-50 rounded-1">
+                <i class="fa-solid fa-check-double me-2"></i> <span id="completion-status-mobile">13/13 complete</span>
+            </div>
+
+            <h6 class="text-white mt-3">Workspace Mode</h6>
+            <div class="d-grid gap-2 mb-4">
+                <button class="btn btn-primary" id="btn-toggle-sandbox-mobile" onclick="toggleSandboxMode()"
+                    data-bs-dismiss="offcanvas">
+                    <i class="fas fa-hammer me-2"></i> <span id="sandbox-menu-text-mobile">Free Practice Mode</span>
+                </button>
+            </div>
+            <hr class="text-white-50">
+
+            <h6 class="text-white mt-3">Language</h6>
+            <ul class="list-group list-group-flush" id="language-menu-mobile">
+            </ul>
+            <hr class="text-white-50">
+
+            <h6 class="text-white">Help & Tools</h6>
+            <div class="d-grid gap-2 mb-4">
+                <!--button class="btn btn-warning" onclick="showHint()" data-bs-dismiss="offcanvas">
+        <i class="fas fa-lightbulb me-2"></i> Get Unstuck
+    </button-->
+                <button class="btn btn-outline-light" id="btn-copy-code-mobile" data-bs-dismiss="offcanvas">
+                    <i class="fa-regular fa-copy me-2"></i> Copy Code
+                </button>
+
+                <button class="btn fw-bold text-dark" style="background-color: var(--ca-yellow);"
+                    onclick="manualSaveProgress()">
+                    <i class="fas fa-save me-1"></i> Save
+                </button>
+
+
+
+
+
+            </div>
+
+            <hr class="text-white-50">
+
+            <h6 class="text-white text-danger">Danger Zone</h6>
+            <button class="btn btn-outline-danger" id="btn-reset-lesson-mobile" onclick="resetLesson()"
+                data-bs-dismiss="offcanvas">
+                <i class="fa-solid fa-rotate-left me-2"></i> Reset Workspace
+            </button>
+        </div>
+    </div>
+
+
+
+    <div class="d-flex w-100" style="height: calc(100vh - 110px);">
+        <div id="instructions-panel" class="panel-left d-none d-lg-flex col-lg-3 p-4 flex-column">
+
+            <div class="card bg-dark text-white border-secondary mb-3">
+                <div class="card-header border-secondary fw-bold small text-uppercase">
+                    <i class="fa-solid fa-book me-2"></i><span id="course-progress-title"></span>
+                    
+                </div>
+                <ul class="list-group list-group-flush" id="lesson-list-container">
+                </ul>
+            </div>
+
+            <div class="d-flex small text-white-50 mt-3 justify-content-between">
+                <span id="available-lessons-count">0 Lessons Available</span>
+                <span class="text-primary cursor-pointer" onclick="resetAllProgress()">Reset All</span>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h6 class="fw-bold mb-0"><i class="fa-regular fa-square-check me-2"></i>Tasks</h6>
+                <span class="badge bg-light text-dark border" id="completion-status-badge">13/13 complete</span>
+                <!--div class="instructions-panel h6"></div-->
+            </div>
+
+            <!--div class="progress-container mt-3x mb-4">
+                <div class="d-flex justify-content-between small text-dark-50 mb-2">
+                    <span>Task Progress</span>
+                    <span id="task-progress-text">1 of 25</span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                    <div id="task-progress-bar" class="progress-bar bg-primary" style="width: 0%"></div>
+                </div>
+            </div-->
+
+            <div class="progress-container mt-3x mb-4">
+                <div class="d-flex justify-content-between small text-dark-50 mb-2">
+                    <span>Task Progress</span>
+                    <span id="task-progress-text">
+                        <a href="javascript:void(0)" class="task-jump-link text-primary fw-bold">
+                            1
+                        </a> of <span id="total-tasks">25</span>
+                    </span>
+                </div>
+                <div class="progress" style="height: 8px;">
+                    <div id="task-progress-bar" class="progress-bar bg-primary" style="width: 0%"></div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div id="instructions-content-container">
+            </div>
+
+            <div id="hint-card-container" class="hint-card p-3 mt-2 shadow-sm" style="display:none;">
+            </div>
+
+        </div>
+
+        <div class="panel-center col-12 col-lg-6 d-flex flex-column border-end border-secondary">
+            <div
+                class="d-flex justify-content-between align-items-center px-3 py-2 bg-dark bg-opacity-50 border-bottom border-secondary">
+                <span id="script-tab-name" class="small text-white fw-bold">script.js</span>
+                <i class="fa-solid fa-expand text-secondary small pointer"></i>
+            </div>
+
+            <div id="editor-container" class="flex-grow-1" style="position: relative;">
+                <div id="main_codeeditor" style="width: 100%; height: 100%;"></div>
+            </div>
+
+            <div id="statusBar" class="d-flex justify-content-end align-items-center px-3 py-1 small"
+                style="background-color: #0b1123; color: #aaa; border-top: 1px solid #333; height: 30px;">
+                <span id="statusbar-info" class="me-auto">Line 1, Column 1</span>
+
+                <div class="btn-group dropup">
+                    <button type="button" class="btn btn-sm text-white dropdown-toggle p-0" data-bs-toggle="dropdown"
+                        aria-expanded="false" style="font-size: 10px;">
+                        <span id="statusbar-languagelist-selected">JavaScript</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" data-mode="html" href="#">HTML</a></li>
+                        <li><a class="dropdown-item" data-mode="python" href="#">Python</a></li>
+                        <li><a class="dropdown-item" data-mode="ajami" href="#">Ajami</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="p-3 border-top border-secondary bg-dark bg-opacity-25 d-none d-lg-block d-flex justify-content-end align-items-center">
+
+
+                <button class="btn fw-bold text-dark" style="background-color: var(--ca-yellow);"
+                    onclick="manualSaveProgress()">
+                    <i class="fas fa-save me-1"></i> Save
+                </button>
+
+                <button id="desktop-run-btn" class="btn fw-bold text-dark" style="background-color: var(--ca-yellow);">
+                    <i class="fa-solid fa-play me-1"></i> Run
+                </button>
+            </div>
+
+        </div>
+
+
+        <div id="output-panel" class="panel-right d-none d-lg-flex col-lg-3 flex-column font-monospace p-3x small">
+
+            <div id="console-output-wrapper" class="h-100 w-100 p-3">
+                <div class="mb-2 text-white-50" id="output-panel-header">Output:</div>
+
+                <div>
+                    Average Haircut Price: <span class="text-success">$31.875</span><br>
+                    [25, 20, 35, 15, 15, 30, 45, 30]<br>
+                    ['bouffant', 'pixie', 'crew', 'bowl']
+                </div>
+                <div class="mt-2 text-white blink">|</div>
+
+                <div id="task-status-message" class="mt-3 small fw-bold"></div>
+            </div>
+
+            <iframe id="render-iframe" class="h-100 w-100 border-0 bg-white" style="display:none;"
+                sandbox="allow-scripts allow-forms allow-same-origin">
+            </iframe>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="footer-bar fixed-bottom w-100 d-flex align-items-center justify-content-between px-4">
+
+        <div class="d-flex d-lg-none w-100 justify-content-between">
+            <button id="task-tab" class="btn btn-link text-white text-decoration-none">
+                <i class="fa-solid fa-list-check me-1"></i> Tasks
+            </button>
+            <button id="run-tab" class="btn fw-bold px-4" style="background-color: var(--ca-yellow);">
+                <i class="fa-solid fa-play me-1"></i> Run
+            </button>
+            <button id="output-tab" class="btn btn-link text-white text-decoration-none">
+                <i class="fa-solid fa-terminal me-1"></i> Output
+            </button>
+        </div>
+
+        <div class="d-none d-lg-flex w-100 justify-content-between align-items-center">
+            <div id="footer-completion-status" class="text-white small">13/13 complete</div>
+            <div>
+
+                <button class="btn btn-outline-secondary text-white border-0 me-2" onclick="loadPreviousLesson()">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+                <button id="btn-finish-lesson" class="btn fw-bold px-4"
+                    style="background-color: var(--ca-yellow);">Finish</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Completion Modal -->
+    <div class="modal fade" id="completionModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color: #1b1b1b; border: 1px solid #333; color: white;">
+                <div class="modal-body text-center p-5">
+                    <div class="mb-4">
+                        <i class="fa-solid fa-trophy fa-4x text-warning fa-bounce"
+                            style="--fa-animation-duration: 2s;"></i>
+                    </div>
+
+                    <h2 class="fw-bold mb-3">Lesson Complete!</h2>
+                    <p class="text-white-50 mb-4">You have successfully mastered the basics of loops.</p>
+
+                    <div class="d-grid gap-3">
+                        <button onclick="loadNextLesson()" class="btn btn-lg fw-bold text-dark"
+                            style="background-color: var(--ca-yellow);">
+                            <i class="fa-solid fa-arrow-right me-2"></i> Next Lesson
+                        </button>
+                        <button onclick="stayOnThisLesson()" class="btn btn-outline-secondary text-white" data-bs-dismiss="modal">
+                            Stay on this page
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert Modal -->
+    <div class="modal fade" id="genericAlertModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content" style="background-color: #1b1b1b; border: 1px solid #333; color: white;">
+                <div class="modal-body text-center p-4">
+                    <div class="mb-3">
+                        <i id="alertIcon" class="fa-solid fa-bell fa-2x text-warning"></i>
+                    </div>
+
+                    <h5 id="alertTitle" class="fw-bold mb-2">Message Title</h5>
+                    <p id="alertMessage" class="text-white-50 mb-4">The message content goes here.</p>
+
+                    <button class="btn btn-outline-secondary text-white w-50" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.7/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.7/ext-language_tools.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.7/ext-statusbar.js"></script>
+
+
+    <script src="https://dialect-script.github.io/core/src/ace_ajami/ajami_highlight_rules.js"></script>
+    <script src="https://dialect-script.github.io/core/src/ace_ajami/ajami_mode.js"></script>
+    <script src="https://dialect-script.github.io/core/src/ace_ajami/ajami_autocomplete_mappings.js"></script>
+
+    <!--script src="app.js"></script-->
+
+    <script>
+        // ==========================================
+        // PART 0: AJAMI CUSTOM AUTOCOMPLETER
+        // ==========================================
+        const ajamiCompleter = {
+            getCompletions: function (editor, session, pos, prefix, callback) {
+                if (prefix.length === 0) { callback(null, []); return; }
+                if (typeof alldialects === 'undefined') { console.warn("Ajami mappings missing"); callback(null, []); return; }
+
+                const keywordMappings = alldialects.keywordMappings || {};
+                const stringMappings = alldialects.stringMappings || {};
+                const suggestions = [];
+
+                for (const [ajamiWord, jsWord] of Object.entries(keywordMappings)) {
+                    suggestions.push({ caption: `${ajamiWord} (${jsWord})`, value: ajamiWord, meta: "keyword" });
+                }
+                for (const [ajamiStr, jsStr] of Object.entries(stringMappings)) {
+                    suggestions.push({ caption: `${ajamiStr} (${jsStr})`, value: ajamiStr, meta: "string" });
+                }
+                callback(null, suggestions);
+            }
+        };
+
+        // ==========================================
+        // PART 1: GLOBAL STATE
+        // ==========================================
+        let currentLanguage = 'en';
+        let CURRENT_TRANSLATIONS = {};
+        let LESSON_DATA = null;
+
+        let isSandboxMode = false;
+
+        // State Management
+        let currentTaskIndex = 0;
+        let currentHintIndex = 0;
+
+        // NEW: Global list of available lesson files
+        const COURSE_LESSONS = [
+            //{ id: "python_intro", file: "lesson1.json", title: "Python: Loops & Variables" },
+            //{ id: "js_intro", file: "lesson2.json", title: "JavaScript: Console Output" },
+            //{ id: "php_intro", file: "lesson3.json", title: "PHP: Server-Side Output" },
+            //{ id: "html_intro", file: "lesson4.json", title: "HTML: Main Header" },
+            //{ id: "ajami_intro", file: "lesson5.json", title: "AjamiScript: Console Output" }, // <-- NEW
+            { id: "js_beginner", file: "js_beginner.json", title: "Javascript Beginner" },
+            { id: "ajmjs_beginner", file: "ajmjs_beginner.json", title: "Dialectscript Beginner" },
+            //{ id: "html_sandbox", file: "html_sandbox.json", title: "HTML Sandbox" },
+            //{ id: "jshtml_sandbox", file: "jshtml_sandbox.json", title: "JSHTML Sandbox" },
+            //{ id: "game_sandbox", file: "game_sandbox.json", title: "Game Sandbox" }
+        ];
+
+        // --- CHECKER LOGIC ---
+        const TASK_CHECKERS = {
+            'python': {
+                sandbox: (code) => { return { passed: true, message_key: "CHECKER_SUCCESS" } },
+                checkTask1: (code) => {
+                    // Pass if code length > 10
+                    return code.length > 10 ? { passed: true, message_key: "CHECKER_SUCCESS" } : { passed: false, feedback: "Write more code!" };
+                },
+                checkTask2: (code) => {
+                    const hasForLoop = /for\s+.*\s+in\s+.*:/s.test(code);
+                    const updatesTotal = /total_price\s*\+=\s*(\w+)/s.test(code);
+
+                    if (!hasForLoop) return { passed: false, message_key: "CHECKER_ERROR_NO_FOR_LOOP" };
+                    if (!updatesTotal) return { passed: false, message_key: "CHECKER_ERROR_NO_UPDATE" };
+
+                    return { passed: true, message_key: "CHECKER_SUCCESS" };
+                }
+            },
+            'javascript': {
+                sandbox: (code) => { return { passed: true, message_key: "CHECKER_SUCCESS" } },
+                //Called by runCodeAndCheckTask()
+                checkTasks_JS: (code, solution_key, current_lesson_translations) => {
+                    let results = checkTasks_with_AST_JS(code, solution_key, current_lesson_translations)
+                    console.log('Checked code: ', results)
+                    return results;
+
+                }
+            },
+            'ajami': {
+                sandbox: (code) => { return { passed: true, message_key: "CHECKER_SUCCESS" } },
+                //Called by runCodeAndCheckTask()
+                checkTasks_Ajami: (code, solution_key, current_lesson_translations) => {
+                    let results = checkTasks_with_AST_AJAMI(code, solution_key, current_lesson_translations)
+                    console.log('Checked code: ', results)
+                    return results;
+
+                },
+                'checkTask1': (code) => {
+                    const hasNuna = /rubuta\s*\([^)]+\)/.test(code);
+                    //const hasNuna = /nuna\s*\([^)]+\)/.test(code);
+                    if (hasNuna) {
+                        return { passed: true, message_key: "CHECKER_SUCCESS" };
+                    }
+                    return { passed: false, message_key: "AJAMI_ERROR_NUNA_MISSING" };
+                }
+            },
+            'html': {
+                'sandbox': (code) => { return { passed: true, message_key: "CHECKER_SUCCESS" } },
+                // Task 1: Check for the presence of the <h1> tag
+                'checkTagH1': (code) => {
+                    const hasH1 = /<h1\b[^>]*>.*<\/h1\s*>/i.test(code);
+                    if (hasH1) {
+                        return { passed: true, message_key: "CHECKER_SUCCESS" };
+                    }
+                    return { passed: false, message_key: "CHECKER_ERROR_NO_H1" };
+                }
+            }
+        };
+
+
+        // Initialize the python Web Worker
+        const pythonWorker = new Worker('./python-runner.js'); // Initialize the Web Worker
+        const javascriptWorker = new Worker('./js-runner.js'); // <-- NEW JS WORKER
+
+        // ==========================================
+        // PART 2: DATA LOADING
+        // ==========================================
+        async function loadTranslations(lang) {
+            try {
+                const response = await fetch(`./translations/${lang}.json`);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                CURRENT_TRANSLATIONS = await response.json();
+                currentLanguage = lang;
+            } catch (error) { console.error("Error loading translations:", error); }
+        }
+
+
+        // PART 2: DATA LOADING (Temporary change for testing)
+        // PART 2: DATA LOADING (UPDATED)
+
+        /**
+ * Finds the next lesson in COURSE_LESSONS and loads it.
+ */
+        window.loadNextLesson = function () {
+            // 1. Get the ID of the currently active lesson
+            if (!LESSON_DATA || !LESSON_DATA.id) {
+                console.error("Cannot load next lesson: LESSON_DATA is not defined or is missing an ID.");
+                return;
+            }
+
+            const currentLessonId = LESSON_DATA.id;
+
+            // 2. Find the index of the current lesson in the global list
+            const currentIndex = COURSE_LESSONS.findIndex(lesson => lesson.id === currentLessonId);
+
+            // 3. Check if a next lesson exists
+            const nextIndex = currentIndex + 1;
+
+            if (nextIndex < COURSE_LESSONS.length) {
+                const nextLessonFile = COURSE_LESSONS[nextIndex].file;
+
+                // 4. Load the next lesson using the existing function
+                loadLesson(nextLessonFile);
+
+                // 5. Hide the modal after transition (assuming your modal uses Bootstrap or similar)
+                //$('#completionModal').modal('hide'); 
+                // Option A (cleanest)
+                bootstrap.Modal.getInstance(document.getElementById('completionModal'))?.hide();
+
+                // Option B (quick and dirty, works great here)
+                //$('#completionModal [data-bs-dismiss="modal"]').click();
+
+            } else {
+                // Handle end of course/module
+                //alert(translate("COURSE_COMPLETE_MESSAGE") || "Congratulations! You have completed all lessons in this module.");
+
+                showCustomAlert(
+                    translate("COURSE_COMPLETE_MESSAGE_TITLE") || "Course Complete",
+                    translate("COURSE_COMPLETE_MESSAGE") || "Congratulations! You have completed all lessons in this module."
+                )
+            }
+        };
+
+        async function loadLessonData(lessonFile) {
+
+            try {
+                const response = await fetch(`./lessons/${lessonFile}`);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                LESSON_DATA = await response.json();
+            } catch (error) { console.error("Error loading lesson data:", error); }
+        }
+
+        async function loadLesson(lessonFile) {
+
+            // 1. Save current state before switching
+            if (LESSON_DATA) {
+                saveProgress();
+            }
+
+
+            // 2. Load new lesson
+            await loadLessonData(lessonFile);
+
+            // *** FIX ADDED HERE ***
+            LESSON_DATA.file = lessonFile; // Store the filename in the LESSON_DATA object itself
+            // ************************
+
+            // 3. Reset or restore state for the new lesson
+            const savedState = loadProgress();
+
+            if (savedState) {
+                currentTaskIndex = savedState.taskIndex || 0;
+                currentHintIndex = savedState.hintIndex || 0;
+                currentLanguage = savedState.language || LESSON_DATA.default_language;
+            } else {
+                // Reset state if no saved progress
+                currentTaskIndex = 0;
+                currentHintIndex = 0;
+                currentLanguage = LESSON_DATA.default_language;
+            }
+
+            // 4. Reload dependencies and UI
+            await loadTranslations(currentLanguage);
+
+            const currentFileKey = LESSON_DATA.current_file;
+            const fileData = LESSON_DATA.files[currentFileKey];
+
+
+
+            // Reset Ace Editor content to saved or initial state
+            if (window.aceEditorInstance) {
+                const contentToLoad = (savedState && savedState.code)
+                    ? savedState.code
+                    : translate(fileData.initial_content_key);
+
+                window.aceEditorInstance.setValue(contentToLoad, -1);
+                window.aceEditorInstance.clearSelection();
+                setEditorMode(fileData.mode, fileData.mode); // Reset editor mode
+            }
+
+            updateUI();
+            renderLessonMenu(lessonFile);
+
+            //Clear previous console output
+            const consoleWrapper = document.getElementById('console-output-wrapper');
+            consoleWrapper.innerHTML = `
+                    <div class="mb-2 text-white-50">${translate("OUTPUT_TITLE")}:</div>
+                `;
+
+            //2.1 If lesson is sandbox the auto swith to sandbox mode
+            if ((LESSON_DATA.isSandboxMode) && LESSON_DATA.isSandboxMode == true) {
+                //toggleSandboxMode()
+            }
+
+            updateCodeEditor()
+        }
+
+        // ==========================================
+        // PART 3: ACE EDITOR SETUP
+        // ==========================================
+        window.aceEditorInstance = null;
+        const editorElementId = 'main_codeeditor';
+
+        function translate(key) { return CURRENT_TRANSLATIONS[key] || ''; }
+        //function translate(key) { return CURRENT_TRANSLATIONS[key] || key; }
+
+        function setEditorMode(mode, name) {
+            if (!window.aceEditorInstance) return;
+            window.aceEditorInstance.session.setMode(`ace/mode/${mode}`);
+            const langTools = ace.require("ace/ext/language_tools");
+            window.aceEditorInstance.completers = [langTools.keyWordCompleter, langTools.snippetCompleter, langTools.textCompleter];
+            if (mode === 'ajami') window.aceEditorInstance.completers.push(ajamiCompleter);
+
+            const sb = document.getElementById('statusbar-languagelist-selected');
+            if (sb) sb.textContent = name || mode;
+        }
+
+        function initializeAceEditor(elementId, language) {
+            if (typeof ace === 'undefined') return;
+            const editorInstance = ace.edit(document.getElementById(elementId));
+            window.aceEditorInstance = editorInstance;
+
+            editorInstance.setTheme("ace/theme/tomorrow_night");
+            editorInstance.setOptions({ fontSize: "14px", showLineNumbers: true, enableBasicAutocompletion: true, enableLiveAutocompletion: true, useSoftTabs: true, tabSize: 4, wrap: true });
+            editorInstance.container.style.fontFamily = "IBM Plex Mono, monospace";
+
+            setEditorMode(language, 'Javascript');
+            //setEditorMode(language, 'Python');
+
+            // Status Bar
+            editorInstance.getSession().selection.on('changeCursor', function () {
+                const pos = editorInstance.getCursorPosition();
+                const el = document.getElementById('statusbar-info');
+                if (el) el.textContent = `Line ${pos.row + 1}, Column ${pos.column + 1}`;
+            });
+
+            // --- MODIFIED: Save on Change ---
+            editorInstance.getSession().on("change", function () {
+                const el = document.getElementById('script-tab-name');
+                if (el) el.classList.add('text-warning');
+
+                // PERSISTENCE: Save code to local storage on every keystroke
+                saveProgress();
+            });
+
+            editorInstance.commands.addCommand({
+                name: "saveShortcut", bindKey: { win: "Ctrl-s", mac: "Command-s" },
+                exec: function () {
+                    document.getElementById('script-tab-name').classList.remove('text-warning');
+                    saveProgress(); // Explicit save
+                    //alert("Saved!");
+
+                    // --- SANDBOX MODE GUARD ---
+                    if (isSandboxMode) {
+                        console.log("Skipping progress save: Sandbox Mode is active.");
+                        // 2. Display the custom confirmation alert
+                        showCustomAlert(
+                            translate("SANDBOX_SAVE_PROGRESS_MESSAGE_TITLE") || "Sandbox",
+                            translate("SANDBOX_SAVE_PROGRESS_MESSAGE") || "sandbox code are temporal",
+                            alertIcon // Use a success icon
+                        );
+                        return;
+                    }
+
+
+                    showCustomAlert(
+                        translate("SAVE_PROGRESS_MESSAGE_TITLE") || "Save",
+                        translate("SAVE_PROGRESS_MESSAGE") || "Successfully Saved!",
+                    )
+                }
+            });
+            editorInstance.clearSelection();
+        }
+
+        // ==========================================
+        // PART 4: UI RENDERING
+        // ==========================================
+
+        // PART 4: UI RENDERING (Add this function)
+
+        function updateOutputPanelDisplay() {
+            // Check for LESSON_DATA before accessing properties
+            if (!LESSON_DATA || !LESSON_DATA.files || !LESSON_DATA.current_file) return;
+
+            const mode = LESSON_DATA.files[LESSON_DATA.current_file].mode;
+            const consoleWrapper = document.getElementById('console-output-wrapper');
+            const iframe = document.getElementById('render-iframe');
+
+            // Modes that require a visual renderer (HTML, CSS)
+            if (mode === 'html' || mode === 'css') {
+                if (consoleWrapper) consoleWrapper.style.display = 'none';
+                if (iframe) iframe.style.display = 'block';
+            } else {
+                // All console-based modes (python, javascript, php, ajami)
+                if (consoleWrapper) consoleWrapper.style.display = 'block';
+                if (iframe) iframe.style.display = 'none';
+            }
+        }
+
+        function updateOutputPanelDisplayByMode(mode) {
+            // Check for LESSON_DATA before accessing properties
+            if (!LESSON_DATA || !LESSON_DATA.files || !LESSON_DATA.current_file) return;
+
+            //const mode = LESSON_DATA.files[LESSON_DATA.current_file].mode;
+            const consoleWrapper = document.getElementById('console-output-wrapper');
+            const iframe = document.getElementById('render-iframe');
+
+            // Modes that require a visual renderer (HTML, CSS)
+            if (mode === 'html' || mode === 'css') {
+                if (consoleWrapper) consoleWrapper.style.display = 'none';
+                if (iframe) iframe.style.display = 'block';
+            } else {
+                // All console-based modes (python, javascript, php, ajami)
+                if (consoleWrapper) consoleWrapper.style.display = 'block';
+                if (iframe) iframe.style.display = 'none';
+            }
+        }
+
+       
+
+        function renderTaskPanel() {
+            const container = document.getElementById('instructions-content-container');
+            const header = document.querySelector('#instructions-panel h6');
+            if (!container || !LESSON_DATA) return;
+
+            if (header) {
+                header.innerHTML = `<i class="fa-regular fa-square-check me-2"></i>${translate("UI_TASKS_TITLE")}`;
+            }
+
+            let html = '';
+
+            if (LESSON_DATA.tasks) {
+                LESSON_DATA.tasks.forEach((task, index) => {
+                    const title = translate(task.title_key || `Task ${index + 1}`);
+                    const desc = translate(task.description_key);
+                    const currentTaskSolution = translate(task.solution_content_key);
+                    const languageSyntax = LESSON_DATA.file_type;
+
+                    let iconHtml = '', titleClass = '', descClass = '', opacityClass = '';
+
+                    if (index < currentTaskIndex) {
+                        // Completed
+                        iconHtml = '<i class="fa-solid fa-square-check fa-lg text-primary"></i>';
+                        titleClass = 'text-muted text-decoration-line-through';
+                        descClass = 'text-muted small';
+                        opacityClass = 'opacity-50';
+                    } else if (index === currentTaskIndex) {
+                        // Active — current task
+                        iconHtml = '<i class="fa-regular fa-square fa-lg text-primary"></i>';
+                        titleClass = 'fw-bold text-dark';
+                        descClass = 'text-dark small';
+                        opacityClass = '';
+                    } else {
+                        // Future tasks
+                        iconHtml = '<i class="fa-regular fa-square fa-lg text-secondary"></i>';
+                        titleClass = 'text-secondary';
+                        descClass = 'd-none';
+                        opacityClass = 'opacity-50';
+                    }
+
+                    // Task item
+                    /*    html += `
+                <div class="d-flex align-items-start mb-4 ${opacityClass} task-item" data-task-index="${index}">
+                    <div class="me-2 mt-1">${iconHtml}</div>
+                    <div class="flex-grow-1">
+                        <p class="mb-1 ${titleClass}">${title}</p>
+                        <p class="${descClass}">${desc}</p>
+                    </div>
+                </div>`;*/
+
+                    // Inside renderTaskPanel(), when building each task:
+                    html += `
+<div class="d-flex align-items-start mb-4 ${opacityClass} task-item" data-task-index="${index}"
+     ${index !== currentTaskIndex ? `onclick="jumpToTask(${index})" style="cursor:pointer;"` : ''}>
+    <div class="me-2 mt-1">${iconHtml}</div>
+    <div class="flex-grow-1">
+        <p class="mb-1 ${titleClass}">${index + 1}. ${title}</p>
+        <p class="${descClass}">${desc}</p>
+        
+        ${displayCode(currentTaskSolution, null, 'javascript')}
+        
+    </div>
+</div>`;
+
+
+                    // Inject hint card IMMEDIATELY after the active task
+                    if (index === currentTaskIndex) {
+                        html += `
+                <div id="hint-card-injected" class="hint-card p-3 mb-4 shadow-sm border-start border-primary border-4 bg-light">
+                    ${getHintCardHTML()}  <!-- We'll define this helper below -->
+                </div>`;
+                    }
+                });
+            }
+
+            container.innerHTML = html;
+            updateTaskProgress();     // ← new
+            scrollToActiveTask();  // This line = pure magic
+
+
+            // STEP 2: NOW highlight ALL code blocks (ONLY ONCE!)
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightElement(block);
+            });
+        }
+
+        // Helper: Generate hint card HTML (so we don't duplicate code)
+        function getHintCardHTML() {
+            const activeTask = LESSON_DATA.tasks[currentTaskIndex];
+            if (!activeTask || !activeTask.hints || activeTask.hints.length === 0) {
+                return ''; // Return empty if no hints
+            }
+
+            const currentHintObj = activeTask.hints[currentHintIndex % activeTask.hints.length];
+            const hintText = translate(currentHintObj.text_key);
+            const hintCount = activeTask.hints.length;
+            const currentHintNum = (currentHintIndex % hintCount) + 1;
+
+            return `
+    <div class="d-flex justify-content-between small text-muted mb-2">
+        <span><i class="fa-solid fa-robot me-1"></i> Hint</span>
+        <span>${currentHintNum} of ${hintCount}</span>
+    </div>
+    <p class="small text-dark mb-3">${hintText}</p>
+    <div class="d-flex justify-content-between align-items-center">
+        <button class="btn btn-sm btn-outline-primary fw-bold" style="font-size: 12px;" onclick="nextHint()">
+            Next Hint <i class="fa-solid fa-chevron-right ms-1"></i>
+        </button>
+    </div>`;
+        }
+
+        function renderHintCard() {
+            const hintContainer = document.getElementById('hint-card-container');
+            if (!hintContainer) return;
+
+            const activeTask = LESSON_DATA.tasks[currentTaskIndex];
+            if (!activeTask || !activeTask.hints || activeTask.hints.length === 0) {
+                hintContainer.style.display = 'none';
+                return;
+            }
+            hintContainer.style.display = 'block';
+
+            const currentHintObj = activeTask.hints[currentHintIndex % activeTask.hints.length];
+            const hintText = translate(currentHintObj.text_key);
+            const hintCount = activeTask.hints.length;
+
+            hintContainer.innerHTML = `
+            <div class="d-flex justify-content-between small text-muted mb-2">
+                <span><i class="fa-solid fa-robot me-1"></i> Hint</span>
+                <span>${(currentHintIndex % hintCount) + 1} of ${hintCount}</span>
+            </div>
+            <p class="small text-dark mb-3">${hintText}</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <button class="btn btn-sm btn-outline-dark fw-bold" style="font-size: 12px;" onclick="nextHint()">
+                    Next Hint <i class="fa-solid fa-chevron-right ms-1"></i>
+                </button>
+            </div>
+        `;
+        }
+
+        window.nextHintx = function () {
+            currentHintIndex++;
+            renderHintCard();
+            saveProgress(); // Save hint position
+        };
+        // Keep it global so onclick="nextHint()" works
+        window.nextHint = function () {
+            const activeTask = LESSON_DATA.tasks[currentTaskIndex];
+
+            // Safety check — do nothing if no hints
+            if (!activeTask || !activeTask.hints || activeTask.hints.length === 0) {
+                return;
+            }
+
+            currentHintIndex++;
+            renderTaskPanel();  // This re-renders everything with the new hint injected
+            saveProgress();    // Keep saving progress (excellent!)
+        };
+
+
+
+        function updateUI() {
+            if (!LESSON_DATA) return;
+            renderTaskPanel();
+
+            updateOutputPanelDisplay(); // <-- CALL IT HERE
+
+            setEditorModeNotification();
+
+            const statusText = `${currentTaskIndex} / ${LESSON_DATA.tasks.length} ${translate("UI_TASKS_TITLE")}`;
+            const ids = ['completion-status', 'completion-status-badge', 'footer-completion-status', 'completion-status-mobile'];
+            ids.forEach(id => { const el = document.getElementById(id); if (el) el.textContent = `${currentTaskIndex}/${LESSON_DATA.tasks.length} completed`; });
+
+            const courseProgressTitleEl = document.getElementById('course-progress-title');
+            if (courseProgressTitleEl) courseProgressTitleEl.textContent = translate("COURSE_PROGRESS_TITLE") ;
+
+
+            const navTitleEl = document.getElementById('nav-title');
+            if (navTitleEl) navTitleEl.textContent = translate("NAV_TITLE") ;
+
+            const titleEl = document.getElementById('lesson-title-display');
+            if (titleEl) titleEl.textContent = translate(LESSON_DATA.title_key);
+
+            const langEl = document.getElementById('current-language-display');
+            if (langEl) {
+                const langObj = LESSON_DATA.available_languages.find(l => l.code === currentLanguage);
+                langEl.textContent = langObj ? langObj.name : currentLanguage.toUpperCase();
+            }
+
+            const isRTL = currentLanguage === 'ar';
+            document.body.style.direction = isRTL ? 'rtl' : 'ltr';
+            const pnl = document.getElementById('instructions-panel');
+            if (pnl) pnl.style.textAlign = isRTL ? 'right' : 'left';
+
+            if (currentTaskIndex < LESSON_DATA.tasks.length) {
+            updateCodeEditor()
+            }
+            
+
+        }
+
+        function stayOnThisLesson (){
+            //loadPreviousLesson()
+            currentTaskIndex--
+        }
+
+        function updateCodeEditor() {
+            // 7. Restore Code Content (Saved > Initial)
+            const activeTask = LESSON_DATA.tasks[currentTaskIndex];
+            //console.log(activeTask)
+
+            //update tab file name
+            const tabNameEl = document.getElementById('script-tab-name');
+            tabNameEl.textContent = LESSON_DATA.current_file
+
+
+            if (window.aceEditorInstance) {
+                // Safe, clean, works everywhere
+                const initialContent = activeTask
+                    ? translate(activeTask.initial_content_key || '// Type your code below\n')
+                    : '';
+
+                // OLD: Instant
+                // window.aceEditorInstance.setValue(initialContent, -1);
+
+                // NEW: Typewriter magic!
+                typwriterForAce(initialContent, {
+                    speed: 45,
+                    humanize: true,
+                    sound: true,           // feels like old-school coding!
+                    onComplete: () => {
+                        window.aceEditorInstance.clearSelection();
+                        console.log("Code typed in!");
+                    }
+                });
+            }
+        }
+
+        // PART 4: UI RENDERING (Add to this section)
+
+        function renderLessonMenu(activeFile) {
+            const container = document.getElementById('lesson-list-container');
+            const countEl = document.getElementById('available-lessons-count');
+            if (!container) return;
+
+            let html = '';
+            COURSE_LESSONS.forEach(lesson => {
+                // Fetch progress for styling
+                const savedProgress = localStorage.getItem(`codecademy_clone_${lesson.id}`);
+                const progress = savedProgress ? JSON.parse(savedProgress) : null;
+                const progressCount = progress ? progress.taskIndex : 0;
+
+
+
+                let statusIcon = '<i class="fa-solid fa-circle-notch fa-spin me-2 lesson-status-icon"></i>'; // Default
+                let activeClass = '';
+
+                if (lesson.file === activeFile) {
+                    activeClass = 'active bg-primary bg-opacity-10 text-primary fw-bold';
+
+                    //console.log(progressCount +'==='+ LESSON_DATA.tasks.length +' && '+lesson.file +'==='+ activeFile)
+                    //console.log('render', savedProgress)
+                }
+
+
+
+                if (progressCount === LESSON_DATA.tasks.length && lesson.file === activeFile) {
+                    statusIcon = '<i class="fa-solid fa-circle-check text-success me-2 lesson-status-icon"></i>'; // Completed
+                } else if (progressCount > 0) {
+                    statusIcon = `<span class="badge bg-secondary me-2">${progressCount}/${progress.totalTasks}</span>`; // In Progress
+                    //statusIcon = `<span class="badge bg-secondary me-2">${progressCount}/${LESSON_DATA.tasks.length}</span>`; // In Progress
+                } else {
+                    statusIcon = '<i class="fa-regular fa-circle me-2 lesson-status-icon"></i>'; // Not Started
+                }
+
+
+                html += `
+            <li class="list-group-item bg-dark text-white-50 border-secondary lesson-item ${activeClass}" 
+                onclick="loadLesson('${lesson.file}')">
+                ${statusIcon}
+                <span class="lesson-title-text">${lesson.title}</span>
+            </li>
+        `;
+            });
+            container.innerHTML = html;
+            if (countEl) countEl.textContent = `${COURSE_LESSONS.length} Lessons Available`;
+        }
+
+        // Add the global reset function here
+        window.resetAllProgress = function () {
+            if (!confirm("Are you sure you want to reset ALL lesson progress? This cannot be undone.")) return;
+
+            COURSE_LESSONS.forEach(lesson => {
+                localStorage.removeItem(`codecademy_clone_${lesson.id}`);
+            });
+
+            // Reload the current lesson to reflect the reset
+            //loadLesson(LESSON_DATA.file);
+            // Reload the current lesson to reflect the reset
+            if (LESSON_DATA && LESSON_DATA.file) { // <- ADDED CHECK
+                loadLesson(LESSON_DATA.file);
+            } else {
+                // Fallback: If no lesson loaded, load the first one.
+                loadLesson(COURSE_LESSONS[0].file);
+            }
+        }
+
+
+        // New Helper Function to Show Modal
+        function showCompletionModal() {
+            // Uses Bootstrap's native JS API
+            const myModal = new bootstrap.Modal(document.getElementById('completionModal'));
+            myModal.show();
+
+            // Confetti effect could go here in the future!
+            console.log("Victory!");
+
+            //currentTaskIndex--
+        }
+
+
+        // ==========================================
+        // PART 5: ENGINE & PROGRESSION LOGIC (FINAL ASYNC)
+        // ==========================================
+        // PART 5: ENGINE & PROGRESSION LOGIC (Helper function)
+
+        /*
+        1. API Endpoint Definition
+
+        We need a single, generic endpoint that the client can hit.
+        Property	Value
+        Method	POST
+        URL	/api/run-code (or similar)
+        Purpose	Sends source code, language mode, and task checker ID to a secured, containerized execution environment (Docker Sandbox).
+                2. Request Body Structure (Payload)
+
+        The JavaScript client must send a JSON object with all necessary information:
+        JSON
+
+        {
+            "code": "<?php echo 'Hello'; ?>",   // The source code from the editor
+            "language": "php",                  // The mode (php, java, go)
+            "checker_function": "checkOutput",  // The name of the server-side checker function
+            "lesson_id": "php_intro"            // Context for the server (optional, but good for logging)
+        }
+
+        3. Response Body Structure (Received by the Client)
+
+        The server API will execute the code and the corresponding checker, then return a JSON response:
+        JSON
+
+        {
+            "stdout": "Hello\n",                    // Standard output from the executed code
+            "stderr": "",                           // Error output (e.g., compile error, runtime exception)
+            "validation": {
+                "passed": true,                     // Boolean indicating task success
+                "message_key": "TASK_PASSED",       // A key for client-side translation
+                "feedback": "Great job!"            // Specific feedback message
+            }
+        }
+        */
+
+        /**
+         * Executes code on the remote Docker sandbox API.
+         * @param {string} code The source code from the editor.
+         * @param {string} language The language mode (php, java, go).
+         * @param {string} checkerFunction The name of the validation function to run server-side.
+         * @param {string} lessonId The current lesson identifier.
+         * @returns {Promise<object>} The server response object containing stdout, stderr, and validation.
+         */
+        async function runCodeOnServer(code, language, checkerFunction, lessonId) {
+            try {
+                const response = await fetch('/api/run-code', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        code: code,
+                        language: language,
+                        checker_function: checkerFunction,
+                        lesson_id: lessonId
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                return data;
+
+            } catch (error) {
+                console.error("Server execution error:", error);
+                return {
+                    stdout: "",
+                    stderr: `Could not connect to the code sandbox API or encountered a network error.`,
+                    validation: {
+                        passed: false,
+                        message_key: "SERVER_COMMUNICATION_ERROR",
+                        feedback: `Error: ${error.message}`
+                    }
+                };
+            }
+        }
+
+
+
+
+
+
+
+        /****************************************** 
+        HANDLER: Function that handles:
+        Filetype: .ajmjs, .js
+        Mode:     ajami, javascript
+        Filename: jshtmlscript.ajmjs, jshtmlscript.js
+        Template: jshtml-template
+        *******************************************/
+        async function runCodeJSHTML(mode, code) {
+
+            // --- IMPORTANT: Reference the inner wrappers ---
+            const consoleWrapper = document.getElementById('console-output-wrapper');
+            const iframe = document.getElementById('render-iframe');
+            const taskStatusMessage = document.getElementById('task-status-message');
+
+            // 1. Synchronous Task Check
+            const activeTask = LESSON_DATA.tasks[currentTaskIndex];
+            const checkerFn = TASK_CHECKERS[mode][activeTask.checker_function];
+            const taskResult = checkerFn(code);
+            let codeToExecute = code
+
+            updateOutputPanelDisplayByMode('html');
+
+            //1.2 Convert vernacular to JS
+            if (typeof window.transpileAjami === 'function') {
+                try {
+                    // Assuming the transpiler function is available globally
+                    codeToExecute = await window.transpileAjami(code);
+
+                    // Display the transpiled code for debugging (optional)
+                    console.log("Ajami Transpiled to JS:", codeToExecute);
+
+                } catch (e) {
+                    // Handle transpilation errors (e.g., syntax errors in Ajami source)
+                    const errorMsg = `Ajami Transpilation Error: ${e.message}`;
+                    console.log(`<div class="text-danger fw-bold">${errorMsg}</div>`);
+                    return; // Stop execution if transpilation fails
+                }
+            } else {
+                const errorMsg = "Transpiler (window.transpileAjami) not loaded or accessible.";
+                console.log(`<div class="text-danger fw-bold">${errorMsg}</div>`);
+                return;
+            }
+
+            // 2. Render the Code in the iframe (Always render, even on failure, so user sees their mistake)
+            const template = document.getElementById('jshtml-template').innerHTML;//if template is template
+            //const template = document.getElementById('jshtml-template').textContent;//if template is script
+
+            // Load the full HTML into iframe
+            iframe.srcdoc = template;
+
+            // Wait for iframe to finish loading
+            iframe.onload = function () {
+                //const doc = iframeDoc;
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+
+                // Step 1: Remove any old custom script
+                const oldScript = doc.getElementById('custom-js');
+                if (oldScript) oldScript.remove();
+
+                // Step 2: Create and inject new user script
+                const userScript = doc.createElement('script');
+                userScript.id = 'custom-js';
+                userScript.type = 'text/javascript';           // Important: standard type
+                userScript.dataset.language = 'alldialects';   // Keep your custom data
+                userScript.textContent = codeToExecute || '// No code yet';
+
+                // THIS LINE WAS MISSING → NOW IT WORKS!
+                doc.head.appendChild(userScript);  // or doc.body.appendChild(userScript)
+
+                console.log("User code injected & running!");
+            };
+
+            // Fallback in case onload doesn't fire (very rare)
+            setTimeout(() => {
+                if (!iframe.contentDocument?.getElementById('custom-js')) {
+                    iframe.onload?.();
+                }
+            }, 300);
+
+
+            
+
+            if (!isSandboxMode) {
+
+                // 3. Handle Progression and Display Status
+                if (taskResult.passed) {
+                    // Display success status in the dedicated UI area
+                    //taskStatusMessage.innerHTML = `<span class="text-success fw-bold">Task Passed! Moving to next step.</span>`;
+
+                    if (currentTaskIndex < LESSON_DATA.tasks.length) {
+                        currentTaskIndex++;
+                        currentHintIndex = 0;
+                        saveProgress();
+                        updateUI();
+
+                        if (currentTaskIndex >= LESSON_DATA.tasks.length) {
+                            showCompletionModal();
+
+                        }
+                    }
+                } else {
+                    // Display failure status
+                    const msg = translate(taskResult.message_key) || taskResult.feedback;
+                    console.log(msg)
+                    //taskStatusMessage.innerHTML = `<span class="text-danger fw-bold">${translate("TASK_FAILED_HEADER")}:</span> ${msg}`;
+                }
+
+            }
+
+            return;
+        }
+
+
+        /****************************************** 
+        HANDLER: Function that handles:
+        Filetype: .ajmjs, .js
+        Mode:     ajami, javascript
+        Filename: jshtmlscript.ajmjs, jshtmlscript.js
+        Template: gamejshtml-template
+        *******************************************/
+        async function runCodeGameJSHTML(mode, code) {
+
+            // --- IMPORTANT: Reference the inner wrappers ---
+            const consoleWrapper = document.getElementById('console-output-wrapper');
+            const iframe = document.getElementById('render-iframe');
+            const taskStatusMessage = document.getElementById('task-status-message');
+
+            // 1. Synchronous Task Check
+            const activeTask = LESSON_DATA.tasks[currentTaskIndex];
+            const checkerFn = TASK_CHECKERS[mode][activeTask.checker_function];
+            const taskResult = checkerFn(code);
+            let codeToExecute = code
+
+            //switch to html display because html is in the background through the template
+            updateOutputPanelDisplayByMode('html');
+
+            //1.2 Convert vernacular to JS
+            if (typeof window.transpileAjami === 'function') {
+                try {
+                    // Assuming the transpiler function is available globally
+                    codeToExecute = await window.transpileAjami(code);
+
+                    // Display the transpiled code for debugging (optional)
+                    console.log("Ajami Transpiled to JS:", codeToExecute);
+
+                } catch (e) {
+                    // Handle transpilation errors (e.g., syntax errors in Ajami source)
+                    const errorMsg = `Ajami Transpilation Error: ${e.message}`;
+                    console.log(`<div class="text-danger fw-bold">${errorMsg}</div>`);
+                    return; // Stop execution if transpilation fails
+                }
+            } else {
+                const errorMsg = "Transpiler (window.transpileAjami) not loaded or accessible.";
+                console.log(`<div class="text-danger fw-bold">${errorMsg}</div>`);
+                return;
+            }
+
+            // 2. Render the Code in the iframe (Always render, even on failure, so user sees their mistake)
+            //const template = templateNode.innerHTML.replace(/<\/script>/g, "<\\/script>");
+
+            const template = document.getElementById("gamejshtml-template").innerHTML;
+            //let template = document.getElementById('gamejshtml-template').textContent;
+            //template = template.replace(/<\/script>/g, "<\\/script>");
+
+
+            //code = 'code= `'+codeToExecute+'`';
+
+            if (code == '') {
+
+                code = `createStory(async () => {  say("Welcome to the Temple of Puzzles!");  say("A massive stone door blocks the way.");  addTo(inventory, "gold key");  await puzzle("The door needs a GOLD key!", "item:gold key");  say("Next, a broken bridge...");  addTo(inventory, "log");  addTo(inventory, "log");  addTo(inventory, "log");  addTo(inventory, "log");  await puzzle("You need 4 logs to cross the chasm!", {item:"log", count:4});  say("Finally, the stone guardian speaks:");  await puzzle("I speak without a mouth and hear without ears. What am I?", "echo");  win("You claimed the ancient treasure! You are a legend!");});runCode();`;
+            }
+
+            // Load the full HTML into iframe
+            iframe.srcdoc = template;
+
+            // Wait for iframe to finish loading
+            iframe.onload = function () {
+                //const doc = iframeDoc;
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+
+                // Step 1: Remove any old custom script
+                const oldScript = doc.getElementById('custom-js');
+                if (oldScript) oldScript.remove();
+
+                // Step 2: Create and inject new user script
+                const userScript = doc.createElement('script');
+                userScript.id = 'custom-js';
+                userScript.type = 'text/javascript';           // Important: standard type
+                userScript.dataset.language = 'alldialects';   // Keep your custom data
+                userScript.textContent = code || '// No code yet';
+
+                // THIS LINE WAS MISSING → NOW IT WORKS!
+                doc.head.appendChild(userScript);  // or doc.body.appendChild(userScript)
+
+                console.log("User code injected & running!");
+            };
+
+            // Fallback in case onload doesn't fire (very rare)
+            setTimeout(() => {
+                if (!iframe.contentDocument?.getElementById('custom-js')) {
+                    iframe.onload?.();
+                }
+            }, 300);
+
+
+
+
+
+
+            if (!isSandboxMode) {
+
+                // 3. Handle Progression and Display Status
+                if (taskResult.passed) {
+                    // Display success status in the dedicated UI area
+                    //taskStatusMessage.innerHTML = `<span class="text-success fw-bold">Task Passed! Moving to next step.</span>`;
+
+                    if (currentTaskIndex < LESSON_DATA.tasks.length) {
+                        currentTaskIndex++;
+                        currentHintIndex = 0;
+                        saveProgress();
+                        //updateUI();
+
+                        if (currentTaskIndex >= LESSON_DATA.tasks.length) {
+                            showCompletionModal();
+
+                        }
+                    }
+                } else {
+                    // Display failure status
+                    const msg = translate(taskResult.message_key) || taskResult.feedback;
+                    console.log(msg)
+                    //taskStatusMessage.innerHTML = `<span class="text-danger fw-bold">${translate("TASK_FAILED_HEADER")}:</span> ${msg}`;
+                }
+
+            }
+
+
+
+
+            return;
+        }
+
+        ////SANDOC
+        async function runCodeSandbox() {
+            const code = window.aceEditorInstance.getValue();
+
+            // --- IMPORTANT: Reference the inner wrappers ---
+            const consoleWrapper = document.getElementById('console-output-wrapper');
+            const iframe = document.getElementById('render-iframe');
+            const taskStatusMessage = document.getElementById('task-status-message');
+
+            // Reset task status message at the start
+            if (taskStatusMessage) taskStatusMessage.innerHTML = '';
+
+            // --- UI Safety Check ---
+            // Make sure the correct panel is displayed before running (in case the user switches tabs quickly)
+            updateOutputPanelDisplay();
+
+            // Safety check for lesson data
+            if (!LESSON_DATA || !LESSON_DATA.files || !LESSON_DATA.current_file) return;
+            const activeTask = LESSON_DATA.tasks[currentTaskIndex];
+            const currentFileKey = LESSON_DATA.current_file;
+            const mode = LESSON_DATA.files[currentFileKey].mode;
+
+            console.log(activeTask)
+
+
+            if ((LESSON_DATA.current_file == 'game.js' || LESSON_DATA.current_file == 'game.ajmjs')) {
+                runCodeGameJSHTML(mode, code);
+                return;
+            } else if ((LESSON_DATA.current_file == 'jshtmlscript.js' || LESSON_DATA.current_file == 'jshtmlscript.ajmjs')) {
+                runCodeJSHTML(mode, code);
+                return;
+            }
+
+            // 1. CLEAR CONSOLE and set loading status for ALL ASYNCHRONOUS MODES
+            if (mode !== 'html' && mode !== 'css') {
+                let runnerStatusMessage = isSandboxMode ?
+                    'Running code... please wait.' :
+                    'Running code... please wait.';
+                // Clear the console's content and add the initial loading message.
+                // **CRITICAL FIX: Using consoleWrapper.innerHTML to preserve the iframe.**
+                consoleWrapper.innerHTML = `
+                    <div class="mb-2 text-white-50">${translate("OUTPUT_TITLE")}:</div>
+                    <div class="text-info fw-bold" id="runner-status">Running code... please wait.</div>
+                `;
+            }
+
+            // A. HTML/CSS: Synchronous rendering is required.
+            if (mode === 'html' || mode === 'css') {
+                //taskStatusMessage.innerHTML = `<span class="text-primary fw-bold">Code Rendered in SANDBOX MODE.</span>`;
+            } else {
+                // B. CONSOLE MODES (Python, JavaScript, Ajami, PHP, etc.): Execution is required.
+                // We MUST pass the isSandboxMode flag to the worker/server.
+
+                // Display initial Sandbox message
+                consoleWrapper.innerHTML += `<div class="text-primary fw-bold mt-2">Code running in SANDBOX MODE. Output expected below.</div>`;
+            }
+
+
+
+
+            // --- EXECUTION ROUTER ---
+
+            if (mode === 'python') {
+
+                // Worker is asynchronous - Must pass flag
+                pythonWorker.postMessage({
+                    pythonCode: code,
+                    checkerFunction: 'sandbox',
+                    isSandboxMode: true // <-- CRITICAL FLAG
+                });
+                // DO NOT RETURN: Let the function continue to ensure the worker listener fires.
+
+                // 2. Listener for Final Result from Worker
+                pythonWorker.onmessage = (event) => {
+                    const result = event.data;
+                    const statusEl = document.getElementById('runner-status');
+                    if (statusEl) statusEl.remove();
+
+                    // Display Real Python Output
+                    if (result.stdout) {
+                        consoleWrapper.innerHTML += `<pre class="text-light">${result.stdout}</pre>`;
+                    }
+                    if (result.stderr) {
+                        consoleWrapper.innerHTML += `<div class="text-danger fw-bold">Runtime Error:</div><pre class="text-danger">${result.stderr}</pre>`;
+                    }
+
+                    // --- FINAL VALIDATION CHECK (Using Worker's Result) ---
+                    const validationResult = result.validation; // This is the pass/fail object returned by Python
+
+                    if (validationResult.passed) {
+                        // Success: Task passed according to Python validation
+                        consoleWrapper.innerHTML += `<div class="text-success fw-bold">${translate(validationResult.message_key) || validationResult.feedback}</div>`;
+
+                        /*if (currentTaskIndex < LESSON_DATA.tasks.length) {
+                            currentTaskIndex++;
+                            currentHintIndex = 0;
+                            saveProgress();
+                            updateUI();
+
+                            if (currentTaskIndex >= LESSON_DATA.tasks.length) {
+                                showCompletionModal();
+                            }
+                        }*/
+                    } else if (result.error) {
+                        // If Pyodide crashed, the stderr already displayed the error message.
+                        consoleWrapper.innerHTML += `<div class="text-danger fw-bold">Execution Failed.</div>`;
+                    }
+                    else {
+                        // Task failed according to Python validation (e.g., regex mismatch)
+                        const msg = translate(validationResult.message_key) || validationResult.feedback;
+                        consoleWrapper.innerHTML += `<div class="text-danger fw-bold">${translate("TASK_FAILED_HEADER")}:</div><div class="text-warning">${msg}</div>`;
+                    }
+                };
+
+            } else if (mode === 'javascript') {
+
+                // Worker is asynchronous - Must pass flag
+                javascriptWorker.postMessage({
+                    code: code,
+                    checkerFunction: 'sandbox',
+                    isSandboxMode: true // <-- CRITICAL FLAG
+                });
+                // DO NOT RETURN: Let the function continue to ensure the worker listener fires.
+
+
+                javascriptWorker.onmessage = (event) => {
+                    const result = event.data;
+                    const statusEl = document.getElementById('runner-status');
+                    if (statusEl) statusEl.remove();
+
+                    // Display Output
+                    if (result.stdout) {
+                        consoleWrapper.innerHTML += `<pre class="text-light">${result.stdout}</pre>`;
+                    }
+
+                    // Handle Progression using Worker's Validation Result
+                    const validationResult = result.validation;
+
+                    // ... (Progression and UI update logic is identical to the Python logic) ...
+
+                    if (validationResult.passed) {
+                        consoleWrapper.innerHTML += `<div class="text-success fw-bold">${translate(validationResult.message_key) || validationResult.feedback}</div>`;
+                        /*if (currentTaskIndex < LESSON_DATA.tasks.length) {
+                            currentTaskIndex++; currentHintIndex = 0; saveProgress(); updateUI();
+                            if (currentTaskIndex >= LESSON_DATA.tasks.length) showCompletionModal();
+                        }*/
+                    } else {
+                        const msg = translate(validationResult.message_key) || validationResult.feedback;
+                        consoleWrapper.innerHTML += `<div class="text-danger fw-bold">${translate("TASK_FAILED_HEADER")}:</div><div class="text-warning">${msg}</div>`;
+                    }
+                };
+
+            } else if (mode === 'php' || mode === 'java' || mode === 'go') {
+                // Handle Backend Execution (AJAX)
+                // AJAX is asynchronous - Must pass flag
+                consoleWrapper.innerHTML += `<div class="text-info fw-bold" id="runner-status">Contacting code sandbox...</div>`;
+
+                // Note: Since runCodeOnServer is async, the whole function is logically awaiting it.
+                const serverResult = await runCodeOnServer(
+                    code,
+                    mode,
+                    'sandbox', // Use 'sandbox' instead of checker function
+                    LESSON_DATA.id,
+                    true // <-- CRITICAL FLAG
+                );
+                // DO NOT RETURN: The AJAX call awaits, so the function will finish properly.
+
+
+
+                const statusEl = document.getElementById('runner-status');
+                if (statusEl) statusEl.remove();
+
+                // Display Output
+                if (serverResult.stdout) {
+                    consoleWrapper.innerHTML += `<pre class="text-light">${serverResult.stdout}</pre>`;
+                }
+                if (serverResult.stderr) {
+                    consoleWrapper.innerHTML += `<div class="text-danger fw-bold">Runtime Error:</div><pre class="text-danger">${serverResult.stderr}</pre>`;
+                }
+
+                // --- FINAL VALIDATION CHECK (Using Server's Validation) ---
+                const validationResult = serverResult.validation;
+
+                if (validationResult.passed) {
+                    // Success: Task passed according to server validation
+                    consoleWrapper.innerHTML += `<div class="text-success fw-bold">${translate(validationResult.message_key) || validationResult.feedback}</div>`;
+                    /*
+                    if (currentTaskIndex < LESSON_DATA.tasks.length) {
+                        currentTaskIndex++; currentHintIndex = 0; saveProgress(); updateUI();
+                        if (currentTaskIndex >= LESSON_DATA.tasks.length) showCompletionModal();
+                    }*/
+                    /*if (currentTaskIndex < LESSON_DATA.tasks.length) {
+                        currentTaskIndex++;
+                        currentHintIndex = 0;
+                        saveProgress();
+                        updateUI();
+
+                        if (currentTaskIndex >= LESSON_DATA.tasks.length) {
+                            showCompletionModal();
+                        }
+                    }*/
+                } else {
+                    // Task failed according to server validation
+                    const msg = translate(validationResult.message_key) || validationResult.feedback;
+                    consoleWrapper.innerHTML += `<div class="text-danger fw-bold">${translate("TASK_FAILED_HEADER")}:</div><div class="text-warning">${msg}</div>`;
+                }
+
+            } else if (mode === 'html' || mode === 'css') {
+                // --- SYNCHRONOUS HTML EXECUTION ---
+
+                // 1. Synchronous Task Check
+                const activeTask = LESSON_DATA.tasks[currentTaskIndex];
+                const checkerFn = TASK_CHECKERS[mode][activeTask.checker_function];
+                const taskResult = checkerFn(code);
+
+                // 2. Render the Code in the iframe (Always render, even on failure, so user sees their mistake)
+                const iframeDoc = iframe.contentWindow.document;
+                /*
+                                
+                                if (iframeDoc) {
+                                    iframeDoc.open();
+                                    // Writing directly to the iframe document ensures the browser renders it immediately
+                                    iframeDoc.write(code);
+                                    //iframeDoc.srcdoc = code;
+                                    iframeDoc.close();
+                                }
+                                    */
+                iframe.src = "about:blank"; // forces a clean context
+
+                iframe.onload = () => {
+                    const iframeDoc = iframe.contentWindow.document;
+                    iframeDoc.open();
+                    iframeDoc.write(code);
+                    iframeDoc.close();
+                };
+
+                // 3. Handle Progression and Display Status
+
+
+                // Note: No output panel updates needed for stdout/stderr, only task status.
+                // CRITICAL: End the function here for synchronous modes.
+                return; // <--- ADD THIS RETURN to exit the function immediately.
+
+
+            } else if (mode === 'ajami') { // <-- NEW AJAMI LOGIC
+
+                let codeToExecute = code;
+
+
+                // CRITICAL STEP: Transpile Ajami code to JavaScript on the main thread.
+
+                if (typeof window.transpileAjami === 'function') {
+                    try {
+                        // Assuming the transpiler function is available globally
+                        codeToExecute = await window.transpileAjami(code);
+
+                        // Display the transpiled code for debugging (optional)
+                        console.log("Ajami Transpiled to JS:", codeToExecute);
+
+                    } catch (e) {
+                        // Handle transpilation errors (e.g., syntax errors in Ajami source)
+                        const errorMsg = `Ajami Transpilation Error: ${e.message}`;
+                        consoleWrapper.innerHTML += `<div class="text-danger fw-bold">${errorMsg}</div>`;
+                        return; // Stop execution if transpilation fails
+                    }
+                } else {
+                    const errorMsg = "Transpiler (window.transpileAjami) not loaded or accessible.";
+                    consoleWrapper.innerHTML += `<div class="text-danger fw-bold">${errorMsg}</div>`;
+                    return;
+                }
+
+
+                // Handle JavaScript Execution via Worker
+                javascriptWorker.postMessage({
+                    code: codeToExecute,
+                    checkerFunction: 'sandbox',
+                    isSandboxMode: true
+                });
+
+                javascriptWorker.onmessage = (event) => {
+                    const result = event.data;
+                    const statusEl = document.getElementById('runner-status');
+                    if (statusEl) statusEl.remove();
+
+                    // Display Output
+                    if (result.stdout) {
+                        consoleWrapper.innerHTML += `<pre class="text-light">${result.stdout}</pre>`;
+                    }
+
+                    // Handle Progression using Worker's Validation Result
+                    const validationResult = result.validation;
+
+                    // ... (Progression and UI update logic is identical to the Python logic) ...
+
+                    if (validationResult.passed) {
+                        consoleWrapper.innerHTML += `<div class="text-success fw-bold">${translate(validationResult.message_key) || validationResult.feedback}</div>`;
+
+                    } else {
+                        const msg = translate(validationResult.message_key) || validationResult.feedback;
+                        consoleWrapper.innerHTML += `<div class="text-danger fw-bold">${translate("TASK_FAILED_HEADER")}:</div><div class="text-warning">${msg}</div>`;
+                    }
+                };
+
+
+            } else {
+                // Fallback for non-python modes (Ajami, etc.)
+                // The synchronous execution remains here for simplicity.
+                const checkerFn = TASK_CHECKERS[mode][activeTask.checker_function];
+                const taskResult = checkerFn(code);
+
+                if (taskResult.passed) {
+                    consoleWrapper.innerHTML += `<div class="text-success fw-bold">${translate(taskResult.message_key) || taskResult.feedback}</div>`;
+
+                } else {
+                    const msg = translate(taskResult.message_key) || taskResult.feedback;
+                    consoleWrapper.innerHTML += `<div class="text-danger fw-bold">${translate("TASK_FAILED_HEADER")}:</div><div class="text-warning">${msg}</div>`;
+                }
+                return; // Add return to stop async function continuing
+            }
+        }
+        //SANDBOX
+
+
+
+        async function runCodeAndCheckTask() {
+
+
+            // ===================================================================
+            // =========== SANDBOX MODE GUARD (Placed before Execution Router) ===========
+            // ===================================================================
+            if (isSandboxMode) {
+                runCodeSandbox()
+                return; // EXIT the function after starting the asynchronous execution
+            }
+            // ===================================================================
+            // =========== END SANDBOX MODE GUARD ================================
+            // ===================================================================
+
+
+
+
+            const code = window.aceEditorInstance.getValue();
+
+            // --- IMPORTANT: Reference the inner wrappers ---
+            const consoleWrapper = document.getElementById('console-output-wrapper');
+            const iframe = document.getElementById('render-iframe');
+            const taskStatusMessage = document.getElementById('task-status-message');
+
+            // Reset task status message at the start
+            if (taskStatusMessage) taskStatusMessage.innerHTML = '';
+
+            // --- UI Safety Check ---
+            // Make sure the correct panel is displayed before running (in case the user switches tabs quickly)
+            updateOutputPanelDisplay();
+
+
+            // Safety check for lesson data
+            if (!LESSON_DATA || !LESSON_DATA.files || !LESSON_DATA.current_file) return;
+
+
+            const activeTask = LESSON_DATA.tasks[currentTaskIndex];
+            const currentFileKey = LESSON_DATA.current_file;
+            const mode = LESSON_DATA.files[currentFileKey].mode;
+
+            if ((LESSON_DATA.current_file == 'game.js' || LESSON_DATA.current_file == 'game.ajmjs')) {
+                runCodeGameJSHTML(mode, code);
+                return;
+            } else if ((LESSON_DATA.current_file == 'jshtmlscript.js' || LESSON_DATA.current_file == 'jshtmlscript.ajmjs')) {
+                runCodeJSHTML(mode, code);
+                return;
+            }
+
+
+            if (currentTaskIndex >= LESSON_DATA.tasks.length) {
+                showCompletionModal();
+                return;
+            }
+
+
+            // 1. CLEAR CONSOLE and set loading status for ALL ASYNCHRONOUS MODES
+            if (mode !== 'html' && mode !== 'css') {
+                // Clear the console's content and add the initial loading message.
+                // **CRITICAL FIX: Using consoleWrapper.innerHTML to preserve the iframe.**
+                consoleWrapper.innerHTML = `
+                    <div class="mb-2 text-white-50">${translate("OUTPUT_TITLE")}:</div>
+                    <div class="text-info fw-bold" id="runner-status">Running code... please wait.</div>
+                `;
+            }
+
+
+            // --- EXECUTION ROUTER ---
+
+            if (mode === 'python') {
+                // Handle Python Execution via Worker
+                pythonWorker.postMessage({
+                    pythonCode: code,
+                    checkerFunction: activeTask.checker_function,
+                    isSandboxMode: false // <-- Pass the flag for Lesson Mode
+                });
+
+                // 2. Listener for Final Result from Worker
+                pythonWorker.onmessage = (event) => {
+                    const result = event.data;
+                    const statusEl = document.getElementById('runner-status');
+                    if (statusEl) statusEl.remove();
+
+                    // Display Real Python Output
+                    if (result.stdout) {
+                        consoleWrapper.innerHTML += `<pre class="text-light">${result.stdout}</pre>`;
+                    }
+                    if (result.stderr) {
+                        consoleWrapper.innerHTML += `<div class="text-danger fw-bold">Runtime Error:</div><pre class="text-danger">${result.stderr}</pre>`;
+                    }
+
+                    // --- FINAL VALIDATION CHECK (Using Worker's Result) ---
+                    const validationResult = result.validation; // This is the pass/fail object returned by Python
+
+                    if (validationResult.passed) {
+                        // Success: Task passed according to Python validation
+                        consoleWrapper.innerHTML += `<div class="text-success fw-bold">${translate(validationResult.message_key) || validationResult.feedback}</div>`;
+
+                        if (currentTaskIndex < LESSON_DATA.tasks.length) {
+                            currentTaskIndex++;
+                            currentHintIndex = 0;
+                            saveProgress();
+                            updateUI();
+
+                            if (currentTaskIndex >= LESSON_DATA.tasks.length) {
+                                showCompletionModal();
+                            }
+                        }
+                    } else if (result.error) {
+                        // If Pyodide crashed, the stderr already displayed the error message.
+                        consoleWrapper.innerHTML += `<div class="text-danger fw-bold">Execution Failed.</div>`;
+                    }
+                    else {
+                        // Task failed according to Python validation (e.g., regex mismatch)
+                        const msg = translate(validationResult.message_key) || validationResult.feedback;
+                        consoleWrapper.innerHTML += `<div class="text-danger fw-bold">${translate("TASK_FAILED_HEADER")}:</div><div class="text-warning">${msg}</div>`;
+                    }
+                };
+
+            } else if (mode === 'javascript') {
+
+                // 1. Synchronous Task Check
+                const activeTask = LESSON_DATA.tasks[currentTaskIndex];
+                //const activeLessonSolutionKey = LESSON_DATA.files["script.ajmjs"].solution_content_key;    
+                const activeTaskSolutionKey = activeTask.solution_content_key;
+                const checkerFn = TASK_CHECKERS[mode][activeTask.checker_function];
+                const taskResult = checkerFn(code, activeTaskSolutionKey, CURRENT_TRANSLATIONS);
+
+
+                //console.log('mode: ', mode)
+                //console.log('task: ', activeTask.checker_function)
+
+
+                if (taskResult.passed) {
+                    /*  consoleWrapper.innerHTML += `<div class="text-success fw-bold">${translate(taskResult.message_key) || taskResult.feedback}</div>`;
+                      if (currentTaskIndex < LESSON_DATA.tasks.length) {
+                          currentTaskIndex++; currentHintIndex = 0; saveProgress(); updateUI();
+                          if (currentTaskIndex >= LESSON_DATA.tasks.length) showCompletionModal();
+                      }*/
+                } else {
+                    const msg = translate(taskResult.message_key) || taskResult.feedback;
+                    consoleWrapper.innerHTML += `<div class="text-danger fw-bold">${translate("TASK_FAILED_HEADER")}:</div><div class="text-warning">${msg}</div>`;
+                    return;
+                }
+
+                //end
+
+
+
+                // Handle JavaScript Execution via Worker
+                javascriptWorker.postMessage({
+                    code: code,
+                    checkerFunction: activeTask.checker_function,
+                    isSandboxMode: false // <-- Pass the flag for Lesson Mode
+                });
+
+                javascriptWorker.onmessage = (event) => {
+                    const result = event.data;
+                    const statusEl = document.getElementById('runner-status');
+                    if (statusEl) statusEl.remove();
+
+                    // Display Output
+                    if (result.stdout) {
+                        consoleWrapper.innerHTML += `<pre class="text-light">${result.stdout}</pre>`;
+                    }
+
+                    // Handle Progression using Worker's Validation Result
+                    const validationResult = result.validation;
+
+                    // ... (Progression and UI update logic is identical to the Python logic) ...
+
+                    if (validationResult.passed) {
+                        consoleWrapper.innerHTML += `<div class="text-success fw-bold">${translate(validationResult.message_key) || validationResult.feedback}</div>`;
+                        if (currentTaskIndex < LESSON_DATA.tasks.length) {
+                            currentTaskIndex++; currentHintIndex = 0; saveProgress(); updateUI();
+                            if (currentTaskIndex >= LESSON_DATA.tasks.length) showCompletionModal();
+                        }
+                    } else {
+                        const msg = translate(validationResult.message_key) || validationResult.feedback;
+                        consoleWrapper.innerHTML += `<div class="text-danger fw-bold">${translate("TASK_FAILED_HEADER")}:</div><div class="text-warning">${msg}</div>`;
+                    }
+                };
+
+            } else if (mode === 'php' || mode === 'java' || mode === 'go') {
+                // Handle Backend Execution (AJAX)
+                consoleWrapper.innerHTML += `<div class="text-info fw-bold" id="runner-status">Contacting code sandbox...</div>`;
+
+                // Note: Since runCodeOnServer is async, the whole function is logically awaiting it.
+                const serverResult = await runCodeOnServer(
+                    code,
+                    mode,
+                    activeTask.checker_function,
+                    LESSON_DATA.id
+                );
+
+                const statusEl = document.getElementById('runner-status');
+                if (statusEl) statusEl.remove();
+
+                // Display Output
+                if (serverResult.stdout) {
+                    consoleWrapper.innerHTML += `<pre class="text-light">${serverResult.stdout}</pre>`;
+                }
+                if (serverResult.stderr) {
+                    consoleWrapper.innerHTML += `<div class="text-danger fw-bold">Runtime Error:</div><pre class="text-danger">${serverResult.stderr}</pre>`;
+                }
+
+                // --- FINAL VALIDATION CHECK (Using Server's Validation) ---
+                const validationResult = serverResult.validation;
+
+                if (validationResult.passed) {
+                    // Success: Task passed according to server validation
+                    consoleWrapper.innerHTML += `<div class="text-success fw-bold">${translate(validationResult.message_key) || validationResult.feedback}</div>`;
+                    /*
+                    if (currentTaskIndex < LESSON_DATA.tasks.length) {
+                        currentTaskIndex++; currentHintIndex = 0; saveProgress(); updateUI();
+                        if (currentTaskIndex >= LESSON_DATA.tasks.length) showCompletionModal();
+                    }*/
+                    if (currentTaskIndex < LESSON_DATA.tasks.length) {
+                        currentTaskIndex++;
+                        currentHintIndex = 0;
+                        saveProgress();
+                        updateUI();
+
+                        if (currentTaskIndex >= LESSON_DATA.tasks.length) {
+                            showCompletionModal();
+                        }
+                    }
+                } else {
+                    // Task failed according to server validation
+                    const msg = translate(validationResult.message_key) || validationResult.feedback;
+                    consoleWrapper.innerHTML += `<div class="text-danger fw-bold">${translate("TASK_FAILED_HEADER")}:</div><div class="text-warning">${msg}</div>`;
+                }
+
+            } else if (mode === 'html' || mode === 'css') {
+                // --- SYNCHRONOUS HTML EXECUTION ---
+
+                //const iframe = document.getElementById('render-iframe');
+                //const taskStatusMessage = document.getElementById('task-status-message');
+                //const code = window.aceEditorInstance.getValue();
+
+                // 1. Synchronous Task Check
+                const activeTask = LESSON_DATA.tasks[currentTaskIndex];
+                const checkerFn = TASK_CHECKERS[mode][activeTask.checker_function];
+                const taskResult = checkerFn(code);
+
+
+                //console.log(code)
+
+                // 2. Render the Code in the iframe (Always render, even on failure, so user sees their mistake)
+                /* const iframeDoc = iframe.contentWindow.document;
+                 if (iframeDoc) {
+                     iframeDoc.open();
+                     // Writing directly to the iframe document ensures the browser renders it immediately
+                     iframeDoc.write(code);
+                     //iframeDoc.srcdoc = code;
+                     iframeDoc.close();
+                 }*/
+                iframe.src = "about:blank"; // forces a clean context
+
+                iframe.onload = () => {
+                    const iframeDoc = iframe.contentWindow.document;
+                    iframeDoc.open();
+                    iframeDoc.write(code);
+                    iframeDoc.close();
+                };
+
+                //console.log(iframeDoc);  // Should log your `code`'s body content
+
+                // 3. Handle Progression and Display Status
+                if (taskResult.passed) {
+                    // Display success status in the dedicated UI area
+                    //taskStatusMessage.innerHTML = `<span class="text-success fw-bold">Task Passed! Moving to next step.</span>`;
+
+                    if (currentTaskIndex < LESSON_DATA.tasks.length) {
+                        currentTaskIndex++;
+                        currentHintIndex = 0;
+                        saveProgress();
+                        updateUI();
+
+                        if (currentTaskIndex >= LESSON_DATA.tasks.length) {
+                            showCompletionModal();
+                        }
+                    }
+                } else {
+                    // Display failure status
+                    const msg = translate(taskResult.message_key) || taskResult.feedback;
+                    console.log(msg)
+                    //taskStatusMessage.innerHTML = `<span class="text-danger fw-bold">${translate("TASK_FAILED_HEADER")}:</span> ${msg}`;
+                }
+
+                // Note: No output panel updates needed for stdout/stderr, only task status.
+                // CRITICAL: End the function here for synchronous modes.
+                return; // <--- ADD THIS RETURN to exit the function immediately.
+
+            } else if (mode === 'ajami') { // <-- NEW AJAMI LOGIC
+
+
+                // 1. Synchronous Task Check
+                const activeTask = LESSON_DATA.tasks[currentTaskIndex];
+                //const activeLessonSolutionKey = LESSON_DATA.files["script.ajmjs"].solution_content_key;              
+                const activeTaskSolutionKey = activeTask.solution_content_key;
+                console.log('checkerFn',activeTask.checker_function)
+                const checkerFn = TASK_CHECKERS[mode][activeTask.checker_function];
+                const taskResult = checkerFn(code, activeTaskSolutionKey, CURRENT_TRANSLATIONS);
+
+                
+
+                //console.log('CURRENT_TRANSLATIONS: ', activeTaskSolution)
+                //console.log('activeTaskSolutionKey: ', activeTaskSolutionKey)
+                //console.log('CURRENT_TRANSLATIONS: ', CURRENT_TRANSLATIONS[activeTaskSolutionKey])
+
+                if (taskResult.passed) {
+                    /*  consoleWrapper.innerHTML += `<div class="text-success fw-bold">${translate(taskResult.message_key) || taskResult.feedback}</div>`;
+                      if (currentTaskIndex < LESSON_DATA.tasks.length) {
+                          currentTaskIndex++; currentHintIndex = 0; saveProgress(); updateUI();
+                          if (currentTaskIndex >= LESSON_DATA.tasks.length) showCompletionModal();
+                      }*/
+                } else {
+                    const msg = translate(taskResult.message_key) || taskResult.feedback;
+                    consoleWrapper.innerHTML += `<div class="text-danger fw-bold">${translate("TASK_FAILED_HEADER")}:</div><div class="text-warning">${msg}</div>`;
+                    return;
+                }
+
+                //end
+
+
+
+
+
+
+
+
+
+                let codeToExecute = code;
+
+                if (mode === 'ajami') {
+                    // CRITICAL STEP: Transpile Ajami code to JavaScript on the main thread.
+
+                    if (typeof window.transpileAjami === 'function') {
+                        try {
+                            // Assuming the transpiler function is available globally
+                            codeToExecute = await window.transpileAjami(code);
+
+                            // Display the transpiled code for debugging (optional)
+                            console.log("Ajami Transpiled to JS:", codeToExecute);
+
+                        } catch (e) {
+                            // Handle transpilation errors (e.g., syntax errors in Ajami source)
+                            const errorMsg = `Ajami Transpilation Error: ${e.message}`;
+                            consoleWrapper.innerHTML += `<div class="text-danger fw-bold">${errorMsg}</div>`;
+                            return; // Stop execution if transpilation fails
+                        }
+                    } else {
+                        const errorMsg = "Transpiler (window.transpileAjami) not loaded or accessible.";
+                        consoleWrapper.innerHTML += `<div class="text-danger fw-bold">${errorMsg}</div>`;
+                        return;
+                    }
+                }
+
+                // Handle JavaScript Execution via Worker
+                javascriptWorker.postMessage({
+                    code: codeToExecute,
+                    checkerFunction: activeTask.checker_function,
+                    isSandboxMode: false // <-- Pass the flag for Lesson Mode
+                });
+
+                javascriptWorker.onmessage = (event) => {
+                    const result = event.data;
+                    const statusEl = document.getElementById('runner-status');
+                    if (statusEl) statusEl.remove();
+
+                    // Display Output
+                    if (result.stdout) {
+                        consoleWrapper.innerHTML += `<pre class="text-light">${result.stdout}</pre>`;
+                    }
+
+                    // Handle Progression using Worker's Validation Result
+                    const validationResult = result.validation;
+
+                    // ... (Progression and UI update logic is identical to the Python logic) ...
+
+                    if (validationResult.passed) {
+                        consoleWrapper.innerHTML += `<div class="text-success fw-bold">${translate(validationResult.message_key) || validationResult.feedback}</div>`;
+                        if (currentTaskIndex < LESSON_DATA.tasks.length) {
+                            currentTaskIndex++; currentHintIndex = 0; saveProgress(); updateUI();
+                            if (currentTaskIndex >= LESSON_DATA.tasks.length) showCompletionModal();
+                        }
+                    } else {
+                        const msg = translate(validationResult.message_key) || validationResult.feedback;
+                        consoleWrapper.innerHTML += `<div class="text-danger fw-bold">${translate("TASK_FAILED_HEADER")}:</div><div class="text-warning">${msg}</div>`;
+                    }
+                };
+
+
+            } else {
+                // Fallback for non-python modes (Ajami, etc.)
+                // The synchronous execution remains here for simplicity.
+                const checkerFn = TASK_CHECKERS[mode][activeTask.checker_function];
+                const taskResult = checkerFn(code);
+
+                if (taskResult.passed) {
+                    consoleWrapper.innerHTML += `<div class="text-success fw-bold">${translate(taskResult.message_key) || taskResult.feedback}</div>`;
+                    if (currentTaskIndex < LESSON_DATA.tasks.length) {
+                        currentTaskIndex++; currentHintIndex = 0; saveProgress(); updateUI();
+                        if (currentTaskIndex >= LESSON_DATA.tasks.length) showCompletionModal();
+                    }
+                } else {
+                    const msg = translate(taskResult.message_key) || taskResult.feedback;
+                    consoleWrapper.innerHTML += `<div class="text-danger fw-bold">${translate("TASK_FAILED_HEADER")}:</div><div class="text-warning">${msg}</div>`;
+                }
+                return; // Add return to stop async function continuing
+            }
+        }
+
+
+
+        // ==========================================
+        // PART 7: PERSISTENCE (LOCAL STORAGE)
+        // ==========================================
+
+        function saveProgress() {
+            if (!LESSON_DATA) return;
+
+            // --- SANDBOX MODE GUARD ---
+            if (isSandboxMode) {
+                console.log("Skipping progress save: Sandbox Mode is active.");
+                return;
+            }
+            // --- END SANDBOX MODE GUARD ---
+
+            const editorContent = window.aceEditorInstance ? window.aceEditorInstance.getValue() : '';
+
+            const state = {
+                lessonId: LESSON_DATA.id,
+                taskIndex: currentTaskIndex,
+                hintIndex: currentHintIndex,
+                code: editorContent,
+                language: currentLanguage,
+                totalTasks: LESSON_DATA.tasks.length
+            };
+
+            localStorage.setItem(`codecademy_clone_${LESSON_DATA.id}`, JSON.stringify(state));
+
+        }
+
+        function loadProgress() {
+            if (!LESSON_DATA) return null;
+            const saved = localStorage.getItem(`codecademy_clone_${LESSON_DATA.id}`);
+            return saved ? JSON.parse(saved) : null;
+        }
+
+
+        // ==========================================
+        // PART 8: UTILITIES (RESET & TOOLS)
+        // ==========================================
+
+        function setEditorModeNotification() {
+            const el = document.getElementById('editor-mode');
+            if (isSandboxMode) {
+                if (el) {
+                    el.innerHTML =
+                        `<span class="badge bg-danger">${translate("EDITOR_MODE_SANDBOX")}</span>`;
+                }
+            } else {
+                el.innerHTML =
+                    `<span class="badge bg-success">${translate("EDITOR_MODE_LESSON")}</span>`;
+            }
+        }
+
+
+        /**
+ * Toggles the application between Lesson Mode and Free Practice (Sandbox) Mode.
+ */
+        window.toggleSandboxMode = function () {
+            isSandboxMode = !isSandboxMode; // Flip the state
+
+            const modeText = isSandboxMode ? "Lesson Mode" : "Free Practice Mode";
+            const statusText = isSandboxMode ? "SANDBOX MODE ACTIVE" : "LESSON MODE ACTIVE";
+            const alertIcon = isSandboxMode ? 'fa-solid fa-tools text-primary' : 'fa-solid fa-graduation-cap text-success';
+
+            // 1. Update Menu Text (Desktop and Mobile)
+            document.getElementById('sandbox-menu-text').textContent = modeText;
+            document.getElementById('sandbox-menu-text-mobile').textContent = modeText;
+
+            setEditorModeNotification();
+
+
+
+            // 2. Display a Confirmation Alert
+            /*?
+            showCustomAlert(
+                "Mode Toggled",
+                `You are now in **${statusText}**. Your progress will not be checked or saved.`,
+                alertIcon
+            );*/
+            showCustomAlert(
+                translate("MODE_TOGGLED_MESSAGE_TITLE") || "Mode Toggled",
+                translate("MODE_TOGGLED_MESSAGE") || "Enabled",
+                alertIcon // Use a success icon
+            );
+
+            // 3. Clear the console output (to remove old Pass/Fail messages)
+            const consoleWrapper = document.getElementById('console-output-wrapper');
+            if (consoleWrapper) {
+                consoleWrapper.innerHTML = `<div class="mb-2 text-white-50">Output:</div>`;
+                // Optional: Add a sandbox status message to the console
+                consoleWrapper.innerHTML += `<div class="text-primary fw-bold">${statusText}</div>`;
+            }
+
+            // 4. Update the main UI (e.g., hiding/showing the instruction panel might be necessary)
+            updateUI();
+
+            // 5. CRITICAL: Re-run the code to confirm the new mode and update the output display (especially for HTML/CSS)
+            // We run it here to immediately show the 'Sandbox Mode Active' status in the console.
+            // if(isSandboxMode){ runCodeSandbox();}else{ runCodeAndCheckTask();}
+        };
+
+        /**
+ * Executes the save logic and displays a custom alert to confirm the save.
+ */
+        window.manualSaveProgress = function () {
+            // 1. Execute the core save logic (which writes to localStorage)
+            saveProgress();
+
+            // --- SANDBOX MODE GUARD ---
+            if (isSandboxMode) {
+                console.log("Skipping progress save: Sandbox Mode is active.");
+                // 2. Display the custom confirmation alert
+                showCustomAlert(
+                    translate("SANDBOX_SAVE_PROGRESS_MESSAGE_TITLE") || "Sandbox",
+                    translate("SANDBOX_SAVE_PROGRESS_MESSAGE") || "sandbox code are temporal",
+                    alertIcon // Use a success icon
+                );
+                return;
+            }
+
+            // 2. Display the custom confirmation alert
+            showCustomAlert(
+                translate("SAVE_PROGRESS_MESSAGE_TITLE") || "Progress Saved",
+                translate("SAVE_PROGRESS_MESSAGE") || "Your code and progress state have been successfully saved.",
+                'fa-solid fa-check-circle text-success' // Use a success icon
+            );
+        };
+
+        /**
+ * Displays a custom alert modal with dynamic content, replacing the default browser alert().
+ * @param {string} title - The main title/header for the alert.
+ * @param {string} message - The message content.
+ * @param {string} [iconClass='fa-solid fa-bell'] - Optional Font Awesome class for the icon.
+ */
+        window.showCustomAlert = function (title, message, iconClass = 'fa-solid fa-bell') {
+            const modalElement = document.getElementById('genericAlertModal');
+            if (!modalElement) {
+                // Fallback to browser alert if the modal structure is missing
+                alert(`${title}: ${message}`);
+                return;
+            }
+
+            // Update content placeholders
+            document.getElementById('alertTitle').textContent = title;
+            document.getElementById('alertMessage').innerHTML = message; // Use innerHTML to allow for translated HTML/line breaks
+
+            const iconElement = document.getElementById('alertIcon');
+            // Reset all classes and apply the new ones
+            iconElement.className = `${iconClass} fa-2x`;
+
+            // Display the modal using Bootstrap's built-in methods
+            // NOTE: This assumes you have Bootstrap's JS library loaded.
+            const modal = new bootstrap.Modal(modalElement);
+            modal.show();
+        };
+
+        function typwriterForAce_(code, options = {}) {
+            const editor = window.aceEditorInstance;
+            if (!editor) {
+                console.warn("Ace editor not found");
+                return;
+            }
+
+            const {
+                speed = 0,                    // ms per char
+                humanize = true,               // random delay for realism
+                sound = false,                 // retro beep
+                cursorColor = "#0d6efd",
+                onComplete = null
+            } = options;
+
+            // Clear editor first
+            editor.setValue("", -1);
+            editor.clearSelection();
+            editor.focus();
+
+            let i = 0;
+            const text = code;
+
+            // Optional typing sound
+            const playBeep = () => {
+                if (!sound) return;
+                const ctx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.frequency.value = 800;
+                osc.type = "square";
+                gain.gain.value = 0.05;
+                osc.start();
+                osc.stop(ctx.currentTime + 0.02);
+            };
+
+            // Insert one character at a time
+            const typeNext = () => {
+                if (i < text.length) {
+                    const char = text[i];
+
+                    // Insert char at cursor
+                    editor.session.insert(editor.getCursorPosition(), char);
+
+                    playBeep();
+
+                    i++;
+
+                    const delay = speed + (humanize ? Math.random() * 40 : 0);
+                    setTimeout(typeNext, delay);
+                } else {
+                    // Done
+                    editor.clearSelection();
+                    if (onComplete) onComplete();
+                }
+            };
+
+            // Start after tiny delay
+            setTimeout(typeNext, 300);
+        }
+        function typwriterForAce(code, options = {}) {
+            const editor = window.aceEditorInstance;
+            if (!editor) {
+                console.warn("Ace editor not found");
+                return;
+            }
+
+            const {
+                speed = 45,
+                humanize = true,
+                sound = false,
+                skipMessage = "Press any key to skip…",
+                onComplete = null
+            } = options;
+
+            // ============================================================
+            // 1. THEME-AWARE CURSOR COLOR
+            // ============================================================
+            const applyCursorColor = () => {
+                const theme = editor.getTheme(); // e.g. "ace/theme/monokai"
+
+                // LIGHT THEMES → dark cursor, DARK THEMES → light cursor
+                const isDark = theme.includes("monokai") ||
+                    theme.includes("tomorrow_night") ||
+                    theme.includes("dracula") ||
+                    theme.includes("twilight");
+
+                const cursorColor = isDark ? "#ffffff" : "#000000";
+
+                // Inject CSS dynamically
+                let styleEl = document.getElementById("ace-cursor-color-style");
+                if (!styleEl) {
+                    styleEl = document.createElement("style");
+                    styleEl.id = "ace-cursor-color-style";
+                    document.head.appendChild(styleEl);
+                }
+                styleEl.textContent = `
+            .ace_cursor {
+                color: ${cursorColor} !important;
+                border-left-color: ${cursorColor} !important;
+            }
+        `;
+            };
+
+            // Apply cursor theme now & whenever theme changes
+            applyCursorColor();
+            editor.on("changeTheme", applyCursorColor);
+
+
+            // ============================================================
+            // 2. CREATE SKIP OVERLAY (blinking text)
+            // ============================================================
+            const skipOverlay = document.createElement("div");
+            skipOverlay.id = "skip-overlay";
+            skipOverlay.textContent = skipMessage;
+
+            Object.assign(skipOverlay.style, {
+                position: "absolute",
+                bottom: "12px",
+                right: "12px",
+                background: "rgba(0,0,0,0.65)",
+                color: "#fff",
+                padding: "6px 12px",
+                borderRadius: "6px",
+                fontSize: "14px",
+                fontFamily: "sans-serif",
+                zIndex: 9999,
+                pointerEvents: "none",
+                animation: "blink 1.2s infinite"
+            });
+
+            // Append overlay
+            document.body.appendChild(skipOverlay);
+
+            // Add blinking animation
+            const blinkCSS = document.createElement("style");
+            blinkCSS.textContent = `
+        @keyframes blink {
+            0% { opacity: 1; }
+            60% { opacity: 1; }
+            100% { opacity: 0.2; }
+        }
+    `;
+            document.head.appendChild(blinkCSS);
+
+
+            // ============================================================
+            // 3. TYPEWRITER LOGIC (with skip)
+            // ============================================================
+            editor.setValue("", -1);
+            editor.clearSelection();
+            editor.focus();
+
+            let i = 0;
+            const text = code;
+            let typingCanceled = false;
+            let typingTimer = null;
+
+            // ---- SOUND ----
+            const playBeep = () => {
+                if (!sound) return;
+                const ctx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.frequency.value = 900;
+                osc.type = "square";
+                gain.gain.value = 0.05;
+                osc.start();
+                osc.stop(ctx.currentTime + 0.02);
+            };
+
+            // ---- SKIP HANDLER ----
+            const skipTyping = () => {
+                if (typingCanceled) return;
+                typingCanceled = true;
+
+                if (typingTimer) clearTimeout(typingTimer);
+
+                // dump full code
+                editor.setValue(text, -1);
+                editor.clearSelection();
+
+                // remove overlay
+                skipOverlay.remove();
+
+                // stop listening
+                window.removeEventListener("keydown", skipTyping);
+
+                if (onComplete) onComplete(true);
+            };
+
+            window.addEventListener("keydown", skipTyping);
+
+
+            // ---- TYPE NEXT CHARACTER ----
+            const typeNext = () => {
+                if (typingCanceled) return;
+
+                if (i < text.length) {
+                    const char = text[i];
+                    editor.session.insert(editor.getCursorPosition(), char);
+                    playBeep();
+                    i++;
+
+                    const delay = speed + (humanize ? Math.random() * 40 : 0);
+                    typingTimer = setTimeout(typeNext, delay);
+                } else {
+                    // typing finished
+                    editor.clearSelection();
+
+                    // remove skip overlay
+                    skipOverlay.remove();
+
+                    window.removeEventListener("keydown", skipTyping);
+
+                    if (onComplete) onComplete(false);
+                }
+            };
+
+            typingTimer = setTimeout(typeNext, 300);
+        }
+
+
+        function jumpToTask(taskIndex) {
+            if (taskIndex < 0 || taskIndex >= LESSON_DATA.tasks.length) return;
+
+            currentTaskIndex = taskIndex;
+            currentHintIndex = 0;
+
+            renderTaskPanel();
+            updateCodeEditor();   // or whatever you call to refresh the challenge
+            saveProgress();
+
+            // Smooth scroll to the task
+            scrollToActiveTask();
+        }
+
+        function updateTaskProgress() {
+
+
+            const total = LESSON_DATA.tasks.length;
+            let current = 1
+            if ((currentTaskIndex + 1) < LESSON_DATA.tasks.length - 1) {
+                current = currentTaskIndex + 1;
+            }
+
+            const bar = document.getElementById('task-progress-bar');
+            const link = document.querySelector('#task-progress-text .task-jump-link');
+            const totalSpan = document.getElementById('total-tasks');
+
+            if (bar) bar.style.width = `${(current / total) * 100}%`;
+            if (totalSpan) totalSpan.textContent = total;
+
+            if (link) {
+                link.textContent = current;
+                // Update the jump target
+                link.onclick = function (e) {
+                    e.preventDefault();
+                    jumpToTask(currentTaskIndex);  // Already current? Still fine
+                };
+            }
+
+        }
+
+        /**
+ * Finds the previous lesson in COURSE_LESSONS and loads it.
+ */
+        window.loadPreviousLesson = function () {
+            // 1. Safety Check for current lesson data
+            if (!LESSON_DATA || !LESSON_DATA.id) {
+                console.error("Cannot load previous lesson: LESSON_DATA is not defined or is missing an ID.");
+                return;
+            }
+
+            const currentLessonId = LESSON_DATA.id;
+
+            // 2. Find the index of the current lesson in the global list
+            const currentIndex = COURSE_LESSONS.findIndex(lesson => lesson.id === currentLessonId);
+
+            // 3. Check if a previous lesson exists (index must be > -1 AND > 0)
+            const previousIndex = currentIndex - 1;
+
+            if (previousIndex >= 0) {
+                const previousLessonFile = COURSE_LESSONS[previousIndex].file;
+
+                // 4. Load the previous lesson using the existing function
+                loadLesson(previousLessonFile);
+
+            } else {
+                // Handle the case where the user is already on the very first lesson
+                //alert(translate("FIRST_LESSON_MESSAGE") || "You are currently viewing the first lesson in this module.");
+
+                showCustomAlert(
+                    translate("FIRST_LESSON_MESSAGE_TITLE") || "Welcome",
+                    translate("FIRST_LESSON_MESSAGE") || "You are currently viewing the first lesson in this module.",
+                )
+
+            }
+        };
+
+        function nextTask() {
+            if (currentTaskIndex < LESSON_DATA.tasks.length - 1) {
+                currentTaskIndex++;
+                currentHintIndex = 0;  // Reset hints when moving to next task
+                renderTaskPanel();
+                updateCodeEditor();  // or whatever you do
+                saveProgress();
+                scrollToActiveTask();   // ← ADD THIS LINE
+            }
+        }
+
+        function prevTask() {
+            if (currentTaskIndex > 0) {
+                currentTaskIndex--;
+                currentHintIndex = 0;
+                renderTaskPanel();
+                updateCodeEditor();
+                saveProgress();
+                scrollToActiveTask();   // ← ADD THIS LINE
+            }
+        }
+
+        function scrollToActiveTask() {
+            const activeTaskElement = document.querySelector(`.task-item[data-task-index="${currentTaskIndex}"]`);
+            if (activeTaskElement) {
+                setTimeout(() => {
+                    activeTaskElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }, 100);
+            }
+        }
+
+        function scrollToActiveTaskx() {
+            // Try multiple selectors in case of future changes
+            let target = document.querySelector(`.task-item[data-task-index="${currentTaskIndex}"]`);
+
+            // Fallback: find the hint card (since it's right after active task)
+            if (!target) {
+                target = document.getElementById('hint-card-injected');
+            }
+
+            // Final fallback: any element with active styling
+            if (!target) {
+                target = document.querySelector('.task-item .text-primary.fa-square');
+                if (target) target = target.closest('.task-item');
+            }
+
+            if (target) {
+                // Use requestAnimationFrame + small delay for perfect timing
+                requestAnimationFrame(() => {
+                    setTimeout(() => {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center',
+                            inline: 'nearest'
+                        });
+
+                        // Optional: add a subtle highlight pulse
+                        target.style.transition = 'background-color 0.6s';
+                        target.style.backgroundColor = 'rgba(13, 110, 253, 0.1)';
+                        setTimeout(() => {
+                            target.style.backgroundColor = '';
+                        }, 800);
+                    }, 50);
+                });
+            }
+        }
+
+        function resetLesson() {
+            if (!confirm("Are you sure you want to reset your code? This cannot be undone.")) return;
+
+            // 1. Clear specific key from LocalStorage
+            if (LESSON_DATA) {
+                localStorage.removeItem(`codecademy_clone_${LESSON_DATA.id}`);
+            }
+
+            // 2. Restore Initial Content
+            if (window.aceEditorInstance && LESSON_DATA) {
+                const currentFileKey = LESSON_DATA.current_file;
+                const fileData = LESSON_DATA.files[currentFileKey];
+                const initialContent = translate(fileData.initial_content_key);
+
+                window.aceEditorInstance.setValue(initialContent, -1);
+
+                // Reset State
+                currentTaskIndex = 0;
+                currentHintIndex = 0;
+
+                // Remove dirty flag
+                document.getElementById('script-tab-name').classList.remove('text-warning');
+            }
+
+            // 3. Update UI to reflect reset state
+            updateUI();
+
+            // 4. Clear Output Panel
+            //document.getElementById('output-panel').innerHTML = `<div class="mb-2 text-white-50">${translate("OUTPUT_TITLE")}:</div>`;
+            const consoleWrapper = document.getElementById('console-output-wrapper');
+            consoleWrapper.innerHTML = `
+                    <div class="mb-2 text-white-50">${translate("OUTPUT_TITLE")}:</div>
+                `;
+
+
+            // 4. Clear Output Panel (Keep this, but remove the unnecessary wrapper div if runCodeAndCheckTask handles it)
+            // NOTE: runCodeAndCheckTask will clear the consoleWrapper, but for visual reset, this is okay.
+            // However, since runCodeAndCheckTask is called right after, we can simplify this or rely on the runner.
+
+            // Simplification: Let the runner function handle the final output refresh/clear.
+
+            // 5. CRITICAL FIX: Explicitly run the code to display initial content/check task status
+            // Since runCodeAndCheckTask is async, we call it without await here, as resetLesson doesn't need to block.
+            //runCodeAndCheckTask();
+        }
+
+        function copyCodeToClipboard() {
+            if (!window.aceEditorInstance) return;
+            const code = window.aceEditorInstance.getValue();
+            navigator.clipboard.writeText(code).then(() => {
+                //alert("Code copied to clipboard!");
+                //showCustomAlert('Copy', "Code copied to clipboard!")
+
+                showCustomAlert(
+                    translate("COPY_CODE_MESSAGE_TITLE") || "Copy Code",
+                    translate("COPY_CODE_MESSAGE") || "Code copied to clipboard!",
+                )
+
+
+
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+
+        // PART 8: UTILITIES (RESTORED AJAX FUNCTION)
+
+
+        async function runCodeOnServer2(code, language, checkerFunction, lessonId) {
+            // RESTORED: This now tries to hit the real endpoint
+            const API_ENDPOINT = 'http://localhost:8080/api/run-code'; // <-- Your sandbox target
+
+            const requestBody = {
+                code: code,
+                language: language,
+                checkerFunction: checkerFunction,
+                lessonId: lessonId
+            };
+
+            try {
+                const response = await fetch(API_ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(requestBody),
+                });
+
+                if (!response.ok) {
+                    // Handle 4xx or 5xx HTTP errors from the server
+                    const errorText = await response.text();
+                    throw new Error(`Server returned HTTP status ${response.status}. Response: ${errorText.substring(0, 100)}...`);
+                }
+
+                return await response.json();
+
+            } catch (error) {
+                console.error("AJAX Execution Error:", error);
+                return {
+                    stdout: "",
+                    stderr: `Could not connect to the code sandbox. (Error: ${error.message}). You need to start the backend server.`,
+                    validation: { passed: false, message_key: "SERVER_COMMUNICATION_ERROR" }
+                };
+            }
+        }
+
+        // PART 8: UTILITIES (Add this function)
+        async function runCodeOnServer1(code, language, checkerFunction, lessonId) {
+            const API_ENDPOINT = 'http://localhost:8080/api/run-code'; // <-- REPLACE THIS WITH YOUR REAL SANDBOX URL
+
+            const requestBody = {
+                code: code,
+                language: language,
+                checkerFunction: checkerFunction,
+                lessonId: lessonId
+            };
+
+            try {
+                const response = await fetch(API_ENDPOINT, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(requestBody),
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Server returned HTTP status ${response.status}`);
+                }
+
+                return await response.json(); // Returns the {stdout, stderr, validation} object
+
+            } catch (error) {
+                console.error("AJAX Execution Error:", error);
+                return {
+                    stdout: "",
+                    stderr: `Could not connect to the code sandbox. Check API endpoint: ${error.message}`,
+                    validation: { passed: false, message_key: "SERVER_COMMUNICATION_ERROR" }
+                };
+            }
+        }
+
+        // PART 8: UTILITIES (TEMPORARY MOCK FUNCTION FOR TESTING)
+        async function runCodeOnServerx(code, language, checkerFunction, lessonId) {
+
+            // ⚠️ WARNING: MOCK API MODE ACTIVE ⚠️
+            console.warn(`[MOCK API] Running test for ${language}. No real API call made.`);
+
+            // 1. Simulate network latency (1.5 seconds)
+            await new Promise(resolve => setTimeout(resolve, 1500));
+
+            // 2. MOCK VALIDATION: We'll check if the code includes "echo" and "Hello"
+            const passesMockCheck = code.includes("echo") && code.includes("Hello");
+            const containsSyntaxError = code.includes("SyntaxError"); // Simulate an error if the user types this
+
+            if (containsSyntaxError) {
+                return {
+                    stdout: "",
+                    stderr: `PHP Fatal error: syntax error, unexpected 'SyntaxError' on line 4`,
+                    validation: { passed: false, message_key: "RUNTIME_ERROR" }
+                };
+            }
+
+            if (passesMockCheck) {
+                return {
+                    stdout: `PHP executed successfully. Output: Hello!`,
+                    stderr: "",
+                    validation: { passed: true, message_key: "CHECKER_SUCCESS" }
+                };
+            } else {
+                return {
+                    stdout: "No output produced.",
+                    stderr: "",
+                    validation: {
+                        passed: false,
+                        message_key: "PHP_ERROR_MOCK_CHECK",
+                        feedback: "The server's test runner requires you to use 'echo' and the word 'Hello'."
+                    }
+                };
+            }
+        }
+
+        // ==========================================
+        // PART 6: INITIALIZATION
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', async () => {
+
+            // --- NEW: Determine which lesson to load first (e.g., the first one) ---
+            const initialLessonFile = COURSE_LESSONS[0].file;
+
+            // 1. Load the initial lesson data and progress (Needed for ID)
+            await loadLesson(initialLessonFile);
+            if (!LESSON_DATA) return;
+
+            // 2. Check for Saved Progress
+            const savedState = loadProgress();
+
+            // 3. Determine Language (Saved > Default > Fallback)
+            if (savedState && savedState.language) {
+                currentLanguage = savedState.language;
+            } else {
+                currentLanguage = LESSON_DATA.default_language || 'en';
+            }
+
+            // 4. Load Translations
+            await loadTranslations(currentLanguage);
+
+            // 5. Restore Task Progress
+            if (savedState) {
+                currentTaskIndex = savedState.taskIndex || 0;
+                currentHintIndex = savedState.hintIndex || 0;
+            }
+
+            // 6. Init Editor
+            const currentFileKey = LESSON_DATA.current_file;
+            const fileData = LESSON_DATA.files[currentFileKey];
+            initializeAceEditor(editorElementId, fileData.mode);
+
+            // 7. Restore Code Content (Saved > Initial)
+            if (window.aceEditorInstance) {
+                if (savedState && savedState.code) {
+                    window.aceEditorInstance.setValue(savedState.code, -1);
+                    // Remove dirty flag since we just loaded saved state
+                    document.getElementById('script-tab-name').classList.remove('text-warning');
+                } else {
+                    const initialContent = translate(fileData.initial_content_key);
+                    window.aceEditorInstance.setValue(initialContent, -1);
+                }
+                window.aceEditorInstance.clearSelection();
+            }
+
+            // 8. Render UI
+            updateUI();
+
+            // --- Event Listeners ---
+            const deskRun = document.getElementById('desktop-run-btn');
+            const mobRun = document.getElementById('run-tab');
+            if (deskRun) deskRun.onclick = () => runCodeAndCheckTask();
+            if (mobRun) mobRun.onclick = () => {
+                runCodeAndCheckTask();
+                const editorPanel = document.querySelector('.panel-center');
+                editorPanel.classList.replace('d-none', 'd-flex');
+                toggleMob("editor")
+            };
+
+            // --- Tools Menu Listeners ---
+            const btnReset = document.getElementById('btn-reset-lesson');
+            const btnCopy = document.getElementById('btn-copy-code');
+            const btnCopyMobile = document.getElementById('btn-copy-code-mobile');
+
+            if (btnReset) btnReset.addEventListener('click', resetLesson);
+            if (btnCopy) btnCopy.addEventListener('click', copyCodeToClipboard);
+            if (btnCopyMobile) btnCopyMobile.addEventListener('click', copyCodeToClipboard);
+
+            // --- Footer Finish Button Listener ---
+            //const finishBtn = document.querySelector('.footer-bar .btn-fw-bold'); // Selecting by class/structure if ID is missing
+            // OR better, add id="btn-finish-lesson" to HTML and use: 
+            const finishBtn = document.getElementById('btn-finish-lesson');
+
+            if (finishBtn) {
+                finishBtn.addEventListener('click', () => {
+                    if (currentTaskIndex >= LESSON_DATA.tasks.length) {
+                        showCompletionModal();
+                    } else {
+                        // Shake effect or tooltip could go here
+                        //alert("You must complete all tasks first!");
+                        //showCustomAlert('Finish Lesson?', "You must complete all tasks first!")
+                        showCustomAlert(
+                            translate("FINISH_LESSON_MESSAGE_TITLE") || "Finish Lesson?",
+                            translate("FINISH_LESSON_MESSAGE") || "You must complete all tasks first!",
+                        )
+                    }
+                });
+            }
+
+            // Setup Language Menu
+            const langMenu = document.getElementById('language-menu');
+            if (langMenu) {
+                langMenu.innerHTML = '';
+                LESSON_DATA.available_languages.forEach(lang => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.className = 'dropdown-item';
+                    a.href = '#';
+                    a.textContent = lang.name;
+                    a.onclick = async (e) => {
+                        e.preventDefault();
+                        await loadTranslations(lang.code);
+                        saveProgress(); // Save language preference
+                        updateUI();
+                    };
+                    li.appendChild(a);
+                    langMenu.appendChild(li);
+                });
+            }
+
+            //Setup Language Menu Mobile
+            /*
+            const langMenuMobile = document.getElementById("language-menu-mobile");
+            if (langMenuMobile && LESSON_DATA?.available_languages) {
+                langMenuMobile.innerHTML = '';
+
+                LESSON_DATA.available_languages.forEach(lang => {
+                    const li = document.createElement('li');
+                    li.className = 'list-group-item';
+
+                    const a = document.createElement('a');
+                    a.href = '#';
+                    a.textContent = lang.name;
+
+                    a.onclick = async (e) => {
+                        e.preventDefault();
+                        await loadTranslations(lang.code);
+                        saveProgress();
+                        updateUI();
+                    };
+
+                    li.appendChild(a);
+                    langMenuMobile.appendChild(li);
+                });
+            }*/
+
+            const langMenuMobile = document.getElementById('language-menu-mobile');
+            // Load previously selected language (if any)
+            const activeLang = localStorage.getItem('active_language');
+
+            if (langMenuMobile && LESSON_DATA?.available_languages) {
+                langMenuMobile.innerHTML = '';
+
+                LESSON_DATA.available_languages.forEach(lang => {
+                    const li = document.createElement('li');
+                    li.className = 'list-group-item';
+
+                    // Highlight if active
+                    if (lang.code === activeLang) {
+                        li.classList.add('active');
+                    }
+
+                    const a = document.createElement('a');
+                    a.href = '#';
+                    a.textContent = lang.name;
+
+                    a.onclick = async (e) => {
+                        e.preventDefault();
+
+                        // Save selected language
+                        localStorage.setItem('codecademy_clone_active_language', lang.code);
+
+                        // Run your existing logic
+                        await loadTranslations(lang.code);
+                        saveProgress();
+                        updateUI();
+
+                        // Re-render menu so the highlight updates
+                        highlightActiveLanguage();
+                    };
+
+                    li.appendChild(a);
+                    langMenuMobile.appendChild(li);
+                });
+            }
+
+            // Helper: re-highlight active language
+            function highlightActiveLanguage() {
+                const selected = localStorage.getItem('codecademy_clone_active_language');
+
+                document.querySelectorAll('#language-menu-mobile li').forEach(li => {
+                    li.classList.remove('active');
+                    if (li.innerText.trim() === LESSON_DATA.available_languages.find(l => l.code === selected)?.name) {
+                        li.classList.add('active');
+                    }
+                });
+            }
+
+
+
+
+
+
+            // Mobile Toggle Logic
+            const tabs = { task: document.getElementById('task-tab'), output: document.getElementById('output-tab') };
+            const panels = {
+                inst: document.getElementById('instructions-panel'),
+                out: document.getElementById('output-panel'),
+                edit: document.querySelector('.panel-center')
+            };
+
+            function toggleMob(view) {
+                if (window.innerWidth >= 992) return;
+                panels.inst.classList.add('d-none');
+                panels.out.classList.add('d-none');
+                panels.edit.classList.replace('d-flex', 'd-none');
+
+                if (view === 'editor') panels.edit.classList.replace('d-none', 'd-flex');
+                if (view === 'tasks') { panels.inst.classList.remove('d-none'); panels.inst.classList.remove('col-lg-3'); panels.inst.classList.add('col-12'); }
+                if (view === 'output') { panels.out.classList.remove('d-none'); panels.out.classList.remove('col-lg-3'); panels.out.classList.add('col-12'); }
+
+                if (window.aceEditorInstance) window.aceEditorInstance.resize();
+            }
+
+            if (tabs.task) tabs.task.onclick = () => toggleMob('tasks');
+            if (tabs.output) tabs.output.onclick = () => toggleMob('output');
+
+            // Mode Selector
+            document.querySelectorAll('.dropdown-menu a[data-mode]').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    setEditorMode(e.target.getAttribute('data-mode'), e.target.textContent);
+                });
+            });
+        });
+    </script>
+
+
+    <script>
+        // --- NEW: Task Checker Functions ---
+
+        const taskCheckers = {
+            /**
+             * Checks if the user's code contains a 'for' loop and updates the 'total_price' variable.
+             * @param {string} code The user's code string.
+             * @returns {{passed: boolean, message: string}} Result object.
+             */
+            check_for_total_price_loop: function (code) {
+                // Simple checks for task T2:
+                const hasForLoop = /for\s+.*\s+in\s+.*:/s.test(code);
+                const updatesTotal = /total_price\s*\+=\s*(\w+)/s.test(code);
+
+                if (!hasForLoop) {
+                    return {
+                        passed: false,
+                        message_key: "CHECKER_ERROR_NO_FOR_LOOP",
+                        message: "Did you remember to use a `for` loop to iterate?"
+                    };
+                }
+
+                if (!updatesTotal) {
+                    return {
+                        passed: false,
+                        message_key: "CHECKER_ERROR_NO_UPDATE",
+                        message: "Make sure you update `total_price` inside the loop using `+=`."
+                    };
+                }
+
+                // If both checks pass, the task is complete!
+                return {
+                    passed: true,
+                    message_key: "CHECKER_SUCCESS",
+                    message: "Great job! You successfully calculated the total price."
+                };
+            }
+            // Add more checker functions here as you expand the course (e.g., check_for_def_keyword, check_variable_declaration)
+        };
+
+
+
+
+        // ==========================================
+        // PART X: CUSTOM
+        // ==========================================
+
+
+
+
+        function displayCode(code, element = null, language = '') {
+            const escapedCode = code
+                .trim()
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;');
+
+            // const langClass = language ? `language-${language}` : '';
+
+            // Auto-map common shortcuts
+            const langMap = { js: 'javascript', py: 'python', html: 'xml', sh: 'bash' };
+            const lang = langMap[language.toLowerCase()] || language.toLowerCase();
+            const langClass = lang ? `language-${lang}` : '';
+
+            // CRITICAL: Encode the code in a data-attribute (100% safe)
+            const safeCode = btoa(unescape(encodeURIComponent(code.trim())));
+
+            return `
+<div class="code-block position-relative mb-3 rounded overflow-hidden shadow-sm bg-dark text-light pt-4">
+  <pre class="m-0 p-3 overflow-x-auto"><code class="${langClass} hljs" style="background:transparent; padding:0; white-space:pre-wrap; word-break:break-all;">${escapedCode}</code></pre>
+  
+  <button type="button" class="copy-btn btn btn-sm position-absolute top-0 end-0 m-2 px-3 py-1 rounded bg-light"
+          data-code="${safeCode}">
+    Copy
+  </button>
+</div>`;
+        }
+
+
+
+        // Put this at the end of your script, after all code blocks are rendered
+        document.addEventListener('click', function (e) {
+            if (e.target && e.target.classList.contains('copy-btn')) {
+                const encoded = e.target.getAttribute('data-code');
+                const code = decodeURIComponent(escape(atob(encoded)));
+
+                navigator.clipboard.writeText(code).then(() => {
+                    e.target.textContent = 'Copied!';
+                    e.target.style.backgroundColor = '#28a745';
+                    e.target.style.color = 'white';
+                    setTimeout(() => {
+                        e.target.textContent = 'Copy';
+                        e.target.style.backgroundColor = '';
+                        e.target.style.color = '';
+                    }, 2000);
+                }).catch(() => {
+                    e.target.textContent = 'Failed';
+                    setTimeout(() => e.target.textContent = 'Copy', 2000);
+                });
+            }
+        });
+
+        function displayCodex(code, element = null, language = '') {
+            // Resolve target element
+            let container;
+            if (typeof element === 'string') {
+                container = document.querySelector(element);
+            } else if (element instanceof HTMLElement) {
+                container = element;
+            }
+
+            // If no valid element found or provided → create one and append to body
+            if (!container) {
+                container = document.createElement('div');
+                document.body.appendChild(container);
+                console.warn('No element provided/found. Appended code block to <body>.');
+            }
+
+            // Create the code block structure
+            const codeBlock = document.createElement('div');
+            codeBlock.className = 'code-block';
+
+            const pre = document.createElement('pre');
+            const codeEl = document.createElement('code');
+
+            // Optional: force language class if provided (e.g. 'javascript', 'php', 'python')
+            const langClass = language ? `language-${language}` : '';
+            codeEl.className = langClass || 'hljs'; // hljs enables auto-detection
+
+            codeEl.textContent = code.trim();
+
+            pre.appendChild(codeEl);
+            codeBlock.appendChild(pre);
+
+            // Copy button
+            const copyBtn = document.createElement('button');
+            copyBtn.textContent = 'Copy';
+            copyBtn.className = 'copy-btn';
+            copyBtn.type = 'button';
+
+            copyBtn.onclick = async () => {
+                try {
+                    await navigator.clipboard.writeText(code.trim());
+                    copyBtn.textContent = 'Copied!';
+                    copyBtn.classList.add('copied');
+                    setTimeout(() => {
+                        copyBtn.textContent = 'Copy';
+                        copyBtn.classList.remove('copied');
+                    }, 2000);
+                } catch (err) {
+                    copyBtn.textContent = 'Failed';
+                    setTimeout(() => copyBtn.textContent = 'Copy', 2000);
+                }
+            };
+
+            codeBlock.appendChild(copyBtn);
+            container.appendChild(codeBlock);
+
+            // Highlight the code (auto-detect if no language specified)
+            hljs.highlightElement(codeEl);
+        }
+
+// ================ USAGE EXAMPLES ================
+
+// Example 1: With target element + explicit language
+/*
+displayCode(`
+let total = price * plates;
+console.log(total);
+`, '#my-code', 'javascript');
+
+// Example 2: Auto-detect, no element → auto-appends to body
+displayCode(`<?php
+/*
+echo "Hello World";
+for($i=0; $i<5; $i++) {
+    echo $i;
+}*/
+?> `, null, 'php');
+
+// Example 3: Python code
+displayCode(`def greet(name):
+        return f"Hello, {name}!"
+
+        print(greet("World"))
+`, document.body, 'python');
+*/
+    </script>
+
+
+<!-- 
+TEMPLATE
+Filetype: .js, ajmjs
+Filename: game.js, game.ajmjs
+Function: runcodeGameJSHTML
+-->
+<template id="gamejshtml-template">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Labari — Code Your Story</title>
+    <style>
+        :root {
+            --paper: #faf8ef;
+            --ink: #333;
+            --accent: #d4a017;
+            --forest: #2d5016;
+            --castle: #8B4513;
+            --space: #1a1a2e;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, serif;
+            background: linear-gradient(135deg, #8B5A2B, #3E1B0D);
+            color: var(--ink);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background 1s ease;
+        }
+
+        body.forest {
+            background: linear-gradient(135deg, var(--forest), #4a7c59);
+        }
+
+        body.castle {
+            background: linear-gradient(135deg, var(--castle), #654321);
+        }
+
+        body.space {
+            background: linear-gradient(135deg, var(--space), #16213e);
+            color: #ddd;
+        }
+
+        #output {
+            flex: 1;
+            background: var(--paper);
+            padding: 2rem 1.5rem;
+            overflow-y: auto;
+            line-height: 1.7;
+            font-size: 1.2rem;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="#faf8ef"/><path d="M0,50 Q25,30 50,50 T100,50 L100,100 L0,100 Z" fill="#e8e1d1" opacity="0.3"/></svg>');
+            transition: background 1s ease;
+        }
+
+        body.space #output {
+            background: #16213e;
+            color: #e0e0e0;
+            background-image: none;
+        }
+
+        #output p {
+            margin: 0.8em 0;
+            animation: fadein 0.6s;
+        }
+
+        #input-area {
+            display: none;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.8);
+            flex-direction: row;
+            justify-content: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 5;
+        }
+
+        #input-area input,
+        #input-area button {
+            font-size: 1.1rem;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #input-area input {
+            flex: 1;
+            max-width: 70%;
+            margin-right: 0.5rem;
+        }
+
+        #input-area button {
+            background: var(--accent);
+            color: white;
+            cursor: pointer;
+        }
+
+        #choices {
+            padding: 1rem;
+            display: grid;
+            gap: 0.8rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            position: relative;
+            z-index: 20;
+            margin-bottom: 80px;
+        }
+
+        .choice-btn {
+            padding: 1rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .choice-btn:hover {
+            transform: scale(1.05);
+            background: #b8860b;
+        }
+
+        .choice-btn.danger {
+            background: #dc3545;
+        }
+
+        .choice-btn.danger:hover {
+            background: #c82333;
+        }
+
+        .choice-btn.safe {
+            background: #28a745;
+        }
+
+        .choice-btn.safe:hover {
+            background: #218838;
+        }
+
+
+        #header {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 1rem;
+            text-align: center;
+            color: #f4c95d;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .btn {
+            background: #f4c95d;
+            color: #333;
+            border: none;
+            padding: 0.8rem 1.2rem;
+            margin: 0.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        .image {
+            max-width: 100%;
+            border-radius: 12px;
+            margin: 1rem 0;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        #play-again {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 1rem 2rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: none;
+            z-index: 20;
+        }
+
+        #status {
+            position: fixed;
+            top: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: #f4c95d;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="forest">
+    <div id="header">Labari</div>
+    <div id="status">Gold: 0 | Health: 100 | Inventory: —</div>
+    <div id="output"></div><div id="debug"></div>
+    <div id="input-area">
+        <input type="text" id="user-input" placeholder="Type your answer..." autocomplete="off" />
+        <button onclick="submitInput()">Send</button>
+    </div>
+    <div id="choices"></div>
+    <button id="play-again" onclick="runCode()">Play Again</button>
+
+    <script>
+        // === v1.5 STATE & HELPERS (100% optional, zero breakage) ===
+        window.labari = window.labari || { gold: 0, health: 100, inventory: [] };
+        let gold = 0, health = 100, inventory = [];
+        const status = document.getElementById('status');
+
+        let code = '';
+
+        function updateStatus() {
+            status.textContent = `Gold: ${gold} | Health: ${health} | Inventory: ${inventory.length ? inventory.join(", ") : "—"}`;
+        }
+
+        function add(amount) { gold += amount; updateStatus(); say(`+${amount} gold! Total: ${gold}`); }
+        function subtract(amount) { health -= amount; updateStatus(); say(`-${amount} health! (${health} left)`); if (health <= 0) die("You have fallen..."); }
+
+        function addTo(list, item) {
+            if (list === inventory) {
+                console.log("addTo called with:", item);
+                console.log("Before push, inventory:", inventory);
+                inventory.push(item);
+                updateStatus();
+                console.log("After push, inventory:", inventory);
+            }
+        }
+
+        function has(item) {
+            console.log("has() called for:", item);
+            console.log("Current inventory in has():", inventory);
+            const result = inventory.includes(item);
+            console.log("has() result:", result);
+            return result;
+        }
+
+
+        function die(msg = "Game Over") { say(`Death: ${msg}`); }
+        function win(msg = "Victory!") { say(`Victory: ${msg}`); }
+        // === FIXED PUZZLE MODE v1.6 — waits properly now! ===
+        async function puzzle(description, requirement) {
+            say(description);
+
+            // Case 1: Need a specific item → "item:gold key"
+            if (typeof requirement === "string" && requirement.startsWith("item:")) {
+                const needed = requirement.slice(5).trim();
+
+                while (!has(needed)) {
+                    say(`(You need: "${needed}" to pass)`);
+                    const choice = await choose("Search for " + needed, "Try anyway");
+                    if (choice.includes("Try anyway")) {
+                        say("It doesn't work without the " + needed + "...");
+                    }
+                }
+                say(`The ${needed} fits perfectly! The way opens.`);
+            }
+
+            // Case 2: Need X of something → {item:"log", count:4}
+            else if (requirement && requirement.item && requirement.count) {
+                const item = requirement.item;
+                const needed = requirement.count;
+                let current = inventory.filter(i => i === item).length;
+
+                while (current < needed) {
+                    say(`(You need ${needed} × ${item} — you have only ${current})`);
+                    await choose("Look for more " + item + "s", "Try anyway");
+                    current = inventory.filter(i => i === item).length;
+                }
+
+                // Auto-remove the used items
+                for (let i = 0; i < needed; i++) {
+                    const idx = inventory.indexOf(item);
+                    if (idx > -1) inventory.splice(idx, 1);
+                }
+                updateStatus();
+                say(`You used ${needed} × ${item}. It works!`);
+            }
+
+            // Case 3: Riddle / password → just a string like "echo"
+            else if (typeof requirement === "string") {
+                let answer;
+                do {
+                    answer = await ask("Your answer?");
+                    if (!answer.toLowerCase().includes(requirement.toLowerCase())) {
+                        say("Wrong! Try again...");
+                    }
+                } while (!answer.toLowerCase().includes(requirement.toLowerCase()));
+                say("Correct! The guardian steps aside.");
+            }
+        }
+
+        // === ORIGINAL v1 CODE (unchanged) ===
+        const output = document.getElementById('output');
+        const inputArea = document.getElementById('input-area');
+        const userInput = document.getElementById('user-input');
+        const choicesDiv = document.getElementById('choices');
+        const playAgainBtn = document.getElementById('play-again');
+        let resolveInput;
+
+        function say(text) {
+            const p = document.createElement('p');
+            p.innerHTML = text.replace(/\n/g, '<br>');
+            output.appendChild(p);
+            output.scrollTop = output.scrollHeight;
+        }
+        function image(url) {
+            const img = document.createElement('img');
+            img.src = url; img.className = "image";
+            img.onerror = () => say("[Image failed to load]");
+            output.appendChild(img);
+            output.scrollTop = output.scrollHeight;
+        }
+        function sound(url) { new Audio(url).play().catch(() => { }); }
+
+        async function ask(question) {
+            say(question);
+            inputArea.style.display = "flex";
+            userInput.focus();
+            return new Promise(res => {
+                window.resolveInput = val => {
+                    inputArea.style.display = "none";
+                    userInput.value = "";
+                    res(val);
+                };
+            });
+        }
+
+        async function choose(...options) {
+            return new Promise(res => {
+                choicesDiv.innerHTML = "";
+                options.forEach(opt => {
+                    const btn = document.createElement('button');
+                    btn.className = "choice-btn";
+                    if (opt.includes("Fight") || opt.includes("Shoot")) btn.classList.add('danger');
+                    if (opt.includes("Wave") || opt.includes("Talk")) btn.classList.add('safe');
+                    btn.textContent = opt;
+                    btn.onclick = () => {
+                        choicesDiv.innerHTML = "";
+                        res(opt);
+                    };
+                    choicesDiv.appendChild(btn);
+                });
+            });
+        }
+
+        function clear() { output.innerHTML = ""; }
+        function wait(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+        async function createStory(fn) {
+            playAgainBtn.style.display = 'none';
+            clear();
+            gold = 0; health = 100; inventory.length = 0; updateStatus();  // ← THIS IS THE KEY //inventory = []; updateStatus();
+            try { await fn(); }
+            catch (e) { say("Story error: " + e.message); }
+            finally { playAgainBtn.style.display = 'block'; }
+        }
+
+        function submitInput() { if (window.resolveInput) window.resolveInput(userInput.value); }
+        userInput.addEventListener("keydown", e => { if (e.key === "Enter") submitInput(); });
+
+        function toggleEditor() {
+            const ed = document.getElementById('editor');
+            ed.style.display = ed.style.display === "flex" ? "none" : "flex";
+        }
+
+        function runCode() {
+            clear();
+            choicesDiv.innerHTML = "";
+            const func = new Function('say', 'ask', 'choose', 'image', 'sound', 'clear', 'wait', 'createStory', 'add', 'subtract', 'addTo', 'has', 'die', 'win', 'inventory', 'gold', 'health', 'puzzle', code);
+            func(say, ask, choose, image, sound, clear, wait, createStory, add, subtract, addTo, has, die, win, inventory, () => gold, () => health, puzzle);
+
+            document.getElementById('debug').textContent='Playing...'
+        }
+
+        function saveAndShare() {
+            const code = btoa(encodeURIComponent(document.getElementById('code').value));
+            const url = location.origin + location.pathname + "?s=" + code;
+            navigator.clipboard.writeText(url).then(() => {
+                alert("Link copied!\n" + url);
+            });
+        }
+
+        function loadExample(which) {
+            const examples = {
+                pirate: `createStory(async () => { say("Ahoy! Captain " + await ask("Name?")); add(50); let c = await choose("Raid","Treasure","Tavern"); if(c==="Raid") add(100); win("Rich pirate!"); });`,
+                space: `createStory(async () => { document.body.className='space'; say("Astronaut " + await ask("Name?")); subtract(20); await choose("Signal","Hide"); win("Space legend!"); });`,
+                treasure: `createStory(async () => { add(10); addTo(inventory,"torch"); let door = await choose("Wooden door","Iron door"); if(door.includes("Iron") && has("torch")) { add(500); win("Treasure!"); } else die("Darkness claims you!"); });`,
+                dungeon: `createStory(async () => {
+  health = 100; gold = 0; inventory = [];
+  say("Welcome to the endless dungeon...");
+  while (health > 0) {
+    say("Health: " + health + " | Gold: " + gold);
+    let act = await choose("Fight goblin (-25 HP, +15 gold)", "Open chest (+30 gold)", "Rest (+30 HP)", "Flee");
+    if (act.includes("Flee")) { win("You escaped with " + gold + " gold!"); return; }
+    if (act.includes("goblin")) { subtract(25); add(15); }
+    else if (act.includes("chest")) add(30);
+    else if (act.includes("Rest")) { health = Math.min(100, health + 30); say("You feel stronger."); }
+  }
+  die("The dungeon wins again...");
+});`,
+                puzzleExample: `createStory(async () => {
+  say("Welcome to the Temple of Puzzles!");
+  say("A massive stone door blocks the way.");
+  addTo(inventory, "gold key");
+  await puzzle("The door needs a GOLD key!", "item:gold key");
+
+  say("Next, a broken bridge...");
+  addTo(inventory, "log");
+  addTo(inventory, "log");
+  addTo(inventory, "log");
+  addTo(inventory, "log");
+  await puzzle("You need 4 logs to cross the chasm!", {item:"log", count:4});
+
+  say("Finally, the stone guardian speaks:");
+  await puzzle("I speak without a mouth and hear without ears. What am I?", "echo");
+
+  win("You claimed the ancient treasure! You are a legend!");
+});`
+            };
+            document.getElementById('code').value = examples[which] || examples.treasure;
+            runCode();
+        }
+
+        // Load shared or run default
+        const params = new URLSearchParams(location.search);
+        if (params.has('s')) {
+            try {
+                //document.getElementById('code').value = decodeURIComponent(atob(params.get('s')));
+                runCode();
+            } catch (e) { alert("Could not load shared story"); }
+        } else {
+            runCode();
+        }
+    </script>
+</body>
+
+</html>
+
+</template>
+
+
+
+<!-- 
+TEMPLATE
+Filetype: .js, ajmjs
+Filename: jshtmlscript.js, jshtmlscript.ajmjs
+Function: runcodeJSHTML
+-->
+
+<!-- blank html -->
+<template id="jshtml-template" type="text/html">
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style></style>
+    </head>
+    <body>
+<script src="https://dialect-script.github.io/core/src/core/transpiler.js" type="module"></script>
+        <!-- Custom Script Placeholder -->
+    <script src="js-extensions.js"></script>
+    </body>
+    </html>
+    </template>
+
+
+
+<!-- this one with existing elements works -->
+<script id="jshtml-template1" type="text/html">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Da Aka Rubuta Da HTML CSS & AjamiScript</title>
+    <style>
+        /* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e3eb;
+}
+.container {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 10px 20px 20px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+.display {
+  height: 80px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: right;
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #000e1a;
+  pointer-events: none;
+}
+.buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.buttons button {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #eee;
+}
+.buttons button:active {
+  transform: scale(0.99);
+}
+.operator {
+  color: #2f9fff;
+}
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <input type="text" class="display" />
+
+      <div class="buttons">
+        <button class="operator" data-value="AC">AC</button>
+        <button class="operator" data-value="DEL">DEL</button>
+        <button class="operator" data-value="%">%</button>
+        <button class="operator" data-value="/">/</button>
+
+        <button data-value="7">7</button>
+        <button data-value="8">8</button>
+        <button data-value="9">9</button>
+        <button class="operator" data-value="*">*</button>
+
+        <button data-value="4">4</button>
+        <button data-value="5">5</button>
+        <button data-value="6">6</button>
+        <button class="operator" data-value="-">-</button>
+
+        <button data-value="1">1</button>
+        <button data-value="2">2</button>
+        <button data-value="3">3</button>
+        <button class="operator" data-value="+">+</button>
+
+        <button data-value="0">0</button>
+        <button data-value="00">00</button>
+        <button data-value=".">.</button>
+        <button class="operator" data-value="=">=</button>
+      </div>
+    </div>
+
+    <!-- Custom Script Placeholder -->
+    <script src="https://dialect-script.github.io/core/src/core/transpiler.js" type="module"></script>
+</body>
+
+</html>
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

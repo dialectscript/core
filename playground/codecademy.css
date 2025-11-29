@@ -1,0 +1,328 @@
+/* ============================================================
+   CODECADEMY DARK THEME — DROP-IN OVERRIDE
+   No HTML edits needed. No added classes. Global overrides only.
+   ============================================================ */
+
+/* ----------------------------
+   1. BASE COLOR VARIABLES
+----------------------------- */
+:root {
+    --cc-bg: #0a0f24;
+    --cc-sidebar: #0d122b;
+    --cc-editor-bg: #0a0f24;
+    --cc-terminal-bg: #0a0f24;
+
+    --cc-text: #e6edf3;
+    --cc-comment: #64748b;
+
+    --cc-keyword: #a78bfa;     /* purple */
+    --cc-string: #4ade80;      /* green */
+    --cc-constant: #60a5fa;    /* soft blue */
+    --cc-function: #38bdf8;    /* cyan */
+
+    --cc-selection: rgba(56, 189, 248, 0.25); /* translucent cyan */
+    --cc-border: #1e293b;
+}
+
+/* ----------------------------
+   2. BODY
+----------------------------- */
+body {
+    background: var(--cc-bg) !important;
+    color: var(--cc-text) !important;
+    overflow: hidden;
+}
+
+/* ----------------------------
+   3. LEFT PANEL (Instructions / Sidebar)
+----------------------------- */
+.panel-left {
+    background: var(--cc-sidebar) !important;
+    color: var(--cc-text) !important;
+    border-right: 1px solid var(--cc-border) !important;
+}
+
+.panel-left .card,
+.panel-left .list-group-item {
+    background: var(--cc-sidebar) !important;
+    color: var(--cc-text) !important;
+    border-color: var(--cc-border) !important;
+}
+
+.panel-left .card-header {
+    background: var(--cc-sidebar) !important;
+    border-color: var(--cc-border) !important;
+}
+
+/* Hint card */
+.hint-card {
+    background: #11172f !important;
+    border-color: var(--cc-function) !important;
+}
+
+/* ----------------------------
+   4. CENTER PANEL (Editor)
+----------------------------- */
+.panel-center {
+    background: var(--cc-editor-bg) !important;
+    color: var(--cc-text) !important;
+}
+
+/* Editor top bar */
+.panel-center .bg-dark,
+.panel-center .border-bottom {
+    background: #0d122b !important;
+    border-color: var(--cc-border) !important;
+}
+
+/* Status bar */
+#statusBar {
+    background: #0d122b !important;
+    color: var(--cc-text) !important;
+}
+
+/* ----------------------------
+   5. RIGHT PANEL (Terminal)
+----------------------------- */
+.panel-right {
+    background: var(--cc-terminal-bg) !important;
+    border-left: 1px solid var(--cc-border) !important;
+    color: var(--cc-text) !important;
+}
+
+/* ----------------------------
+   6. FOOTER / MOBILE BAR
+----------------------------- */
+.footer-bar {
+    background: #0d122b !important;
+    color: var(--cc-text) !important;
+}
+
+.footer-bar button {
+    background: #1e293b !important;
+    color: var(--cc-text) !important;
+    border: none !important;
+}
+
+/* ----------------------------
+   7. NAVBAR
+----------------------------- */
+.navbar {
+    background: #0d122b !important;
+    border-bottom: 1px solid var(--cc-border) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .text-white {
+    color: var(--cc-text) !important;
+}
+
+.navbar .btn-outline-light {
+    border-color: var(--cc-border) !important;
+    color: var(--cc-text) !important;
+}
+
+.btn-round {
+    background: #1e293b !important;
+    color: var(--cc-text) !important;
+}
+
+/* ----------------------------
+   8. BUTTONS
+----------------------------- */
+.btn,
+button {
+    border-radius: 4px !important;
+    background: #1e293b !important;
+    color: var(--cc-text) !important;
+    border: 1px solid var(--cc-border) !important;
+}
+
+.btn:hover {
+    background: #334155 !important;
+}
+
+/* Run / Save buttons */
+#desktop-run-btn,
+#run-tab,
+button[onclick="manualSaveProgress()"] {
+    background: var(--cc-function) !important;
+    color: var(--cc-bg) !important;
+}
+
+/* ----------------------------
+   9. ACE EDITOR
+----------------------------- */
+#main_codeeditor,
+.ace_editor,
+.ace_gutter {
+    background: var(--cc-editor-bg) !important;
+    color: var(--cc-text) !important;
+}
+
+.ace_gutter {
+    background: #0d122b !important;
+    color: var(--cc-comment) !important;
+}
+
+.ace_gutter-active-line {
+    background: rgba(255,255,255,0.05) !important;
+}
+
+.ace_active-line {
+    background: var(--cc-selection) !important;
+}
+
+.ace_cursor {
+    color: var(--cc-text) !important;
+}
+
+.ace_marker-layer .ace_selection {
+    background: var(--cc-selection) !important;
+}
+
+.ace_keyword {
+    color: var(--cc-keyword) !important;
+}
+
+.ace_string {
+    color: var(--cc-string) !important;
+}
+
+.ace_constant,
+.ace_numeric {
+    color: var(--cc-constant) !important;
+}
+
+.ace_variable {
+    color: var(--cc-text) !important;
+}
+
+.ace_comment {
+    color: var(--cc-comment) !important;
+}
+
+.ace_support.ace_function {
+    color: var(--cc-function) !important;
+}
+
+/* ----------------------------
+   10. Highlight.js
+----------------------------- */
+.code-block {
+    background: var(--cc-editor-bg) !important;
+    border: 1px solid var(--cc-border) !important;
+}
+
+.code-block pre {
+    background: var(--cc-editor-bg) !important;
+    color: var(--cc-text) !important;
+}
+
+/* Copy button */
+.copy-btn {
+    background: #1e293b !important;
+    color: var(--cc-text) !important;
+}
+
+.copy-btn:hover {
+    background: var(--cc-function) !important;
+    color: var(--cc-bg) !important;
+}
+
+/* ----------------------------
+   11. LIST GROUPS / DROPDOWNS / CARDS
+----------------------------- */
+.list-group-item {
+    background: #0d122b !important;
+    color: var(--cc-text) !important;
+    border-color: var(--cc-border) !important;
+}
+
+.dropdown-menu {
+    background: #0d122b !important;
+    border-color: var(--cc-border) !important;
+}
+
+.dropdown-item {
+    color: var(--cc-text) !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item.active {
+    background: #1e293b !important;
+}
+
+/* ----------------------------
+   12. Offcanvas
+----------------------------- */
+.offcanvas {
+    background: #0d122b !important;
+    color: var(--cc-text) !important;
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid var(--cc-border) !important;
+}
+
+/* ----------------------------
+   13. Modals
+----------------------------- */
+.modal-content {
+    background: var(--cc-bg) !important;
+    color: var(--cc-text) !important;
+    border-color: var(--cc-border) !important;
+}
+
+.modal .btn-outline-secondary {
+    border-color: var(--cc-border) !important;
+    color: var(--cc-text) !important;
+}
+
+/* ----------------------------
+   14. SCROLLBARS
+----------------------------- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #334155 !important;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #0a0f24 !important;
+}
+
+.text-dark {
+    color: #cbd5e1 !important;
+}
+
+.bg-light {
+    color: #0a0f24 !important;
+}
+
+/* ----------------------------
+   15. PRE FORMAT FIXES
+----------------------------- */
+pre {
+    display: block;
+    margin: 0 0 1rem 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+    max-width: 100%;
+    font-size: .875em;
+    padding: 8px;
+}
+
+/* Perfect circular buttons */
+.btn-round {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+}

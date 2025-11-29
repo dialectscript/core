@@ -1,0 +1,34 @@
+{
+    "id": "html_sandbox",
+    "title_key": "HTML_SANDBOX_TITLE",
+    "description_key": "HTML_SANDBOX_DESC",
+    "current_file": "index.html",
+    "file_type": "html",
+    "isSandboxMode": true,
+    "default_language": "en",
+    "available_languages": [
+        { "code": "en", "name": "English" },
+        { "code": "ar", "name": "العربية" },
+        { "code": "ha", "name": "Hausa" }
+    ],
+    "files": {
+        "index.html": {
+            "mode": "html",
+            "initial_content_key": "HTML_SANDBOX_TASK_INITIAL",
+            "solution_content_key": "HTML_SANDBOX_TASK_SOLUTION"
+        }
+    },
+    "tasks": [
+        {
+            "id": "HTML_SANDBOX_TASK",
+            "title_key": "HTML_SANDBOX_TASK_TITLE",
+            "description_key": "HTML_SANDBOX_TASK_DESC",
+            "initial_content_key": "HTML_SANDBOX_TASK_INITIAL",
+      "solution_content_key": "HTML_SANDBOX_TASK_SOLUTION",
+            "checker_function": "sandbox",
+             "hints": [
+        { "text_key": "HTML_SANDBOX_TASK_HINT_1" }
+      ]
+        }
+    ]
+}

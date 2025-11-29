@@ -1,0 +1,72 @@
+{
+  "LESSON_TITLE": "أساسيات بايثون: التكرار (Looping)",
+  "LESSON_DESC": "تعلم كيفية التكرار على القوائم.",
+  
+  "T1_TITLE": "تعريف القائمة",
+  "T1_DESC": "المهمة 1: أنشئ قائمة أو اكتب 10 أحرف على الأقل لتجتاز هذا الفحص التجريبي.",
+  "T1_HINT_1": "فقط اكتب بعض الأكواد في المحرر!",
+  
+  "T2_TITLE": "إنشاء الحلقة",
+  "T2_DESC": "المهمة 2: اكتب حلقة `for` لاجتياز قائمة `prices`.",
+  "T2_HINT_1": "تذكر الصيغة: for x in list:",
+  "T2_HINT_2": "لا تنسَ النقطتين في نهاية السطر.",
+  "T2_CODE": "prices = [10, 20, 30]\ntotal = 0\n# Write loop here",
+  
+  "UI_TASKS_TITLE": "المهام",
+  "UI_COMPLETION_STATUS": "0/2 مكتمل",
+  
+  "TASK_FAILED_HEADER": "فشلت المهمة",
+  "CHECKER_ERROR_NO_FOR_LOOP": "هل تذكرت كتابة حلقة 'for'؟",
+  "CHECKER_ERROR_NO_UPDATE": "قم بتحديث المتغير total.",
+  "CHECKER_SUCCESS": "عمل رائع! المهمة نجحت.",
+  "OUTPUT_TITLE": "مخرجات الـ Console",
+  
+  "NAV_TITLE": "دورة بايثون",
+  "LANG_EN": "الإنجليزية",
+  "LANG_HA": "الهوسا",
+  "LANG_AR": "العربية",
+
+  
+  "LESSON2_TITLE": "مدخل إلى جافاسكربت: طباعة النص في الكونسول",
+  "LESSON2_DESC": "تعلم كيفية طباعة الرسائل في الكونسول باستخدام لغة جافاسكربت.",
+  "LESSON2_INITIAL_CODE": "// اكتب كود جافاسكربت هنا\nconsole.log('مرحبا، ');",
+  "LESSON2_SOLUTION": "console.log('مرحبا، العالم!');",
+  "JS_TASK1_TITLE": "المهمة 1: اطبع رسالة",
+  "JS_TASK1_DESC": "استخدم الأمر 'console.log()' لطباعة العبارة الكاملة 'مرحبا، العالم!' في كونسول الإخراج.",
+  "JS_HINT1_1": "في جافاسكربت، الأمر المستخدم لعرض النصوص هو 'console.log()'.",
+  "JS_HINT1_2": "تذكر أن تنهي جملتك بفاصلة منقوطة (;).",
+  "RUNTIME_ERROR": "فشل تنفيذ كود جافاسكربت الخاص بك بسبب خطأ في الصياغة أو أثناء التنفيذ.",
+
+
+
+  "LESSON3_TITLE": "PHP من جانب الخادم: الإخراج الأساسي",
+  "LESSON3_DESC": "يتم تشغيل كود PHP على الخادم. استخدم الأمر 'echo' لإخراج النصوص.",
+  "LESSON3_INITIAL_CODE": "<?php\n\n?>",
+  "LESSON3_SOLUTION": "<?php\necho 'مرحباً بالعالم!';\n?>",
+  "PHP_TASK1_TITLE": "المهمة 1: قل مرحباً",
+  "PHP_TASK1_DESC": "اكتب جملة PHP تستخدم 'echo' لطباعة كلمة 'مرحباً'.",
+  "PHP_ERROR_MOCK_CHECK": "فشل تشغيل الاختبار على الخادم. الكود الخاص بك لم يحقق المتطلبات.",
+
+  
+  "LESSON4_TITLE": "مقدمة في HTML: إنشاء عنوان رئيسي",
+  "LESSON4_DESC": "استخدم الهيكل الأساسي لـ HTML لعرض النصوص على صفحة الويب. تذكّر استخدام وسم <h1>.",
+  "LESSON4_INITIAL_CODE": "<!DOCTYPE html>\n<html>\n <body>\n \n </body>\n</html>",
+  "LESSON4_SOLUTION": "<h1>مرحباً بكم في أجامي!</h1>",
+  "HTML_TASK1_TITLE": "المهمة 1: أضف عنواناً رئيسياً",
+  "HTML_TASK1_DESC": "أنشئ وسم h1 يحتوي على أي نص داخل وسم body في المستند.",
+  "CHECKER_ERROR_NO_H1": "الـ HTML الخاص بك يفتقد وسم <h1> المطلوب.",
+
+
+  "LESSON5_TITLE": "مدخل إلى جافاسكربت: طباعة النص في الكونسول",
+  "LESSON5_DESC": "تعلم كيفية طباعة الرسائل في الكونسول باستخدام لغة جافاسكربت.",
+  "LESSON5_INITIAL_CODE": "// اكتب كود جافاسكربت هنا\nrubuta('مرحبا، ');",
+  "LESSON5_SOLUTION": "rubuta('مرحبا، العالم!');",
+  "AJMJS_TASK1_TITLE": "المهمة 1: اطبع رسالة",
+  "AJMJS_TASK1_DESC": "استخدم الأمر 'rubuta()' لطباعة العبارة الكاملة 'مرحبا، العالم!' في كونسول الإخراج.",
+  "AJMJS_HINT1_1": "في جافاسكربت، الأمر المستخدم لعرض النصوص هو 'rubuta()'.",
+  "AJMJS_HINT1_2": "تذكر أن تنهي جملتك بفاصلة منقوطة (;).",
+
+  "AJAMI_ERROR_NUNA_MISSING": "Your Ajami code failed to execute due to a syntax or runtime error." 
+
+
+}

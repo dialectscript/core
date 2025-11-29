@@ -1,0 +1,197 @@
+{
+
+  "UI_TASKS_TITLE": "Tasks",
+  "UI_COMPLETION_STATUS": "Completed",
+  "TASK_FAILED_HEADER": "Task Failed",
+  "CHECKER_SUCCESS": "Great job! Task passed.",
+  "OUTPUT_TITLE": "Console Output",
+  "SAVE_PROGRESS_MESSAGE_TITLE": "Save",
+  "SAVE_PROGRESS_MESSAGE": "Successfully Saved!",
+  "FIRST_LESSON_MESSAGE_TITLE": "Welcome",
+  "FIRST_LESSON_MESSAGE": "You are currently viewing the first lesson in this module.",
+  "COPY_CODE_MESSAGE_TITLE": "Copy Code",
+  "COPY_CODE_MESSAGE": "Code copied to clipboard!",
+  "FINISH_LESSON_MESSAGE_TITLE": "Finish Lesson?",
+  "FINISH_LESSON_MESSAGE": "You must complete all tasks first!",
+  "COURSE_COMPLETE_MESSAGE_TITLE": "Course Complete",
+  "COURSE_COMPLETE_MESSAGE": "Congratulations! You have completed all lessons in this module.",
+  "COURSE_PROGRESS_TITLE":"Course Progress",
+  "MODE_TOGGLED_MESSAGE_TITLE": "Mode Toggled",
+  "MODE_TOGGLED_MESSAGE": "Enabled",
+  "EDITOR_MODE_SANDBOX": "Sandbox Mode",
+  "EDITOR_MODE_LESSON": "Lesson Mode",
+  "NAV_TITLE": "JavaScript",
+  "LANG_EN": "English",
+  "LANG_HA": "Hausa",
+  "LANG_YO": "Yoruba",
+  "LANG_IG": "Igbo",
+  "LANG_": "Pidgin",
+  "LANG_AR": "Arabic",
+
+  "JS_BEGINNER_TITLE": "JavaScript for Beginners",
+  "JS_BEGINNER_DESC": "Learn JavaScript from zero to hero — step by step, with fun challenges!",
+
+  "JS_BEGINNER_TASK_0_TITLE": "What is JavaScript ?",
+  "JS_BEGINNER_TASK_0_DESC": "<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">JavaScript Basics Tutorial</b><br>\nJavaScript is a programming language that allows you to program computers.<br><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">1. Comments</b>\nTo make the computer take a note, use //. <br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:GrayText;\">// A comment starts with //</span>\n<span style=\"color:GrayText;\">// The computer does not execute anything that starts with //</span>\n<span style=\"color:GrayText;\">// This is just for you to comment on what your code does</span></pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">2. Displaying Texts and Numbers</b>\nTo make the computer display texts, use console.log():<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">console</span>.log(<span style=\"color:rgb(180,80,80);\">\"Welcome\"</span>)</pre>\nTo display numbers:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">console</span>.log(<span style=\"color:rgb(80,120,200);\">100</span>)</pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">3. Variables</b>\nTo store text or numbers, use <code>let</code>:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">let</span> name = <span style=\"color:rgb(180,80,80);\">\"Ali\"</span>;\n<span style=\"color:AccentColor;\">let</span> age = <span style=\"color:rgb(80,120,200);\">20</span>;</pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">4. Functions</b>\nThis function adds two numbers:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">function</span> <span style=\"color:AccentColor; font-weight:bold;\">add</span>(a, b) {\n   <span style=\"color:AccentColor;\">return</span> a + b;\n}</pre>\nTo call the function:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">let</span> result = add(x, y);</pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">5. Condition Statements</b>\nExample using <code>if</code> and <code>else</code>:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">let</span> a = <span style=\"color:rgb(80,120,200);\">20</span>;\n<span style=\"color:AccentColor;\">let</span> b = <span style=\"color:rgb(80,120,200);\">2</span>;\n\n<span style=\"color:AccentColor;\">if</span> (a > b) {\n   <span style=\"color:AccentColor;\">console</span>.log(<span style=\"color:rgb(180,80,80);\">\"a is greater than b\"</span>)\n} <span style=\"color:AccentColor;\">else</span> {\n    <span style=\"color:AccentColor;\">console</span>.log(<span style=\"color:rgb(180,80,80);\">\"a is less than b\"</span>)\n}</pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">6. Arrays</b>\nTo store multiple items, use arrays:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">let</span> myeggs = [];</pre>\nWith initial values:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">let</span> ages = [<span style=\"color:rgb(80,120,200);\">10</span>, <span style=\"color:rgb(80,120,200);\">22</span>];\n<span style=\"color:AccentColor;\">let</span> shelf = [<span style=\"color:rgb(180,80,80);\">\"book\"</span>, <span style=\"color:rgb(180,80,80);\">\"fruit\"</span>, <span style=\"color:rgb(180,80,80);\">\"bottle\"</span>];</pre>\nAccess values:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">console</span>.log(ages[<span style=\"color:rgb(80,120,200);\">1</span>]); <span style=\"color:GrayText;\">// 10</span>\n<span style=\"color:AccentColor;\">console</span>.log(shelf[<span style=\"color:rgb(80,120,200);\">2</span>]); <span style=\"color:GrayText;\">// bottle</span></pre>\nLength property:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">console</span>.log(myeggs.length);\n<span style=\"color:AccentColor;\">console</span>.log(shelf.length);</pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">7. Loops</b>\nRepeating actions with a <code>for...of</code> loop:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">for</span> (<span style=\"color:AccentColor;\">let</span> drawer <span style=\"color:AccentColor;\">of</span> shelf) {\n    <span style=\"color:AccentColor;\">console</span>.log(drawer);\n}</pre><br>\n\nJavaScript is an evolving language with rich features that you will explore in the upcoming tutorials.<br>\nIn this tutorial, you learned about what JavaScript is and gained an overview of the JavaScript language.", 
+  "JS_BEGINNER_TASK_0_INITIAL": "// Click RUN to begin\nconsole.log('Begin')",
+  "JS_BEGINNER_TASK_0_SOLUTION": "// Click RUN to begin\nconsole.log('Begin')",
+  "JS_BEGINNER_TASK_0_HINT_1": "Click RUN to begin",
+
+  "JS_BEGINNER_TASK_1_TITLE": "Display a Greeting",
+  "JS_BEGINNER_TASK_1_DESC": "Make the computer greet the user by displaying 'Assalam Alaykum'.",
+  "JS_BEGINNER_TASK_1_INITIAL": "// TODO: Make the computer greet\n",
+  "JS_BEGINNER_TASK_1_SOLUTION": "console.log('Assalam Alaykum');",
+  "JS_BEGINNER_TASK_1_HINT_1": "Use console.log() to display text.",
+  "JS_BEGINNER_TASK_1_HINT_2": "Text must be inside quotes.",
+  "JS_BEGINNER_TASK_1_HINT_3": "Try console.log('Hello') first.",
+
+  "JS_BEGINNER_TASK_2_TITLE": "Introduce the Computer",
+  "JS_BEGINNER_TASK_2_DESC": "Make the computer display its name.",
+  "JS_BEGINNER_TASK_2_INITIAL": "// TODO: Make the computer say its name\n",
+  "JS_BEGINNER_TASK_2_SOLUTION": "console.log('My name is Komputer');",
+  "JS_BEGINNER_TASK_2_HINT_1": "Use console.log() again.",
+  "JS_BEGINNER_TASK_2_HINT_2": "Combine text with the computer's name.",
+  "JS_BEGINNER_TASK_2_HINT_3": "Try writing the exact sentence in quotes.",
+
+  "JS_BEGINNER_TASK_3_TITLE": "Store Computer Details",
+  "JS_BEGINNER_TASK_3_DESC": "Store the computer's name and age in variables.",
+  "JS_BEGINNER_TASK_3_INITIAL": "// TODO: Store name and age\n",
+  "JS_BEGINNER_TASK_3_SOLUTION": "let computername = 'Komputer';\nlet computerage = 15;",
+  "JS_BEGINNER_TASK_3_HINT_1": "Use let to create variables.",
+  "JS_BEGINNER_TASK_3_HINT_2": "Assign a value using =",
+  "JS_BEGINNER_TASK_3_HINT_3": "Strings are in quotes, numbers are not.",
+
+  "JS_BEGINNER_TASK_4_TITLE": "Create Cupboards",
+  "JS_BEGINNER_TASK_4_DESC": "Store items in room cupboard, kitchen cupboard, and contacts.",
+  "JS_BEGINNER_TASK_4_INITIAL": "// TODO: Create arrays for cupboards and contacts\n",
+  "JS_BEGINNER_TASK_4_SOLUTION": "let room_cupboard = ['shirt','book','phone','','pen','mirror'];\nlet kitchen_cupboard = ['plate','onion','spoon','',''];\nlet contacts = [8030000001, 8030000002, 8030000003];",
+  "JS_BEGINNER_TASK_4_HINT_1": "Use square brackets [] to create arrays.",
+  "JS_BEGINNER_TASK_4_HINT_2": "Separate items with commas.",
+  "JS_BEGINNER_TASK_4_HINT_3": "Numbers do not need quotes, strings do.",
+
+  "JS_BEGINNER_TASK_5_TITLE": "Compare Ages",
+  "JS_BEGINNER_TASK_5_DESC": "Ask the computer to compare its age with yours and display a message.",
+  "JS_BEGINNER_TASK_5_INITIAL": "// TODO: Compare ages\nlet myage = 14;",
+  "JS_BEGINNER_TASK_5_SOLUTION": "if (computerage > myage) {\n    console.log('I am older than you!');\n} else if (computerage == myage) {\n    console.log('We have the same age!');\n} else {\n    console.log('You are older than me!');\n}",
+  "JS_BEGINNER_TASK_5_HINT_1": "Use if, else if, else for conditions.",
+  "JS_BEGINNER_TASK_5_HINT_2": "Use == to compare equality, not =",
+  "JS_BEGINNER_TASK_5_HINT_3": "console.log() can display different messages depending on the age.",
+
+  "JS_BEGINNER_TASK_6_TITLE": "Repeat a Message",
+  "JS_BEGINNER_TASK_6_DESC": "Make the computer say its name 5 times using a loop.",
+  "JS_BEGINNER_TASK_6_INITIAL": "// TODO: Repeat a message 5 times\n",
+  "JS_BEGINNER_TASK_6_SOLUTION": "for(let i = 0; i < 5; i++) {\n    console.log('My name is ' + computername);\n}",
+  "JS_BEGINNER_TASK_6_HINT_1": "Use a for loop.",
+  "JS_BEGINNER_TASK_6_HINT_2": "Start i at 0, loop while i < 5, increase i each time.",
+  "JS_BEGINNER_TASK_6_HINT_3": "Use + to combine text and variables.",
+
+  "JS_BEGINNER_TASK_7_TITLE": "Display Cupboard Items",
+  "JS_BEGINNER_TASK_7_DESC": "Make the computer display all items in the room cupboard using a loop.",
+  "JS_BEGINNER_TASK_7_INITIAL": "// TODO: Loop through room cupboard\n",
+  "JS_BEGINNER_TASK_7_SOLUTION": "for (let drawer of room_cupboard) {\n    console.log(drawer);\n}",
+  "JS_BEGINNER_TASK_7_HINT_1": "Use a for...of loop to go through an array.",
+  "JS_BEGINNER_TASK_7_HINT_2": "Each item in the array can be printed using console.log()",
+  "JS_BEGINNER_TASK_7_HINT_3": "You can call each item 'drawer' or any name.",
+
+  "JS_BEGINNER_TASK_8_TITLE": "Count Items",
+  "JS_BEGINNER_TASK_8_DESC": "Display the total number of items in each cupboard and contacts.",
+  "JS_BEGINNER_TASK_8_INITIAL": "// TODO: Count items in arrays\n",
+  "JS_BEGINNER_TASK_8_SOLUTION": "console.log('There are ' + room_cupboard.length + ' in the room cupboard');\nconsole.log('There are ' + kitchen_cupboard.length + ' in the kitchen cupboard');\nconsole.log('There are ' + contacts.length + ' in the contacts');",
+  "JS_BEGINNER_TASK_8_HINT_1": "Use array.length to get the number of items.",
+  "JS_BEGINNER_TASK_8_HINT_2": "Combine text and numbers with +",
+  "JS_BEGINNER_TASK_8_HINT_3": "console.log() prints the final message.",
+
+
+
+
+"AJMJS_BEGINNER_TITLE": "JavaScript for Beginners",
+  "AJMJS_BEGINNER_DESC": "Learn JavaScript from zero to hero — step by step, with fun challenges!",
+
+"AJMJS_BEGINNER_TASK_0_TITLE": "What is DialectScript ?",
+  "AJMJS_BEGINNER_TASK_0_DESC": "<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">DialectScript Basics Tutorial</b><br>\nDialectScript is a programming language that allows you to program computers.<br><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">1. Comments</b>\nTo make the computer take a note, use //. <br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:GrayText;\">// A comment starts with //</span>\n<span style=\"color:GrayText;\">// The computer does not execute anything that starts with //</span>\n<span style=\"color:GrayText;\">// This is just for you to comment on what your code does</span></pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">2. Displaying Texts and Numbers</b>\nTo make the computer display texts, use rubuta():<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">rubuta</span>(<span style=\"color:rgb(180,80,80);\">\"Sannu da zuwa\"</span>)</pre>\nTo display numbers:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">rubuta</span>(<span style=\"color:rgb(80,120,200);\">100</span>)</pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">3. Variables</b>\nTo store text or numbers, use <code>madadi</code>:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">madadi</span> suna = <span style=\"color:rgb(180,80,80);\">\"Ali\"</span>;\n<span style=\"color:AccentColor;\">madadi</span> shekara = <span style=\"color:rgb(80,120,200);\">20</span>;</pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">4. Aiki</b>\nThis function adds two numbers:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">aiki</span> <span style=\"color:AccentColor; font-weight:bold;\">add</span>(a, b) {\n   <span style=\"color:AccentColor;\">return</span> a + b;\n}</pre>\nTo call the function:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">madadi</span> result = add(x, y);</pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">5. Condition Statements</b>\nExample using <code>idan</code> and <code>kokuma</code>:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">madadi</span> a = <span style=\"color:rgb(80,120,200);\">20</span>;\n<span style=\"color:AccentColor;\">madadi</span> b = <span style=\"color:rgb(80,120,200);\">2</span>;\n\n<span style=\"color:AccentColor;\">idan</span> (a > b) {\n   <span style=\"color:AccentColor;\">rubuta</span>(<span style=\"color:rgb(180,80,80);\">\"a is greater than b\"</span>)\n} <span style=\"color:AccentColor;\">kokuma</span> {\n    <span style=\"color:AccentColor;\">rubuta</span>(<span style=\"color:rgb(180,80,80);\">\"a is less than b\"</span>)\n}</pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">6. Arrays</b>\nTo store multiple items, use arrays:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">madadi</span> myeggs = [];</pre>\nWith initial values:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">madadi</span> shekaru = [<span style=\"color:rgb(80,120,200);\">10</span>, <span style=\"color:rgb(80,120,200);\">22</span>];\n<span style=\"color:AccentColor;\">madadi</span> shelf = [<span style=\"color:rgb(180,80,80);\">\"book\"</span>, <span style=\"color:rgb(180,80,80);\">\"fruit\"</span>, <span style=\"color:rgb(180,80,80);\">\"bottle\"</span>];</pre>\nAccess values:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">rubuta</span>(shekaru[<span style=\"color:rgb(80,120,200);\">1</span>]); <span style=\"color:GrayText;\">// 10</span>\n<span style=\"color:AccentColor;\">rubuta</span>(shelf[<span style=\"color:rgb(80,120,200);\">2</span>]); <span style=\"color:GrayText;\">// bottle</span></pre>\nLength property:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">rubuta</span>(myeggs.tsawo);\n<span style=\"color:AccentColor;\">rubuta</span>(shelf.tsawo);</pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">7. Loops</b>\nRepeating actions with a <code>faraDaga..kowanef</code> loop:<br>\n<pre class=\"code-block\"  style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">faraDaga</span> (<span style=\"color:AccentColor;\">madadi</span> drawer <span style=\"color:AccentColor;\">kowane</span> shelf) {\n    <span style=\"color:AccentColor;\">rubuta</span>(drawer);\n}</pre><br>\n\nDialectScript is an evolving language with rich features that you will explore in the upcoming tutorials.<br>\nIn this tutorial, you learned about what DialectScript is and gained an overview of the DialectScript language.", 
+  "AJMJS_BEGINNER_TASK_0_INITIAL": "// Click RUN to begin\nrubuta('Fara')",
+  "AJMJS_BEGINNER_TASK_0_SOLUTION": "// Click RUN to begin\nrubuta('Fara')",
+  "AJMJS_BEGINNER_TASK_0_HINT_1": "Click RUN to begin",
+
+  "AJMJS_BEGINNER_TASK_1_TITLE": "Display a Greeting",
+  "AJMJS_BEGINNER_TASK_1_DESC": "Make the computer greet the user by displaying 'Assalam Alaykum'.",
+  "AJMJS_BEGINNER_TASK_1_INITIAL": "// TODO: Make the computer greet\n",
+  "AJMJS_BEGINNER_TASK_1_SOLUTION": "rubuta('Assalam Alaykum');",
+  "AJMJS_BEGINNER_TASK_1_HINT_1": "Use rubuta() to display text.",
+  "AJMJS_BEGINNER_TASK_1_HINT_2": "Text must be inside quotes.",
+  "AJMJS_BEGINNER_TASK_1_HINT_3": "Try rubuta('Hello') first.",
+
+  "AJMJS_BEGINNER_TASK_2_TITLE": "Introduce the Computer",
+  "AJMJS_BEGINNER_TASK_2_DESC": "Make the computer display its name.",
+  "AJMJS_BEGINNER_TASK_2_INITIAL": "// TODO: Make the computer say its name\n",
+  "AJMJS_BEGINNER_TASK_2_SOLUTION": "rubuta('My name is Komputer');",
+  "AJMJS_BEGINNER_TASK_2_HINT_1": "Use rubuta() again.",
+  "AJMJS_BEGINNER_TASK_2_HINT_2": "Combine text with the computer's name.",
+  "AJMJS_BEGINNER_TASK_2_HINT_3": "Try writing the exact sentence in quotes.",
+
+  "AJMJS_BEGINNER_TASK_3_TITLE": "Store Computer Details",
+  "AJMJS_BEGINNER_TASK_3_DESC": "Store the computer's name and age in variables.",
+  "AJMJS_BEGINNER_TASK_3_INITIAL": "// TODO: Store name and age\n",
+  "AJMJS_BEGINNER_TASK_3_SOLUTION": "madadi computersuna = 'Komputer';\nmadadi computershekara = 15;",
+  "AJMJS_BEGINNER_TASK_3_HINT_1": "Use madadi to create variables.",
+  "AJMJS_BEGINNER_TASK_3_HINT_2": "Assign a value using =",
+  "AJMJS_BEGINNER_TASK_3_HINT_3": "Strings are in quotes, numbers are not.",
+
+  "AJMJS_BEGINNER_TASK_4_TITLE": "Create Cupboards",
+  "AJMJS_BEGINNER_TASK_4_DESC": "Store items in room cupboard, kitchen cupboard, and contacts.",
+  "AJMJS_BEGINNER_TASK_4_INITIAL": "// TODO: Create arrays for cupboards and contacts\n",
+  "AJMJS_BEGINNER_TASK_4_SOLUTION": "madadi room_cupboard = ['shirt','book','phone','','pen','mirror'];\nmadadi kitchen_cupboard = ['plate','onion','spoon','',''];\nmadadi contacts = [8030000001, 8030000002, 8030000003];",
+  "AJMJS_BEGINNER_TASK_4_HINT_1": "Use square brackets [] to create arrays.",
+  "AJMJS_BEGINNER_TASK_4_HINT_2": "Separate items with commas.",
+  "AJMJS_BEGINNER_TASK_4_HINT_3": "Numbers do not need quotes, strings do.",
+
+  "AJMJS_BEGINNER_TASK_5_TITLE": "Compare Ages",
+  "AJMJS_BEGINNER_TASK_5_DESC": "Ask the computer to compare its age with yours and display a message.",
+  "AJMJS_BEGINNER_TASK_5_INITIAL": "// TODO: Compare ages\nmadadi myshekara = 14;",
+  "AJMJS_BEGINNER_TASK_5_SOLUTION": "idan (computerage > myage) {\n    rubuta('I am older than you!');\n} kokuma idan (computershekara == myage) {\n    rubuta('We have the same age!');\n} kokuma {\n    rubuta('You are older than me!');\n}",
+  "AJMJS_BEGINNER_TASK_5_HINT_1": "Use idan, kokuma idan, kokuma for conditions.",
+  "AJMJS_BEGINNER_TASK_5_HINT_2": "Use == to compare equality, not =",
+  "AJMJS_BEGINNER_TASK_5_HINT_3": "rubuta() can display different messages depending on the age.",
+
+  "AJMJS_BEGINNER_TASK_6_TITLE": "Repeat a Message",
+  "AJMJS_BEGINNER_TASK_6_DESC": "Make the computer say its name 5 times using a loop.",
+  "AJMJS_BEGINNER_TASK_6_INITIAL": "// TODO: Repeat a message 5 times\n",
+  "AJMJS_BEGINNER_TASK_6_SOLUTION": "faraDaga(madadi i = 0; i < 5; i++) {\n    rubuta('My name is ' + computername);\n}",
+  "AJMJS_BEGINNER_TASK_6_HINT_1": "Use a faraDaga loop.",
+  "AJMJS_BEGINNER_TASK_6_HINT_2": "Start i at 0, loop while i < 5, increase i each time.",
+  "AJMJS_BEGINNER_TASK_6_HINT_3": "Use + to combine text and variables.",
+
+  "AJMJS_BEGINNER_TASK_7_TITLE": "Display Cupboard Items",
+  "AJMJS_BEGINNER_TASK_7_DESC": "Make the computer display all items in the room cupboard using a loop.",
+  "AJMJS_BEGINNER_TASK_7_INITIAL": "// TODO: Loop through room cupboard\n",
+  "AJMJS_BEGINNER_TASK_7_SOLUTION": "faraDaga (madadi drawer kowane room_cupboard) {\n    rubuta(drawer);\n}",
+  "AJMJS_BEGINNER_TASK_7_HINT_1": "Use a faraDaga...kowane loop to go through an array.",
+  "AJMJS_BEGINNER_TASK_7_HINT_2": "Each item in the array can be printed using rubuta()",
+  "AJMJS_BEGINNER_TASK_7_HINT_3": "You can call each item 'drawer' or any name.",
+
+  "AJMJS_BEGINNER_TASK_8_TITLE": "Count Items",
+  "AJMJS_BEGINNER_TASK_8_DESC": "Display the total number of items in each cupboard and contacts.",
+  "AJMJS_BEGINNER_TASK_8_INITIAL": "// TODO: Count items in arrays\n",
+  "AJMJS_BEGINNER_TASK_8_SOLUTION": "rubuta('There are ' + room_cupboard.tsawo + ' in the room cupboard');\nrubuta('There are ' + kitchen_cupboard.tsawo + ' in the kitchen cupboard');\nrubuta('There are ' + contacts.tsawo + ' in the contacts');",
+  "AJMJS_BEGINNER_TASK_8_HINT_1": "Use array.tsawo to get the number of items.",
+  "AJMJS_BEGINNER_TASK_8_HINT_2": "Combine text and numbers with +",
+  "AJMJS_BEGINNER_TASK_8_HINT_3": "rubuta() prints the final message.",
+
+
+
+
+
+
+
+  
+
+
+
+   "JSHTML_SANDBOX_TITLE": "JSHTML Free Practice",
+  "JSHTML_SANDBOX_DESC": "Write JSHTML code",
+  "JSHTML_SANDBOX_TASK_TITLE": "JSHTML Sandbox",
+  "JSHTML_SANDBOX_TASK_DESC": "Write and run JSHTML code in a sandbox",
+  "JSHTML_SANDBOX_TASK_INITIAL": "// Write your JSHTML code below\n",
+  "JSHTML_SANDBOX_TASK_SOLUTION": "",
+  "JSHTML_SANDBOX_TASK_HINT_1": "Write JSHTML Code"
+}

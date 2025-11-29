@@ -1,0 +1,125 @@
+{
+  "id": "ajmjs_beginner",
+  "title_key": "AJMJS_BEGINNER_TITLE",
+  "description_key": "AJMJS_BEGINNER_DESC",
+  "current_file": "script.ajmjs",
+  "file_type": "ajami",
+  "default_language": "en",
+  "available_languages": [
+    { "code": "en", "name": "English" },
+    { "code": "yo", "name": "Yoruba" },
+    { "code": "ha", "name": "Hausa" },
+    { "code": "ib", "name": "Igbo" },
+    { "code": "pg", "name": "Pidgin" }
+  ],
+  "files": {
+    "script.ajmjs": {
+      "mode": "ajami",
+    "initial_content_key": "AJMJS_BEGINNER_TASK_1_INITIAL",
+        "solution_content_key": "AJMJS_BEGINNER_TASK_1_SOLUTION"
+    }
+  },
+  "tasks": [
+    {
+      "id": "task_0",
+      "title_key": "AJMJS_BEGINNER_TASK_0_TITLE",
+      "description_key": "AJMJS_BEGINNER_TASK_0_DESC",
+      "initial_content_key": "AJMJS_BEGINNER_TASK_0_INITIAL",
+      "solution_content_key": "AJMJS_BEGINNER_TASK_0_SOLUTION",
+      "checker_function": "checkTasks_Ajami",
+      "hints": [
+        { "text_key": "AJMJS_BEGINNER_TASK_0_HINT_1" }
+      ]
+    },
+    {
+      "id": "task_1",
+      "title_key": "AJMJS_BEGINNER_TASK_1_TITLE",
+      "description_key": "AJMJS_BEGINNER_TASK_1_DESC",
+      "initial_content_key": "AJMJS_BEGINNER_TASK_1_INITIAL",
+      "solution_content_key": "AJMJS_BEGINNER_TASK_1_SOLUTION",
+      "checker_function": "checkTasks_Ajami",
+      "hints": [
+        { "text_key": "AJMJS_BEGINNER_TASK_1_HINT_1" },
+        { "text_key": "AJMJS_BEGINNER_TASK_1_HINT_2" }
+      ]
+    },
+    {
+      "id": "task_2",
+      "title_key": "AJMJS_BEGINNER_TASK_2_TITLE",
+      "description_key": "AJMJS_BEGINNER_TASK_2_DESC",
+      "initial_content_key": "AJMJS_BEGINNER_TASK_2_INITIAL",
+      "solution_content_key": "AJMJS_BEGINNER_TASK_2_SOLUTION",
+      "checker_function": "checkTasks_Ajami",
+      "hints": [
+        { "text_key": "AJMJS_BEGINNER_TASK_2_HINT_1" }
+      ]
+    },
+    {
+      "id": "task_3",
+      "title_key": "AJMJS_BEGINNER_TASK_3_TITLE",
+      "description_key": "AJMJS_BEGINNER_TASK_3_DESC",
+      "initial_content_key": "AJMJS_BEGINNER_TASK_3_INITIAL",
+      "solution_content_key": "AJMJS_BEGINNER_TASK_3_SOLUTION",
+      "checker_function": "checkTasks_Ajami",
+      "hints": [
+        { "text_key": "AJMJS_BEGINNER_TASK_3_HINT_1" }
+      ]
+    },
+    {
+      "id": "task_4",
+      "title_key": "AJMJS_BEGINNER_TASK_4_TITLE",
+      "description_key": "AJMJS_BEGINNER_TASK_4_DESC",
+      "initial_content_key": "AJMJS_BEGINNER_TASK_4_INITIAL",
+      "solution_content_key": "AJMJS_BEGINNER_TASK_4_SOLUTION",
+      "checker_function": "checkTasks_Ajami",
+      "hints": [
+        { "text_key": "AJMJS_BEGINNER_TASK_4_HINT_1" },
+        { "text_key": "AJMJS_BEGINNER_TASK_4_HINT_2" }
+      ]
+    },
+    {
+      "id": "task_5",
+      "title_key": "AJMJS_BEGINNER_TASK_5_TITLE",
+      "description_key": "AJMJS_BEGINNER_TASK_5_DESC",
+      "initial_content_key": "AJMJS_BEGINNER_TASK_5_INITIAL",
+      "solution_content_key": "AJMJS_BEGINNER_TASK_5_SOLUTION",
+      "checker_function": "checkTasks_Ajami",
+      "hints": [
+        { "text_key": "AJMJS_BEGINNER_TASK_5_HINT_1" }
+      ]
+    },
+    {
+      "id": "task_6",
+      "title_key": "AJMJS_BEGINNER_TASK_6_TITLE",
+      "description_key": "AJMJS_BEGINNER_TASK_6_DESC",
+      "initial_content_key": "AJMJS_BEGINNER_TASK_6_INITIAL",
+      "solution_content_key": "AJMJS_BEGINNER_TASK_6_SOLUTION",
+      "checker_function": "checkTasks_Ajami",
+      "hints": [
+        { "text_key": "AJMJS_BEGINNER_TASK_6_HINT_1" }
+      ]
+    },
+    {
+      "id": "task_7",
+      "title_key": "AJMJS_BEGINNER_TASK_7_TITLE",
+      "description_key": "AJMJS_BEGINNER_TASK_7_DESC",
+      "initial_content_key": "AJMJS_BEGINNER_TASK_7_INITIAL",
+      "solution_content_key": "AJMJS_BEGINNER_TASK_7_SOLUTION",
+      "checker_function": "checkTasks_Ajami",
+      "hints": [
+        { "text_key": "AJMJS_BEGINNER_TASK_7_HINT_1" }
+      ]
+    },
+    {
+      "id": "task_8",
+      "title_key": "AJMJS_BEGINNER_TASK_8_TITLE",
+      "description_key": "AJMJS_BEGINNER_TASK_8_DESC",
+      "initial_content_key": "AJMJS_BEGINNER_TASK_8_INITIAL",
+      "solution_content_key": "AJMJS_BEGINNER_TASK_8_SOLUTION",
+      "checker_function": "checkTasks_Ajami",
+      "hints": [
+        { "text_key": "AJMJS_BEGINNER_TASK_8_HINT_1" }
+      ]
+    }
+  ]
+}

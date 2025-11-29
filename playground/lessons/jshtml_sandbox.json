@@ -1,0 +1,34 @@
+{
+    "id": "jshtml_sandbox",
+    "title_key": "JSHTML_SANDBOX_TITLE",
+    "description_key": "JSHTML_SANDBOX_DESC",
+    "current_file": "jshtmlscript.js",
+    "file_type": "javascript",
+    "isSandboxMode": true,
+    "default_language": "en",
+    "available_languages": [
+        { "code": "en", "name": "English" },
+        { "code": "ar", "name": "العربية" },
+        { "code": "ha", "name": "Hausa" }
+    ],
+    "files": {
+        "jshtmlscript.js": {
+            "mode": "javascript",
+            "initial_content_key": "JSHTML_SANDBOX_TASK_INITIAL",
+            "solution_content_key": "JSHTML_SANDBOX_TASK_SOLUTION"
+        }
+    },
+    "tasks": [
+        {
+            "id": "JSHTML_SANDBOX_TASK",
+            "title_key": "JSHTML_SANDBOX_TASK_TITLE",
+            "description_key": "JSHTML_SANDBOX_TASK_DESC",
+            "initial_content_key": "JSHTML_SANDBOX_TASK_INITIAL",
+      "solution_content_key": "JSHTML_SANDBOX_TASK_SOLUTION",
+            "checker_function": "sandbox",
+             "hints": [
+        { "text_key": "JSHTML_SANDBOX_TASK_HINT_1" }
+      ]
+        }
+    ]
+}
