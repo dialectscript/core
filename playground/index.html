@@ -1264,8 +1264,9 @@
                 // window.aceEditorInstance.setValue(initialContent, -1);
 
                 // NEW: Typewriter magic!
-                typwriterForAce(initialContent, {
-                    speed: 45,
+                //typwriterForAce(initialContent, {
+                fadeInTextForAce(initialContent, {
+                    speed: 10,
                     humanize: true,
                     sound: true,           // feels like old-school coding!
                     onComplete: () => {
@@ -2813,6 +2814,69 @@
             typingTimer = setTimeout(typeNext, 300);
         }
 
+
+//fadeInText
+        function fadeInTextForAce(initialContent, options = {}) {
+    const {
+        speed = 45,
+        humanize = true,
+        sound = false,
+        onComplete = () => {}
+    } = options;
+
+    const editor = window.aceEditorInstance;
+    if (!editor) {
+        console.error("Ace Editor instance not found!");
+        return;
+    }
+
+    // Insert the text immediately, but make it invisible
+    editor.setValue(initialContent, -1);
+
+    const editorElement = editor.container;
+
+    // Start fully transparent
+    editorElement.style.opacity = 0;
+
+    // Calculate total animation steps
+    //const totalSteps = 30;
+    const totalSteps = Math.max(10, Math.floor(speed * 1.5)); 
+
+    let step = 0;
+
+    function animate() {
+        step++;
+
+        // Apply easing / humanize randomness
+        let delay = speed;
+        if (humanize) {
+            delay = speed + Math.random() * 50;
+        }
+
+        // Sound option
+        if (sound) {
+            // simplest retro sound "click"
+            const audio = new Audio(
+                "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEA..." // (optional placeholder)
+            );
+            audio.volume = 0.05;
+            audio.play().catch(() => {});
+        }
+
+        // Update opacity
+        const newOpacity = Math.min(step / totalSteps, 1);
+        editorElement.style.opacity = newOpacity;
+
+        if (step < totalSteps) {
+            setTimeout(animate, delay);
+        } else {
+            editor.clearSelection();
+            onComplete();
+        }
+    }
+
+    animate();
+}
 
         function jumpToTask(taskIndex) {
             if (taskIndex < 0 || taskIndex >= LESSON_DATA.tasks.length) return;
