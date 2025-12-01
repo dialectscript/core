@@ -18,10 +18,14 @@
   "MODE_TOGGLED_MESSAGE": "E tinyere",
   "EDITOR_MODE_SANDBOX": "Sandbox Mode",
   "EDITOR_MODE_LESSON": "Lesson Mode",
-  "NAV_TITLE": "Ajami",
+  "NAV_TITLE": "DialectScript",
   "LANG_EN": "English",
   "LANG_HA": "Hausa",
+  "LANG_YO": "Yoruba",
+  "LANG_IG": "Igbo",
+  "LANG_PG": "Pidgin",
   "LANG_AR": "Arabic",
+
 
   "JS_BEGINNER_TITLE": "JavaScript Maka Ndị Mbido",
   "JS_BEGINNER_DESC": "Mụta JavaScript site na ntọala ruo ọkwa dị elu — nwayọ nwayọ, tinyere ihe mgbatị ụtọ!",
