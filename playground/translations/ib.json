@@ -34,9 +34,9 @@
   "JS_BEGINNER_TASK_0_HINT_1": "Pịa RUN ka ị malite",
 
   "JS_BEGINNER_TASK_1_TITLE": "Gosi Nnọọ",
-  "JS_BEGINNER_TASK_1_DESC": "Mee ka kọmputa kwuo 'Assalam Alaykum'.",
+  "JS_BEGINNER_TASK_1_DESC": "Mee ka kọmputa kwuo 'Hello'.",
   "JS_BEGINNER_TASK_1_INITIAL": "// TODO: Mee ka kọmputa kwuo nnọọ\n",
-  "JS_BEGINNER_TASK_1_SOLUTION": "console.log('Assalam Alaykum');",
+  "JS_BEGINNER_TASK_1_SOLUTION": "console.log('Hello');",
   "JS_BEGINNER_TASK_1_HINT_1": "Jiri console.log() igosi okwu.",
   "JS_BEGINNER_TASK_1_HINT_2": "Okwu ga-abụ n’ime quotes.",
   "JS_BEGINNER_TASK_1_HINT_3": "Gbalịa console.log('Hello') mbụ.",
@@ -95,5 +95,54 @@
   "JS_BEGINNER_TASK_8_SOLUTION": "console.log('Enwere ' + room_cupboard.length + ' na room cupboard');\nconsole.log('Enwere ' + kitchen_cupboard.length + ' na kitchen cupboard');\nconsole.log('Enwere ' + contacts.length + ' na contacts');",
   "JS_BEGINNER_TASK_8_HINT_1": "Jiri array.length.",
   "JS_BEGINNER_TASK_8_HINT_2": "Jiri + ijikọ okwu na nọmba.",
-  "JS_BEGINNER_TASK_8_HINT_3": "console.log() na-egosi ozi ikpeazụ."
+  "JS_BEGINNER_TASK_8_HINT_3": "console.log() na-egosi ozi ikpeazụ.",
+
+
+  "AJMJS_BEGINNER_TITLE": "DialectScript Maka Ndị Malitere",
+  "AJMJS_BEGINNER_DESC": "Mụta DialectScript site na efu ruo ọkwa dike — nkeji nkeji, yana ihe ịma aka ndị na-atọ ụtọ!",
+
+  "AJMJS_BEGINNER_TASK_0_TITLE": "Gịnị bụ DialectScript?",
+  "AJMJS_BEGINNER_TASK_0_DESC": "<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">Nkuzi Izizi DialectScript</b><br>\nDialectScript bụ asụsụ mmemme nke na-enye gị ohere ịhazi kọmputa.<br><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">◉ Nkwupụta (Comments)</b>\nIji mee ka kọmputa detuo ihe, jiri //.<br>\n<pre class=\"code-block\" style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:GrayText;\">// Nkwupụta na-amalite na //</span>\n<span style=\"color:GrayText;\">// Kọmputa anaghị eme ihe ọ bụla bidoro na //</span>\n<span style=\"color:GrayText;\">// Nke a bụ naanị maka gị ka ị kọwaa ihe koodu gị na-eme</span></pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">◉ Igosi Edemede na Ọnụọgụgụ</b>\nIji mee ka kọmputa gosi edemede, jiri ziputa():<br>\n<pre class=\"code-block\" style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">ziputa</span>(<span style=\"color:rgb(180,80,80);\">\"Sannu da zuwa\"</span>)</pre>\nIji gosi ọnụọgụgụ:<br>\n<pre class=\"code-block\" style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">ziputa</span>(<span style=\"color:rgb(80,120,200);\">100</span>)</pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">◉ Ọdịiche (Variables)</b>\nIji chekwa edemede ma ọ bụ ọnụọgụgụ, jiri <code>agbanwe</code>:<br>\n<pre class=\"code-block\" style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">agbanwe</span> aha = <span style=\"color:rgb(180,80,80);\">\"Ali</span>;\n<span style=\"color:AccentColor;\">agbanwe</span> afọ = <span style=\"color:rgb(80,120,200);\">20</span>;</pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">◉ Ọrụ (Functions)</b>\nỌrụ a na-agbakọ ọnụọgụgụ abụọ:<br>\n<pre class=\"code-block\" style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">aiki</span> <span style=\"color:AccentColor; font-weight:bold;\">gbakọọ</span>(a, b) {\n   <span style=\"color:AccentColor;\">return</span> a + b;\n}</pre>\nIji kpọọ ọrụ ahụ:<br>\n<pre class=\"code-block\" style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">agbanwe</span> nsonye = gbakọọ(x, y);</pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">◉ Okwu Ọnọdụ (Conditional Statements)</b>\nIhe atụ site na iji <code>oburuna</code> na <code>maobughi</code>:<br>\n<pre class=\"code-block\" style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">idan</span> (a > b) {\n   ziputa(<span style=\"color:rgb(180,80,80);\">\"a karịrị b\"</span>)\n} <span style=\"color:AccentColor;\">maobughi</span> {\n   ziputa(<span style=\"color:rgb(180,80,80);\">\"a pere mpe karịa b\"</span>)\n}</pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">◉ Nchịkọta (Arrays)</b>\nIji chekwa ọtụtụ ihe, jiri nchịkọta:<br>\n<pre class=\"code-block\" style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">agbanwe</span> àkwá = [];</pre>\nSite na ụkpụrụ mbido:<br>\n<pre class=\"code-block\" style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">agbanwe</span> afọ = [<span style=\"color:rgb(80,120,200);\">10</span>, <span style=\"color:rgb(80,120,200);\">22</span>];\n<span style=\"color:AccentColor;\">agbanwe</span> shelf = [<span style=\"color:rgb(180,80,80);\">\"akwụkwọ\"</span>, <span style=\"color:rgb(180,80,80);\">\"mkpụrụ osisi\"</span>, <span style=\"color:rgb(180,80,80);\">\"karama\"</span>];</pre>\nInweta ụkpụrụ:<br>\n<pre class=\"code-block\" style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">ziputa</span>(afọ[<span style=\"color:rgb(80,120,200);\">1</span>]); <span style=\"color:GrayText;\">// 22</span></pre>\nOgologo nchịkọta:<br>\n<pre class=\"code-block\" style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">ziputa</span>(àkwá.ogologo);\n<span style=\"color:AccentColor;\">ziputa</span>(shelf.ogologo);</pre><br>\n\n<b style=\"display:block; margin-bottom:6px; color:canvasTextx;\">◉ Akaghị (Loops)</b>\nImegharị ihe ugboro ugboro site na <code>maka..kowane</code>:<br>\n<pre class=\"code-block\" style=\"background:canvasTextx; color:Canvas; padding:10px; border:1px solid GrayText; border-radius:6px;\"><span style=\"color:AccentColor;\">maka</span> (<span style=\"color:AccentColor;\">agbanwe</span> ihe <span style=\"color:AccentColor;\">kowane</span> shelf) {\n    <span style=\"color:AccentColor;\">ziputa</span>(ihe);\n}</pre><br>\n\nDialectScript bụ asụsụ na-etolite etolite nke nwere ọtụtụ atụmatụ ị ga-amụta n’ọdịnihu.<br>\nNa nkuzi a, ị mụtala ihe DialectScript bụ ma nweta nleba anya zuru oke banyere ya.",
+
+  "AJMJS_BEGINNER_TASK_0_INITIAL": "// Pịa RUN ka ị malite\nziputa('Bido')",
+  "AJMJS_BEGINNER_TASK_0_SOLUTION": "// Pịa RUN ka ị malite\nziputa('Bido')",
+  "AJMJS_BEGINNER_TASK_0_HINT_1": "Pịa RUN ka ị malite",
+
+  "AJMJS_BEGINNER_TASK_1_TITLE": "Gosi Ekele",
+  "AJMJS_BEGINNER_TASK_1_DESC": "Mee ka kọmputa kelee onye ọrụ site na igosi 'Hello'.",
+  "AJMJS_BEGINNER_TASK_1_INITIAL": "// TODO: Mee ka kọmputa kelee",
+  "AJMJS_BEGINNER_TASK_1_SOLUTION": "ziputa('Hello');",
+  "AJMJS_BEGINNER_TASK_1_HINT_1": "Jiri ziputa() gosi edemede.",
+  "AJMJS_BEGINNER_TASK_1_HINT_2": "Edemede ga-anọ n’ime akara abụọ \"...\".",
+  "AJMJS_BEGINNER_TASK_1_HINT_3": "Gbalịa ziputa('Ndewo') mbụ.",
+
+  "AJMJS_BEGINNER_TASK_2_TITLE": "Kọwaara Kọmputa Onwe Ya",
+  "AJMJS_BEGINNER_TASK_2_DESC": "Mee ka kọmputa gosi aha ya.",
+  "AJMJS_BEGINNER_TASK_2_SOLUTION": "ziputa('Aha m bụ Kọmputa');",
+
+  "AJMJS_BEGINNER_TASK_3_TITLE": "Chekwaa Nkọwa Kọmputa",
+  "AJMJS_BEGINNER_TASK_3_DESC": "Chekwaa aha na afọ kọmputa n’ime mgbanwe.",
+  "AJMJS_BEGINNER_TASK_3_SOLUTION": "agbanwe ahaKọmputa = 'Kọmputa';\nagbanwe afọKọmputa = 15;",
+
+  "AJMJS_BEGINNER_TASK_4_TITLE": "Mepụta Kaboodu",
+  "AJMJS_BEGINNER_TASK_4_DESC": "Chekwaa ihe n’ime kaboodu ụlọ, kaboodu kichin, na kọntaktị.",
+  "AJMJS_BEGINNER_TASK_4_SOLUTION": "agbanwe kaboodu_ụlọ = ['uwe','akwụkwọ','ekwe','pen','enyo'];\nagbanwe kaboodu_kichin = ['efere','yabasị','ngaji','',''];\nagbanwe kọntaktị = [8030000001, 8030000002, 8030000003];",
+
+  "AJMJS_BEGINNER_TASK_5_TITLE": "Tụlee Afọ",
+  "AJMJS_BEGINNER_TASK_5_DESC": "Gwa kọmputa ka o tulee afọ ya na nke gị wee gosi ozi.",
+  "AJMJS_BEGINNER_TASK_5_INITIAL": "// TODO: Tụlee afọ\nagbanwe afọM = 14;",
+  "AJMJS_BEGINNER_TASK_5_SOLUTION": "idan (afọKọmputa > afọM) {\n    ziputa('Aka m toro gị!');\n} maobughi idan (afọKọmputa == afọM) {\n    ziputa('Anyị nwere otu afọ!');\n} maobughi {\n    ziputa('Ị toro m!');\n}",
+
+  "AJMJS_BEGINNER_TASK_6_TITLE": "Kwuogharịa Ozi Ugboro Ise",
+  "AJMJS_BEGINNER_TASK_6_DESC": "Mee ka kọmputa kwuo aha ya ugboro ise site na akaghị.",
+  "AJMJS_BEGINNER_TASK_6_SOLUTION": "maka(agbanwe i = 0; i < 5; i++) {\n    ziputa('Aha m bụ ' + ahaKọmputa);\n}",
+
+  "AJMJS_BEGINNER_TASK_7_TITLE": "Gosi Ihe Ndị Dị na Kaboodu",
+  "AJMJS_BEGINNER_TASK_7_DESC": "Mee ka kọmputa gosi ihe niile dị na kaboodu ụlọ site na akaghị.",
+  "AJMJS_BEGINNER_TASK_7_SOLUTION": "maka (agbanwe ihe kowane kaboodu_ụlọ) {\n    ziputa(ihe);\n}",
+
+  "AJMJS_BEGINNER_TASK_8_TITLE": "Gụọ Ọnụọgụ Ihe",
+  "AJMJS_BEGINNER_TASK_8_DESC": "Gosi ọnụọgụ ihe dị na kaboodu ọ bụla na kọntaktị.",
+  "AJMJS_BEGINNER_TASK_8_SOLUTION": "ziputa('E nwere ' + kaboodu_ụlọ.ogologo + ' ihe n’ime kaboodu ụlọ');\nziputa('E nwere ' + kaboodu_kichin.ogologo + ' ihe n’ime kaboodu kichin');\nziputa('E nwere ' + kọntaktị.ogologo + ' na kọntaktị');"
+
 }

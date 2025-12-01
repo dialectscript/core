@@ -18,7 +18,7 @@
   "MODE_TOGGLED_MESSAGE": "Ti ṣiṣẹ́",
   "EDITOR_MODE_SANDBOX": "Sandbox Mode",
   "EDITOR_MODE_LESSON": "Lesson Mode",
-  "NAV_TITLE": "Ajami",
+  "NAV_TITLE": "DialectScript",
   "LANG_EN": "Gẹ̀ẹ́sì",
   "LANG_HA": "Hausa",
   "LANG_AR": "Arabiki",
@@ -95,5 +95,55 @@
   "JS_BEGINNER_TASK_8_SOLUTION": "console.log('Ọ̀kànlélọ́gọ́rin ni ' + room_cupboard.length + ' wà nínú àpótí yàrá');\nconsole.log('Ọ̀kànlélọ́gọ́rin ni ' + kitchen_cupboard.length + ' wà nínú àpótí ibi idáná');\nconsole.log('Ọ̀kànlélọ́gọ́rin ni ' + contacts.length + ' wà nínú contacts');",
   "JS_BEGINNER_TASK_8_HINT_1": "Lo array.length.",
   "JS_BEGINNER_TASK_8_HINT_2": "Lo + láti darapọ̀ ọ̀rọ̀ àti nọ́mbà.",
-  "JS_BEGINNER_TASK_8_HINT_3": "console.log() fi ìfiranṣẹ́ ikẹhin hàn."
+  "JS_BEGINNER_TASK_8_HINT_3": "console.log() fi ìfiranṣẹ́ ikẹhin hàn.",
+
+  
+  "AJMJS_BEGINNER_TITLE": "JavaScript fun Àwọn Àkọ́kọ́",
+  "AJMJS_BEGINNER_DESC": "Kọ́ JavaScript láti òdo dé akọni — pẹ̀lú àwọn ìpèníjà amóríyá!",
+
+  "AJMJS_BEGINNER_TASK_0_TITLE": "JavaScript fun Àwọn Àkọ́kọ́",
+  "AJMJS_BEGINNER_TASK_0_DESC": "Kọ́ JavaScript láti òdo dé akọni — pẹ̀lú àwọn ìpèníjà amóríyá!",
+  "AJMJS_BEGINNER_TASK_0_INITIAL": "// Tẹ RUN láti bẹ̀rẹ̀\nfihan('Bẹ̀rẹ̀')",
+  "AJMJS_BEGINNER_TASK_0_SOLUTION": "// Tẹ RUN láti bẹ̀rẹ̀\nfihan('Bẹ̀rẹ̀')",
+  "AJMJS_BEGINNER_TASK_0_HINT_1": "Tẹ RUN láti bẹ̀rẹ̀",
+
+  "AJMJS_BEGINNER_TASK_1_TITLE": "Fi Kí Oúnjẹ Hàn",
+  "AJMJS_BEGINNER_TASK_1_DESC": "Jẹ́ kí kọ̀ǹpútà kí olùṣe nípa fífihan 'Ekaro'.",
+  "AJMJS_BEGINNER_TASK_1_INITIAL": "// TODO: Jẹ́ kí kọ̀ǹpútà kí ni",
+  "AJMJS_BEGINNER_TASK_1_SOLUTION": "fihan('Ekaro');",
+  "AJMJS_BEGINNER_TASK_1_HINT_1": "Lo fihan() láti fi ọ̀rọ̀ hàn.",
+  "AJMJS_BEGINNER_TASK_1_HINT_2": "Ọ̀rọ̀ gbọdọ̀ wà nínú àmì ọ̀rọ̀ méjì \"...\".",
+  "AJMJS_BEGINNER_TASK_1_HINT_3": "Gbìyànjú fihan('Bawo') lákọ́ọ́kọ́.",
+
+  "AJMJS_BEGINNER_TASK_2_TITLE": "Ṣe Àfihàn Kọ̀ǹpútà",
+  "AJMJS_BEGINNER_TASK_2_DESC": "Jẹ́ kí kọ̀ǹpútà sọ orúkọ rẹ̀.",
+  "AJMJS_BEGINNER_TASK_2_INITIAL": "// TODO: Jẹ́ kí kọ̀ǹpútà sọ orúkọ rẹ̀\n",
+  "AJMJS_BEGINNER_TASK_2_SOLUTION": "fihan('Orúkọ mi ni Kọ̀ǹpútà');",
+
+  "AJMJS_BEGINNER_TASK_3_TITLE": "Tọ́jú Àwọn Ìwífún Kọ̀ǹpútà",
+  "AJMJS_BEGINNER_TASK_3_DESC": "Tọ́jú orúkọ àti ọjọ́ọ́rí kọ̀ǹpútà nínú àwọn oníṣẹ́.",
+  "AJMJS_BEGINNER_TASK_3_SOLUTION": "oniruuru orukoKomputa = 'Kọ̀ǹpútà';\noniruuru odunKomputa = 15;",
+
+  "AJMJS_BEGINNER_TASK_4_TITLE": "Ṣẹ̀dá Àwọn Kọ́bọ̀ọ̀dù",
+  "AJMJS_BEGINNER_TASK_4_DESC": "Tọ́jú àwọn nǹkan sínú kọ́bọ̀ọ̀dù yàrá, kọ́bọ̀ọ̀dù ilé ìdána, àti àwọn nọ́mbà ìfọ̀rọ̀wérọ̀.",
+  "AJMJS_BEGINNER_TASK_4_SOLUTION": "oniruuru koboodu_yara = ['ase','ìwé','fóònù','','pen','digi'];\noniruuru koboodu_idana = ['àwo','àlùbọ́sà','ṣíbí','',''];\noniruuru awon_nomba = [8030000001, 8030000002, 8030000003];",
+
+  "AJMJS_BEGINNER_TASK_5_TITLE": "Wé Àwọn Ọdún",
+  "AJMJS_BEGINNER_TASK_5_DESC": "Jẹ́ kí kọ̀ǹpútà wé ọjọ́ọ́rí rẹ̀ pẹ̀lú tirẹ̀ kí ó sì fi ìròyìn hàn.",
+  "AJMJS_BEGINNER_TASK_5_INITIAL": "// TODO: Wé ọdún\noniruuru odunMi = 14;",
+  "AJMJS_BEGINNER_TASK_5_SOLUTION": "ti(odunKomputa > odunMi) {\n    fihan('Mo ti dàgbà ju ẹ̀ lọ!');\n} kokuma ti(odunKomputa == odunMi) {\n    fihan('A ní ọdún kan náà!');\n} kokuma {\n    fihan('Ẹ̀yin dàgbà ju mi lọ!');\n}",
+
+  "AJMJS_BEGINNER_TASK_6_TITLE": "Tun Ọ̀rọ̀ Ṣe Lọ́pọ̀lọpọ̀",
+  "AJMJS_BEGINNER_TASK_6_DESC": "Jẹ́ kí kọ̀ǹpútà sọ orúkọ rẹ̀ ní ìgbà márùn-ún pẹ̀lú ìgbàyí.",
+  "AJMJS_BEGINNER_TASK_6_SOLUTION": "fun(oniruuru i = 0; i < 5; i++) {\n    fihan('Orúkọ mi ni ' + orukoKomputa);\n}",
+
+  "AJMJS_BEGINNER_TASK_7_TITLE": "Fi Àwọn Nǹkan Kọ́bọ̀ọ̀dù Hàn",
+  "AJMJS_BEGINNER_TASK_7_DESC": "Jẹ́ kí kọ̀ǹpútà fi gbogbo àwọn nǹkan nínú kọ́bọ̀ọ̀dù yàrá hàn pẹ̀lú ìgbàyí.",
+  "AJMJS_BEGINNER_TASK_7_SOLUTION": "fun (oniruuru nkan kowane koboodu_yara) {\n    fihan(nkan);\n}",
+
+  "AJMJS_BEGINNER_TASK_8_TITLE": "Ka Àwọn Nǹkan",
+  "AJMJS_BEGINNER_TASK_8_DESC": "Fi iye àwọn nǹkan tó wà nínú kọ́bọ̀ọ̀dù kọ̀ọ̀kan àti àwọn nọ́mbà ìfọ̀rọ̀wérọ̀ hàn.",
+  "AJMJS_BEGINNER_TASK_8_SOLUTION": "fihan('Àwọn nǹkan ' + koboodu_yara.iwon + ' wà nínú kọ́bọ̀ọ̀dù yàrá');\nfihan('Àwọn nǹkan ' + koboodu_idana.iwon + ' wà nínú kọ́bọ̀ọ̀dù ilé ìdána');\nfihan('Àwọn nọ́mbà ' + awon_nomba.iwon + ' wà nínú àwọn ìfọ̀rọ̀wérọ̀');"
+
 }
+

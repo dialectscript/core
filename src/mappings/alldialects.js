@@ -64,6 +64,7 @@ export const alldialects = {
 
         // Control Flow
         "in": "if",
+        "idan": "if",
         "kokuma": "else",
         "faraDaga": "for",
         "zabi": "switch",
@@ -619,7 +620,8 @@ export const alldialects = {
         // Variable Declarations
         "aago": "const",
         "je": "let",
-        "iwon": "var",
+        "oniruuru": "var",
+        "iwon":"length",
 
         // Data Types & Values
         "otito": "true",
@@ -732,6 +734,12 @@ export const alldialects = {
         "ka": "let",
         "mgbeNiile": "const",
         "mgbanwe": "var",
+        "agbanwe": "var",
+        "ogologo":"length",
+        "oburuna": "if",
+        "maobughi": "else",
+        
+
 
         // Output
         "zipụta": "console.log",

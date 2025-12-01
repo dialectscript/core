@@ -66,6 +66,7 @@ export const hausa = {
 
         // Control Flow
         "in": "if",
+        "idan": "if",
         "kokuma": "else",
         "faraDaga": "for",
         "zabi": "switch",

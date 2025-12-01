@@ -667,8 +667,7 @@
     <script src="https://dialectscript.github.io/core/src/ace_ajami/ajami_autocomplete_mappings.js"></script>
 
     <!--script src="app.js"></script-->
-
-    <script>
+<script>
         // ==========================================
         // PART 0: AJAMI CUSTOM AUTOCOMPLETER
         // ==========================================
@@ -694,7 +693,7 @@
         // ==========================================
         // PART 1: GLOBAL STATE
         // ==========================================
-        let currentLanguage = 'en';
+        let currentLanguage = 'ha';
         let CURRENT_TRANSLATIONS = {};
         let LESSON_DATA = null;
 
@@ -711,7 +710,7 @@
             //{ id: "php_intro", file: "lesson3.json", title: "PHP: Server-Side Output" },
             //{ id: "html_intro", file: "lesson4.json", title: "HTML: Main Header" },
             //{ id: "ajami_intro", file: "lesson5.json", title: "AjamiScript: Console Output" }, // <-- NEW
-            { id: "js_beginner", file: "js_beginner.json", title: "Javascript Beginner" },
+            //{ id: "js_beginner", file: "js_beginner.json", title: "Javascript Beginner" },
             { id: "ajmjs_beginner", file: "ajmjs_beginner.json", title: "Dialectscript Beginner" },
             //{ id: "html_sandbox", file: "html_sandbox.json", title: "HTML Sandbox" },
             //{ id: "jshtml_sandbox", file: "jshtml_sandbox.json", title: "JSHTML Sandbox" },
@@ -786,6 +785,7 @@
         // PART 2: DATA LOADING
         // ==========================================
         async function loadTranslations(lang) {
+            //alert(lang)
             try {
                 const response = await fetch(`./translations/${lang}.json`);
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -1266,7 +1266,7 @@
                 // NEW: Typewriter magic!
                 //typwriterForAce(initialContent, {
                 fadeInTextForAce(initialContent, {
-                    speed: 10,
+                    speed: 5,
                     humanize: true,
                     sound: true,           // feels like old-school coding!
                     onComplete: () => {
@@ -1379,7 +1379,7 @@
         JSON
 
         {
-            "code": "<?php echo 'Hello'; ?>",   // The source code from the editor
+            "code": "&lt;?php echo 'Hello'; ?&gt;",   // The source code from the editor
             "language": "php",                  // The mode (php, java, go)
             "checker_function": "checkOutput",  // The name of the server-side checker function
             "lesson_id": "php_intro"            // Context for the server (optional, but good for logging)
@@ -2483,6 +2483,8 @@
                 el.innerHTML =
                     `<span class="badge bg-success">${translate("EDITOR_MODE_LESSON")}</span>`;
             }
+
+                        
         }
 
 
@@ -2493,7 +2495,7 @@
             isSandboxMode = !isSandboxMode; // Flip the state
 
             const modeText = isSandboxMode ? "Lesson Mode" : "Free Practice Mode";
-            const statusText = isSandboxMode ? "SANDBOX MODE ACTIVE" : "LESSON MODE ACTIVE";
+            const statusText = isSandboxMode ?  "SANDBOX MODE ACTIVE" : "LESSON MODE ACTIVE";
             const alertIcon = isSandboxMode ? 'fa-solid fa-tools text-primary' : 'fa-solid fa-graduation-cap text-success';
 
             // 1. Update Menu Text (Desktop and Mobile)
@@ -2502,20 +2504,33 @@
 
             setEditorModeNotification();
 
-
-
             // 2. Display a Confirmation Alert
+
+if(isSandboxMode){
+            showCustomAlert(
+                translate("EDITOR_MODE_SANDBOX") ,
+                statusText,
+                alertIcon
+            );
+        }else{
+            showCustomAlert(
+                translate("EDITOR_MODE_LESSON") ,
+                statusText,
+                alertIcon
+            );
+        }
+
             /*?
             showCustomAlert(
                 "Mode Toggled",
                 `You are now in **${statusText}**. Your progress will not be checked or saved.`,
                 alertIcon
             );*/
-            showCustomAlert(
+            /*showCustomAlert(
                 translate("MODE_TOGGLED_MESSAGE_TITLE") || "Mode Toggled",
                 translate("MODE_TOGGLED_MESSAGE") || "Enabled",
                 alertIcon // Use a success icon
-            );
+            );*/
 
             // 3. Clear the console output (to remove old Pass/Fail messages)
             const consoleWrapper = document.getElementById('console-output-wrapper');
@@ -2815,7 +2830,7 @@
         }
 
 
-//fadeInText
+        //fadeInText
         function fadeInTextForAce(initialContent, options = {}) {
     const {
         speed = 45,
@@ -2877,6 +2892,8 @@
 
     animate();
 }
+
+
 
         function jumpToTask(taskIndex) {
             if (taskIndex < 0 || taskIndex >= LESSON_DATA.tasks.length) return;
@@ -2983,7 +3000,7 @@
                 setTimeout(() => {
                     activeTaskElement.scrollIntoView({
                         behavior: 'smooth',
-                        //block: 'center'
+                       // block: 'center'
                     });
                 }, 100);
             }
@@ -3266,9 +3283,60 @@
             if (mobRun) mobRun.onclick = () => {
                 runCodeAndCheckTask();
                 const editorPanel = document.querySelector('.panel-center');
-                editorPanel.classList.replace('d-none', 'd-flex');
-                toggleMob("editor")
+                const outputPanel = document.getElementById('output-panel');
+
+                if (window.innerWidth >= 992) {
+        return; // Only run this logic on mobile
+    }
+    
+    // --- Logic to check and switch panels ---
+
+    // Scenario 1: Editor Panel is VISIBLE (The usual state before running code)
+    if (editorPanel.classList.contains('d-flex')) {
+        // Hide Editor Panel
+        editorPanel.classList.replace('d-flex', 'd-none');
+        
+        // Show Output Panel
+        outputPanel.classList.replace('d-none', 'd-flex');
+        
+        // Call toggleMob to update tab buttons and resizing (CRITICAL for consistency)
+        if (typeof toggleMob === 'function') {
+            toggleMob("output");
+        }
+    } 
+    
+    // Scenario 2: Output Panel is VISIBLE (User ran code, then clicked Run again)
+    // NOTE: This assumes the Output panel is also set to 'd-flex' when visible on mobile.
+    else if (outputPanel.classList.contains('d-flex')) {
+        // Hide Output Panel
+        outputPanel.classList.replace('d-flex', 'd-none');
+        
+        // Show Editor Panel
+        editorPanel.classList.replace('d-none', 'd-flex');
+        
+        // Call toggleMob to update tab buttons and resizing
+        if (typeof toggleMob === 'function') {
+            toggleMob("editor");
+        }
+    }else{
+        editorPanel.classList.replace('d-none', 'd-flex');
+        toggleMob("editor")
+    }
+    
+    // The previous 'toggleMob("editor")' call in your original code is now replaced
+    // and handled by the conditional logic above.
+
+
+
+                
+               
             };
+            
+
+
+
+
+
 
             // --- Tools Menu Listeners ---
             const btnReset = document.getElementById('btn-reset-lesson');

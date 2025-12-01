@@ -23,7 +23,11 @@
   "NAV_TITLE": "DialectScript",
   "LANG_EN": "Turanci",
   "LANG_HA": "Hausa",
+  "LANG_YO": "Yarbanci",
+  "LANG_IG": "Ibo",
+  "LANG_PG": "Pidgin",
   "LANG_AR": "Larabci",
+  
 
   "JS_BEGINNER_TITLE": "JavaScript Ga Masu Farawa",
   "JS_BEGINNER_DESC": "Koyi JavaScript daga tushe zuwa matsayi — mataki-mataki tare da kalubale masu kayatarwa!",
@@ -99,6 +103,10 @@
   "JS_BEGINNER_TASK_8_HINT_2": "Haɗa rubutu da lamba da +.",
   "JS_BEGINNER_TASK_8_HINT_3": "console.log() yana nuna sakon ƙarshe.",
 
+
+
+  "AJMJS_BEGINNER_TITLE": "DialectScript ga Masu Koyo",
+  "AJMJS_BEGINNER_DESC": "Koyi DialectScript — da kadan da kadan!",
 
   
   "AJMJS_BEGINNER_TASK_0_TITLE": "Menene DialectScript?",

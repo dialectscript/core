@@ -58,6 +58,8 @@ export const igbo = {
     "nkea": "this",                 // same
     "puo": "break",
     "gaaNihu": "continue",
+    "oburuna": "if",
+        "maobughi": "else",
 
     // Async & modern (keep English – everyone uses these words)
     "async": "async",

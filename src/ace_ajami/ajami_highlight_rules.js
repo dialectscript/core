@@ -67,6 +67,7 @@ ace.define('ace/mode/ajami_highlight_rules', ['require', 'exports', 'ace/lib/oop
 
         // Control Flow
         "in": "if",
+        "idan": "if",
         "kokuma": "else",
         "faraDaga": "for",
         "zabi": "switch",
@@ -506,7 +507,8 @@ ace.define('ace/mode/ajami_highlight_rules', ['require', 'exports', 'ace/lib/oop
         "aago": "const",
         "jé_": "let",
         "jẹ": "let",
-        "iwon": "var",
+        "oniruuru": "var",
+        "iwon":"length",
 
         // Data Types & Values
         "otito": "true",
@@ -622,7 +624,7 @@ ace.define('ace/mode/ajami_highlight_rules', ['require', 'exports', 'ace/lib/oop
         // Variable Declarations
         "aago": "const",
         "je": "let",
-        "iwon": "var",
+        "oniruuru": "var",
 
         // Data Types & Values
         "otito": "true",
@@ -735,6 +737,12 @@ ace.define('ace/mode/ajami_highlight_rules', ['require', 'exports', 'ace/lib/oop
         "ka": "let",
         "mgbeNiile": "const",
         "mgbanwe": "var",
+        "agbanwe": "var",
+        "ogologo":"length",
+        "oburuna": "if",
+        "maobughi": "else",
+        
+
 
         // Output
         "zipụta": "console.log",

@@ -63,6 +63,7 @@ window.alldialects = {
 
         // Control Flow
         "in": "if",
+        "idan": "if",
         "kokuma": "else",
         "faraDaga": "for",
         "zabi": "switch",
@@ -502,7 +503,7 @@ window.alldialects = {
         "aago": "const",
         "jé_": "let",
         "jẹ": "let",
-        "iwon": "var",
+        "oniruuru": "var",
 
         // Data Types & Values
         "otito": "true",
@@ -618,7 +619,8 @@ window.alldialects = {
         // Variable Declarations
         "aago": "const",
         "je": "let",
-        "iwon": "var",
+        "oniruuru": "var",
+        "iwon":"length",
 
         // Data Types & Values
         "otito": "true",
@@ -716,8 +718,8 @@ window.alldialects = {
 
         //Igbo
         // Core — waiting for community
-        "ọbụrụna": "if",
-        "maọbụghị": "else",
+        "oburuna": "if",
+        "maobughi": "else",
         "ọrụ": "function",
         "weghachi": "return",
         "nwalee": "try",
@@ -731,6 +733,10 @@ window.alldialects = {
         "ka": "let",
         "mgbeNiile": "const",
         "mgbanwe": "var",
+        "agbanwe": "var",
+        "ogologo":"length",
+        
+
 
         // Output
         "zipụta": "console.log",
