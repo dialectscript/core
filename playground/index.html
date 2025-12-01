@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
 
@@ -36,12 +37,14 @@
     <meta name="twitter:site" content="@CodeunitSITTE">
 
     <!-- Favicon (replace later with real logo) -->
-    <link rel="icon" href="https://dialectscript.github.io/core/website/assets/images/apple-launch-640x1136.jpg" type="image/x-icon">
-    <link rel="apple-touch-icon" href="https://dialectscript.github.io/core/website/assets/images/apple-launch-640x1136.jpg">
+    <link rel="icon" href="https://dialectscript.github.io/core/website/assets/images/apple-launch-640x1136.jpg"
+        type="image/x-icon">
+    <link rel="apple-touch-icon"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-640x1136.jpg">
 
     <title>Dialect Script – Code in Your Language</title>
 
-  
+
 
 
 
@@ -79,7 +82,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-   
+
     <style>
         :root {
             /* The Codecademy Palette */
@@ -327,9 +330,7 @@
     <script src="https://unpkg.com/acorn@8.11.3/dist/acorn.js"></script>
     <script src="checktasks.js"></script>
     <script src="js-extensions.js"></script>
-    <script 
-    src="https://dialectscript.github.io/core/src/core/transpiler_console.js" 
-    type="module">
+    <script src="https://dialectscript.github.io/core/src/core/transpiler_console.js" type="module">
     </script>
 </head>
 
@@ -455,7 +456,7 @@
             <div class="card bg-dark text-white border-secondary mb-3">
                 <div class="card-header border-secondary fw-bold small text-uppercase">
                     <i class="fa-solid fa-book me-2"></i><span id="course-progress-title"></span>
-                    
+
                 </div>
                 <ul class="list-group list-group-flush" id="lesson-list-container">
                 </ul>
@@ -625,7 +626,8 @@
                             style="background-color: var(--ca-yellow);">
                             <i class="fa-solid fa-arrow-right me-2"></i> Next Lesson
                         </button>
-                        <button onclick="stayOnThisLesson()" class="btn btn-outline-secondary text-white" data-bs-dismiss="modal">
+                        <button onclick="stayOnThisLesson()" class="btn btn-outline-secondary text-white"
+                            data-bs-dismiss="modal">
                             Stay on this page
                         </button>
                     </div>
@@ -654,7 +656,7 @@
         </div>
     </div>
 
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.7/ace.js"></script>
@@ -667,7 +669,7 @@
     <script src="https://dialectscript.github.io/core/src/ace_ajami/ajami_autocomplete_mappings.js"></script>
 
     <!--script src="app.js"></script-->
-<script>
+    <script>
         // ==========================================
         // PART 0: AJAMI CUSTOM AUTOCOMPLETER
         // ==========================================
@@ -693,7 +695,22 @@
         // ==========================================
         // PART 1: GLOBAL STATE
         // ==========================================
-        let currentLanguage = 'ha';
+
+        // Get language from URL or default to Hausa
+        const urlParams = new URLSearchParams(window.location.search);
+        let currentLanguage = urlParams.get('lang') || 'ha';  // ← This is the line you wanted
+
+        // Optional: force only supported languages
+        if (!['en', 'yo', 'ha','ib'].includes(currentLanguage)) {
+            currentLanguage = 'ha';
+        }
+
+        // Set <html lang=""> correctly
+        document.documentElement.lang = currentLanguage;
+
+
+
+        //let currentLanguage = 'ha';
         let CURRENT_TRANSLATIONS = {};
         let LESSON_DATA = null;
 
@@ -1036,7 +1053,7 @@
             }
         }
 
-       
+
 
         function renderTaskPanel() {
             const container = document.getElementById('instructions-content-container');
@@ -1212,11 +1229,11 @@
             ids.forEach(id => { const el = document.getElementById(id); if (el) el.textContent = `${currentTaskIndex}/${LESSON_DATA.tasks.length} completed`; });
 
             const courseProgressTitleEl = document.getElementById('course-progress-title');
-            if (courseProgressTitleEl) courseProgressTitleEl.textContent = translate("COURSE_PROGRESS_TITLE") ;
+            if (courseProgressTitleEl) courseProgressTitleEl.textContent = translate("COURSE_PROGRESS_TITLE");
 
 
             const navTitleEl = document.getElementById('nav-title');
-            if (navTitleEl) navTitleEl.textContent = translate("NAV_TITLE") ;
+            if (navTitleEl) navTitleEl.textContent = translate("NAV_TITLE");
 
             const titleEl = document.getElementById('lesson-title-display');
             if (titleEl) titleEl.textContent = translate(LESSON_DATA.title_key);
@@ -1233,13 +1250,13 @@
             if (pnl) pnl.style.textAlign = isRTL ? 'right' : 'left';
 
             if (currentTaskIndex < LESSON_DATA.tasks.length) {
-            updateCodeEditor()
+                updateCodeEditor()
             }
-            
+
 
         }
 
-        function stayOnThisLesson (){
+        function stayOnThisLesson() {
             //loadPreviousLesson()
             currentTaskIndex--
         }
@@ -1531,7 +1548,7 @@
             }, 300);
 
 
-            
+
 
             if (!isSandboxMode) {
 
@@ -2317,11 +2334,11 @@
                 const activeTask = LESSON_DATA.tasks[currentTaskIndex];
                 //const activeLessonSolutionKey = LESSON_DATA.files["script.ajmjs"].solution_content_key;              
                 const activeTaskSolutionKey = activeTask.solution_content_key;
-                console.log('checkerFn',activeTask.checker_function)
+                console.log('checkerFn', activeTask.checker_function)
                 const checkerFn = TASK_CHECKERS[mode][activeTask.checker_function];
                 const taskResult = checkerFn(code, activeTaskSolutionKey, CURRENT_TRANSLATIONS);
 
-                
+
 
                 //console.log('CURRENT_TRANSLATIONS: ', activeTaskSolution)
                 //console.log('activeTaskSolutionKey: ', activeTaskSolutionKey)
@@ -2484,7 +2501,7 @@
                     `<span class="badge bg-success">${translate("EDITOR_MODE_LESSON")}</span>`;
             }
 
-                        
+
         }
 
 
@@ -2495,7 +2512,7 @@
             isSandboxMode = !isSandboxMode; // Flip the state
 
             const modeText = isSandboxMode ? "Lesson Mode" : "Free Practice Mode";
-            const statusText = isSandboxMode ?  "SANDBOX MODE ACTIVE" : "LESSON MODE ACTIVE";
+            const statusText = isSandboxMode ? "SANDBOX MODE ACTIVE" : "LESSON MODE ACTIVE";
             const alertIcon = isSandboxMode ? 'fa-solid fa-tools text-primary' : 'fa-solid fa-graduation-cap text-success';
 
             // 1. Update Menu Text (Desktop and Mobile)
@@ -2506,19 +2523,19 @@
 
             // 2. Display a Confirmation Alert
 
-if(isSandboxMode){
-            showCustomAlert(
-                translate("EDITOR_MODE_SANDBOX") ,
-                statusText,
-                alertIcon
-            );
-        }else{
-            showCustomAlert(
-                translate("EDITOR_MODE_LESSON") ,
-                statusText,
-                alertIcon
-            );
-        }
+            if (isSandboxMode) {
+                showCustomAlert(
+                    translate("EDITOR_MODE_SANDBOX"),
+                    statusText,
+                    alertIcon
+                );
+            } else {
+                showCustomAlert(
+                    translate("EDITOR_MODE_LESSON"),
+                    statusText,
+                    alertIcon
+                );
+            }
 
             /*?
             showCustomAlert(
@@ -2832,66 +2849,66 @@ if(isSandboxMode){
 
         //fadeInText
         function fadeInTextForAce(initialContent, options = {}) {
-    const {
-        speed = 45,
-        humanize = true,
-        sound = false,
-        onComplete = () => {}
-    } = options;
+            const {
+                speed = 45,
+                humanize = true,
+                sound = false,
+                onComplete = () => { }
+            } = options;
 
-    const editor = window.aceEditorInstance;
-    if (!editor) {
-        console.error("Ace Editor instance not found!");
-        return;
-    }
+            const editor = window.aceEditorInstance;
+            if (!editor) {
+                console.error("Ace Editor instance not found!");
+                return;
+            }
 
-    // Insert the text immediately, but make it invisible
-    editor.setValue(initialContent, -1);
+            // Insert the text immediately, but make it invisible
+            editor.setValue(initialContent, -1);
 
-    const editorElement = editor.container;
+            const editorElement = editor.container;
 
-    // Start fully transparent
-    editorElement.style.opacity = 0;
+            // Start fully transparent
+            editorElement.style.opacity = 0;
 
-    // Calculate total animation steps
-    //const totalSteps = 30;
-    const totalSteps = Math.max(10, Math.floor(speed * 1.5)); 
+            // Calculate total animation steps
+            //const totalSteps = 30;
+            const totalSteps = Math.max(10, Math.floor(speed * 1.5));
 
-    let step = 0;
+            let step = 0;
 
-    function animate() {
-        step++;
+            function animate() {
+                step++;
 
-        // Apply easing / humanize randomness
-        let delay = speed;
-        if (humanize) {
-            delay = speed + Math.random() * 50;
+                // Apply easing / humanize randomness
+                let delay = speed;
+                if (humanize) {
+                    delay = speed + Math.random() * 50;
+                }
+
+                // Sound option
+                if (sound) {
+                    // simplest retro sound "click"
+                    const audio = new Audio(
+                        "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEA..." // (optional placeholder)
+                    );
+                    audio.volume = 0.05;
+                    audio.play().catch(() => { });
+                }
+
+                // Update opacity
+                const newOpacity = Math.min(step / totalSteps, 1);
+                editorElement.style.opacity = newOpacity;
+
+                if (step < totalSteps) {
+                    setTimeout(animate, delay);
+                } else {
+                    editor.clearSelection();
+                    onComplete();
+                }
+            }
+
+            animate();
         }
-
-        // Sound option
-        if (sound) {
-            // simplest retro sound "click"
-            const audio = new Audio(
-                "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEA..." // (optional placeholder)
-            );
-            audio.volume = 0.05;
-            audio.play().catch(() => {});
-        }
-
-        // Update opacity
-        const newOpacity = Math.min(step / totalSteps, 1);
-        editorElement.style.opacity = newOpacity;
-
-        if (step < totalSteps) {
-            setTimeout(animate, delay);
-        } else {
-            editor.clearSelection();
-            onComplete();
-        }
-    }
-
-    animate();
-}
 
 
 
@@ -3000,7 +3017,7 @@ if(isSandboxMode){
                 setTimeout(() => {
                     activeTaskElement.scrollIntoView({
                         behavior: 'smooth',
-                       // block: 'center'
+                        // block: 'center'
                     });
                 }, 100);
             }
@@ -3286,52 +3303,52 @@ if(isSandboxMode){
                 const outputPanel = document.getElementById('output-panel');
 
                 if (window.innerWidth >= 992) {
-        return; // Only run this logic on mobile
-    }
-    
-    // --- Logic to check and switch panels ---
+                    return; // Only run this logic on mobile
+                }
 
-    // Scenario 1: Editor Panel is VISIBLE (The usual state before running code)
-    if (editorPanel.classList.contains('d-flex')) {
-        // Hide Editor Panel
-        editorPanel.classList.replace('d-flex', 'd-none');
-        
-        // Show Output Panel
-        outputPanel.classList.replace('d-none', 'd-flex');
-        
-        // Call toggleMob to update tab buttons and resizing (CRITICAL for consistency)
-        if (typeof toggleMob === 'function') {
-            toggleMob("output");
-        }
-    } 
-    
-    // Scenario 2: Output Panel is VISIBLE (User ran code, then clicked Run again)
-    // NOTE: This assumes the Output panel is also set to 'd-flex' when visible on mobile.
-    else if (outputPanel.classList.contains('d-flex')) {
-        // Hide Output Panel
-        outputPanel.classList.replace('d-flex', 'd-none');
-        
-        // Show Editor Panel
-        editorPanel.classList.replace('d-none', 'd-flex');
-        
-        // Call toggleMob to update tab buttons and resizing
-        if (typeof toggleMob === 'function') {
-            toggleMob("editor");
-        }
-    }else{
-        editorPanel.classList.replace('d-none', 'd-flex');
-        toggleMob("editor")
-    }
-    
-    // The previous 'toggleMob("editor")' call in your original code is now replaced
-    // and handled by the conditional logic above.
+                // --- Logic to check and switch panels ---
+
+                // Scenario 1: Editor Panel is VISIBLE (The usual state before running code)
+                if (editorPanel.classList.contains('d-flex')) {
+                    // Hide Editor Panel
+                    editorPanel.classList.replace('d-flex', 'd-none');
+
+                    // Show Output Panel
+                    outputPanel.classList.replace('d-none', 'd-flex');
+
+                    // Call toggleMob to update tab buttons and resizing (CRITICAL for consistency)
+                    if (typeof toggleMob === 'function') {
+                        toggleMob("output");
+                    }
+                }
+
+                // Scenario 2: Output Panel is VISIBLE (User ran code, then clicked Run again)
+                // NOTE: This assumes the Output panel is also set to 'd-flex' when visible on mobile.
+                else if (outputPanel.classList.contains('d-flex')) {
+                    // Hide Output Panel
+                    outputPanel.classList.replace('d-flex', 'd-none');
+
+                    // Show Editor Panel
+                    editorPanel.classList.replace('d-none', 'd-flex');
+
+                    // Call toggleMob to update tab buttons and resizing
+                    if (typeof toggleMob === 'function') {
+                        toggleMob("editor");
+                    }
+                } else {
+                    editorPanel.classList.replace('d-none', 'd-flex');
+                    toggleMob("editor")
+                }
+
+                // The previous 'toggleMob("editor")' call in your original code is now replaced
+                // and handled by the conditional logic above.
 
 
 
-                
-               
+
+
             };
-            
+
 
 
 
@@ -3672,423 +3689,424 @@ if(isSandboxMode){
     </script>
 
 
-<!-- 
+    <!-- 
 TEMPLATE
 Filetype: .js, ajmjs
 Filename: game.js, game.ajmjs
 Function: runcodeGameJSHTML
 -->
-<template id="gamejshtml-template">
+    <template id="gamejshtml-template">
 
-<!DOCTYPE html>
-<html lang="en">
+        <!DOCTYPE html>
+        <html lang="en">
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Labari — Code Your Story</title>
-    <style>
-        :root {
-            --paper: #faf8ef;
-            --ink: #333;
-            --accent: #d4a017;
-            --forest: #2d5016;
-            --castle: #8B4513;
-            --space: #1a1a2e;
-        }
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Labari — Code Your Story</title>
+            <style>
+                :root {
+                    --paper: #faf8ef;
+                    --ink: #333;
+                    --accent: #d4a017;
+                    --forest: #2d5016;
+                    --castle: #8B4513;
+                    --space: #1a1a2e;
+                }
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Georgia, serif;
-            background: linear-gradient(135deg, #8B5A2B, #3E1B0D);
-            color: var(--ink);
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            transition: background 1s ease;
-        }
+                body {
+                    margin: 0;
+                    padding: 0;
+                    font-family: Georgia, serif;
+                    background: linear-gradient(135deg, #8B5A2B, #3E1B0D);
+                    color: var(--ink);
+                    height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    transition: background 1s ease;
+                }
 
-        body.forest {
-            background: linear-gradient(135deg, var(--forest), #4a7c59);
-        }
+                body.forest {
+                    background: linear-gradient(135deg, var(--forest), #4a7c59);
+                }
 
-        body.castle {
-            background: linear-gradient(135deg, var(--castle), #654321);
-        }
+                body.castle {
+                    background: linear-gradient(135deg, var(--castle), #654321);
+                }
 
-        body.space {
-            background: linear-gradient(135deg, var(--space), #16213e);
-            color: #ddd;
-        }
+                body.space {
+                    background: linear-gradient(135deg, var(--space), #16213e);
+                    color: #ddd;
+                }
 
-        #output {
-            flex: 1;
-            background: var(--paper);
-            padding: 2rem 1.5rem;
-            overflow-y: auto;
-            line-height: 1.7;
-            font-size: 1.2rem;
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="#faf8ef"/><path d="M0,50 Q25,30 50,50 T100,50 L100,100 L0,100 Z" fill="#e8e1d1" opacity="0.3"/></svg>');
-            transition: background 1s ease;
-        }
+                #output {
+                    flex: 1;
+                    background: var(--paper);
+                    padding: 2rem 1.5rem;
+                    overflow-y: auto;
+                    line-height: 1.7;
+                    font-size: 1.2rem;
+                    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="#faf8ef"/><path d="M0,50 Q25,30 50,50 T100,50 L100,100 L0,100 Z" fill="#e8e1d1" opacity="0.3"/></svg>');
+                    transition: background 1s ease;
+                }
 
-        body.space #output {
-            background: #16213e;
-            color: #e0e0e0;
-            background-image: none;
-        }
+                body.space #output {
+                    background: #16213e;
+                    color: #e0e0e0;
+                    background-image: none;
+                }
 
-        #output p {
-            margin: 0.8em 0;
-            animation: fadein 0.6s;
-        }
+                #output p {
+                    margin: 0.8em 0;
+                    animation: fadein 0.6s;
+                }
 
-        #input-area {
-            display: none;
-            padding: 1rem;
-            background: rgba(0, 0, 0, 0.8);
-            flex-direction: row;
-            justify-content: center;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 5;
-        }
+                #input-area {
+                    display: none;
+                    padding: 1rem;
+                    background: rgba(0, 0, 0, 0.8);
+                    flex-direction: row;
+                    justify-content: center;
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    z-index: 5;
+                }
 
-        #input-area input,
-        #input-area button {
-            font-size: 1.1rem;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 8px;
-        }
+                #input-area input,
+                #input-area button {
+                    font-size: 1.1rem;
+                    padding: 0.8rem;
+                    border: none;
+                    border-radius: 8px;
+                }
 
-        #input-area input {
-            flex: 1;
-            max-width: 70%;
-            margin-right: 0.5rem;
-        }
+                #input-area input {
+                    flex: 1;
+                    max-width: 70%;
+                    margin-right: 0.5rem;
+                }
 
-        #input-area button {
-            background: var(--accent);
-            color: white;
-            cursor: pointer;
-        }
+                #input-area button {
+                    background: var(--accent);
+                    color: white;
+                    cursor: pointer;
+                }
 
-        #choices {
-            padding: 1rem;
-            display: grid;
-            gap: 0.8rem;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            position: relative;
-            z-index: 20;
-            margin-bottom: 80px;
-        }
+                #choices {
+                    padding: 1rem;
+                    display: grid;
+                    gap: 0.8rem;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    position: relative;
+                    z-index: 20;
+                    margin-bottom: 80px;
+                }
 
-        .choice-btn {
-            padding: 1rem;
-            background: var(--accent);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
+                .choice-btn {
+                    padding: 1rem;
+                    background: var(--accent);
+                    color: white;
+                    border: none;
+                    border-radius: 12px;
+                    font-size: 1.1rem;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                }
 
-        .choice-btn:hover {
-            transform: scale(1.05);
-            background: #b8860b;
-        }
+                .choice-btn:hover {
+                    transform: scale(1.05);
+                    background: #b8860b;
+                }
 
-        .choice-btn.danger {
-            background: #dc3545;
-        }
+                .choice-btn.danger {
+                    background: #dc3545;
+                }
 
-        .choice-btn.danger:hover {
-            background: #c82333;
-        }
+                .choice-btn.danger:hover {
+                    background: #c82333;
+                }
 
-        .choice-btn.safe {
-            background: #28a745;
-        }
+                .choice-btn.safe {
+                    background: #28a745;
+                }
 
-        .choice-btn.safe:hover {
-            background: #218838;
-        }
-
-
-        #header {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 1rem;
-            text-align: center;
-            color: #f4c95d;
-            font-size: 2rem;
-            font-weight: bold;
-            letter-spacing: 3px;
-        }
-
-        .btn {
-            background: #f4c95d;
-            color: #333;
-            border: none;
-            padding: 0.8rem 1.2rem;
-            margin: 0.5rem;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        @keyframes fadein {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: none;
-            }
-        }
-
-        .image {
-            max-width: 100%;
-            border-radius: 12px;
-            margin: 1rem 0;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-        }
-
-        #play-again {
-            position: fixed;
-            bottom: 100px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 1rem 2rem;
-            background: var(--accent);
-            color: white;
-            border: none;
-            border-radius: 12px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            display: none;
-            z-index: 20;
-        }
-
-        #status {
-            position: fixed;
-            top: 70px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.8);
-            color: #f4c95d;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            z-index: 50;
-            font-weight: bold;
-        }
-    </style>
-</head>
-
-<body class="forest">
-    <div id="header">Labari</div>
-    <div id="status">Gold: 0 | Health: 100 | Inventory: —</div>
-    <div id="output"></div><div id="debug"></div>
-    <div id="input-area">
-        <input type="text" id="user-input" placeholder="Type your answer..." autocomplete="off" />
-        <button onclick="submitInput()">Send</button>
-    </div>
-    <div id="choices"></div>
-    <button id="play-again" onclick="runCode()">Play Again</button>
-
-    <script>
-        // === v1.5 STATE & HELPERS (100% optional, zero breakage) ===
-        window.labari = window.labari || { gold: 0, health: 100, inventory: [] };
-        let gold = 0, health = 100, inventory = [];
-        const status = document.getElementById('status');
-
-        let code = '';
-
-        function updateStatus() {
-            status.textContent = `Gold: ${gold} | Health: ${health} | Inventory: ${inventory.length ? inventory.join(", ") : "—"}`;
-        }
-
-        function add(amount) { gold += amount; updateStatus(); say(`+${amount} gold! Total: ${gold}`); }
-        function subtract(amount) { health -= amount; updateStatus(); say(`-${amount} health! (${health} left)`); if (health <= 0) die("You have fallen..."); }
-
-        function addTo(list, item) {
-            if (list === inventory) {
-                console.log("addTo called with:", item);
-                console.log("Before push, inventory:", inventory);
-                inventory.push(item);
-                updateStatus();
-                console.log("After push, inventory:", inventory);
-            }
-        }
-
-        function has(item) {
-            console.log("has() called for:", item);
-            console.log("Current inventory in has():", inventory);
-            const result = inventory.includes(item);
-            console.log("has() result:", result);
-            return result;
-        }
+                .choice-btn.safe:hover {
+                    background: #218838;
+                }
 
 
-        function die(msg = "Game Over") { say(`Death: ${msg}`); }
-        function win(msg = "Victory!") { say(`Victory: ${msg}`); }
-        // === FIXED PUZZLE MODE v1.6 — waits properly now! ===
-        async function puzzle(description, requirement) {
-            say(description);
+                #header {
+                    background: rgba(0, 0, 0, 0.7);
+                    padding: 1rem;
+                    text-align: center;
+                    color: #f4c95d;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    letter-spacing: 3px;
+                }
 
-            // Case 1: Need a specific item → "item:gold key"
-            if (typeof requirement === "string" && requirement.startsWith("item:")) {
-                const needed = requirement.slice(5).trim();
+                .btn {
+                    background: #f4c95d;
+                    color: #333;
+                    border: none;
+                    padding: 0.8rem 1.2rem;
+                    margin: 0.5rem;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    font-weight: bold;
+                }
 
-                while (!has(needed)) {
-                    say(`(You need: "${needed}" to pass)`);
-                    const choice = await choose("Search for " + needed, "Try anyway");
-                    if (choice.includes("Try anyway")) {
-                        say("It doesn't work without the " + needed + "...");
+                @keyframes fadein {
+                    from {
+                        opacity: 0;
+                        transform: translateY(10px);
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: none;
                     }
                 }
-                say(`The ${needed} fits perfectly! The way opens.`);
-            }
 
-            // Case 2: Need X of something → {item:"log", count:4}
-            else if (requirement && requirement.item && requirement.count) {
-                const item = requirement.item;
-                const needed = requirement.count;
-                let current = inventory.filter(i => i === item).length;
-
-                while (current < needed) {
-                    say(`(You need ${needed} × ${item} — you have only ${current})`);
-                    await choose("Look for more " + item + "s", "Try anyway");
-                    current = inventory.filter(i => i === item).length;
+                .image {
+                    max-width: 100%;
+                    border-radius: 12px;
+                    margin: 1rem 0;
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
                 }
 
-                // Auto-remove the used items
-                for (let i = 0; i < needed; i++) {
-                    const idx = inventory.indexOf(item);
-                    if (idx > -1) inventory.splice(idx, 1);
+                #play-again {
+                    position: fixed;
+                    bottom: 100px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    padding: 1rem 2rem;
+                    background: var(--accent);
+                    color: white;
+                    border: none;
+                    border-radius: 12px;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    display: none;
+                    z-index: 20;
                 }
-                updateStatus();
-                say(`You used ${needed} × ${item}. It works!`);
-            }
 
-            // Case 3: Riddle / password → just a string like "echo"
-            else if (typeof requirement === "string") {
-                let answer;
-                do {
-                    answer = await ask("Your answer?");
-                    if (!answer.toLowerCase().includes(requirement.toLowerCase())) {
-                        say("Wrong! Try again...");
+                #status {
+                    position: fixed;
+                    top: 70px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: rgba(0, 0, 0, 0.8);
+                    color: #f4c95d;
+                    padding: 0.5rem 1rem;
+                    border-radius: 20px;
+                    font-size: 0.9rem;
+                    z-index: 50;
+                    font-weight: bold;
+                }
+            </style>
+        </head>
+
+        <body class="forest">
+            <div id="header">Labari</div>
+            <div id="status">Gold: 0 | Health: 100 | Inventory: —</div>
+            <div id="output"></div>
+            <div id="debug"></div>
+            <div id="input-area">
+                <input type="text" id="user-input" placeholder="Type your answer..." autocomplete="off" />
+                <button onclick="submitInput()">Send</button>
+            </div>
+            <div id="choices"></div>
+            <button id="play-again" onclick="runCode()">Play Again</button>
+
+            <script>
+                // === v1.5 STATE & HELPERS (100% optional, zero breakage) ===
+                window.labari = window.labari || { gold: 0, health: 100, inventory: [] };
+                let gold = 0, health = 100, inventory = [];
+                const status = document.getElementById('status');
+
+                let code = '';
+
+                function updateStatus() {
+                    status.textContent = `Gold: ${gold} | Health: ${health} | Inventory: ${inventory.length ? inventory.join(", ") : "—"}`;
+                }
+
+                function add(amount) { gold += amount; updateStatus(); say(`+${amount} gold! Total: ${gold}`); }
+                function subtract(amount) { health -= amount; updateStatus(); say(`-${amount} health! (${health} left)`); if (health <= 0) die("You have fallen..."); }
+
+                function addTo(list, item) {
+                    if (list === inventory) {
+                        console.log("addTo called with:", item);
+                        console.log("Before push, inventory:", inventory);
+                        inventory.push(item);
+                        updateStatus();
+                        console.log("After push, inventory:", inventory);
                     }
-                } while (!answer.toLowerCase().includes(requirement.toLowerCase()));
-                say("Correct! The guardian steps aside.");
-            }
-        }
+                }
 
-        // === ORIGINAL v1 CODE (unchanged) ===
-        const output = document.getElementById('output');
-        const inputArea = document.getElementById('input-area');
-        const userInput = document.getElementById('user-input');
-        const choicesDiv = document.getElementById('choices');
-        const playAgainBtn = document.getElementById('play-again');
-        let resolveInput;
+                function has(item) {
+                    console.log("has() called for:", item);
+                    console.log("Current inventory in has():", inventory);
+                    const result = inventory.includes(item);
+                    console.log("has() result:", result);
+                    return result;
+                }
 
-        function say(text) {
-            const p = document.createElement('p');
-            p.innerHTML = text.replace(/\n/g, '<br>');
-            output.appendChild(p);
-            output.scrollTop = output.scrollHeight;
-        }
-        function image(url) {
-            const img = document.createElement('img');
-            img.src = url; img.className = "image";
-            img.onerror = () => say("[Image failed to load]");
-            output.appendChild(img);
-            output.scrollTop = output.scrollHeight;
-        }
-        function sound(url) { new Audio(url).play().catch(() => { }); }
 
-        async function ask(question) {
-            say(question);
-            inputArea.style.display = "flex";
-            userInput.focus();
-            return new Promise(res => {
-                window.resolveInput = val => {
-                    inputArea.style.display = "none";
-                    userInput.value = "";
-                    res(val);
-                };
-            });
-        }
+                function die(msg = "Game Over") { say(`Death: ${msg}`); }
+                function win(msg = "Victory!") { say(`Victory: ${msg}`); }
+                // === FIXED PUZZLE MODE v1.6 — waits properly now! ===
+                async function puzzle(description, requirement) {
+                    say(description);
 
-        async function choose(...options) {
-            return new Promise(res => {
-                choicesDiv.innerHTML = "";
-                options.forEach(opt => {
-                    const btn = document.createElement('button');
-                    btn.className = "choice-btn";
-                    if (opt.includes("Fight") || opt.includes("Shoot")) btn.classList.add('danger');
-                    if (opt.includes("Wave") || opt.includes("Talk")) btn.classList.add('safe');
-                    btn.textContent = opt;
-                    btn.onclick = () => {
+                    // Case 1: Need a specific item → "item:gold key"
+                    if (typeof requirement === "string" && requirement.startsWith("item:")) {
+                        const needed = requirement.slice(5).trim();
+
+                        while (!has(needed)) {
+                            say(`(You need: "${needed}" to pass)`);
+                            const choice = await choose("Search for " + needed, "Try anyway");
+                            if (choice.includes("Try anyway")) {
+                                say("It doesn't work without the " + needed + "...");
+                            }
+                        }
+                        say(`The ${needed} fits perfectly! The way opens.`);
+                    }
+
+                    // Case 2: Need X of something → {item:"log", count:4}
+                    else if (requirement && requirement.item && requirement.count) {
+                        const item = requirement.item;
+                        const needed = requirement.count;
+                        let current = inventory.filter(i => i === item).length;
+
+                        while (current < needed) {
+                            say(`(You need ${needed} × ${item} — you have only ${current})`);
+                            await choose("Look for more " + item + "s", "Try anyway");
+                            current = inventory.filter(i => i === item).length;
+                        }
+
+                        // Auto-remove the used items
+                        for (let i = 0; i < needed; i++) {
+                            const idx = inventory.indexOf(item);
+                            if (idx > -1) inventory.splice(idx, 1);
+                        }
+                        updateStatus();
+                        say(`You used ${needed} × ${item}. It works!`);
+                    }
+
+                    // Case 3: Riddle / password → just a string like "echo"
+                    else if (typeof requirement === "string") {
+                        let answer;
+                        do {
+                            answer = await ask("Your answer?");
+                            if (!answer.toLowerCase().includes(requirement.toLowerCase())) {
+                                say("Wrong! Try again...");
+                            }
+                        } while (!answer.toLowerCase().includes(requirement.toLowerCase()));
+                        say("Correct! The guardian steps aside.");
+                    }
+                }
+
+                // === ORIGINAL v1 CODE (unchanged) ===
+                const output = document.getElementById('output');
+                const inputArea = document.getElementById('input-area');
+                const userInput = document.getElementById('user-input');
+                const choicesDiv = document.getElementById('choices');
+                const playAgainBtn = document.getElementById('play-again');
+                let resolveInput;
+
+                function say(text) {
+                    const p = document.createElement('p');
+                    p.innerHTML = text.replace(/\n/g, '<br>');
+                    output.appendChild(p);
+                    output.scrollTop = output.scrollHeight;
+                }
+                function image(url) {
+                    const img = document.createElement('img');
+                    img.src = url; img.className = "image";
+                    img.onerror = () => say("[Image failed to load]");
+                    output.appendChild(img);
+                    output.scrollTop = output.scrollHeight;
+                }
+                function sound(url) { new Audio(url).play().catch(() => { }); }
+
+                async function ask(question) {
+                    say(question);
+                    inputArea.style.display = "flex";
+                    userInput.focus();
+                    return new Promise(res => {
+                        window.resolveInput = val => {
+                            inputArea.style.display = "none";
+                            userInput.value = "";
+                            res(val);
+                        };
+                    });
+                }
+
+                async function choose(...options) {
+                    return new Promise(res => {
                         choicesDiv.innerHTML = "";
-                        res(opt);
-                    };
-                    choicesDiv.appendChild(btn);
-                });
-            });
-        }
+                        options.forEach(opt => {
+                            const btn = document.createElement('button');
+                            btn.className = "choice-btn";
+                            if (opt.includes("Fight") || opt.includes("Shoot")) btn.classList.add('danger');
+                            if (opt.includes("Wave") || opt.includes("Talk")) btn.classList.add('safe');
+                            btn.textContent = opt;
+                            btn.onclick = () => {
+                                choicesDiv.innerHTML = "";
+                                res(opt);
+                            };
+                            choicesDiv.appendChild(btn);
+                        });
+                    });
+                }
 
-        function clear() { output.innerHTML = ""; }
-        function wait(ms) { return new Promise(r => setTimeout(r, ms)); }
+                function clear() { output.innerHTML = ""; }
+                function wait(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-        async function createStory(fn) {
-            playAgainBtn.style.display = 'none';
-            clear();
-            gold = 0; health = 100; inventory.length = 0; updateStatus();  // ← THIS IS THE KEY //inventory = []; updateStatus();
-            try { await fn(); }
-            catch (e) { say("Story error: " + e.message); }
-            finally { playAgainBtn.style.display = 'block'; }
-        }
+                async function createStory(fn) {
+                    playAgainBtn.style.display = 'none';
+                    clear();
+                    gold = 0; health = 100; inventory.length = 0; updateStatus();  // ← THIS IS THE KEY //inventory = []; updateStatus();
+                    try { await fn(); }
+                    catch (e) { say("Story error: " + e.message); }
+                    finally { playAgainBtn.style.display = 'block'; }
+                }
 
-        function submitInput() { if (window.resolveInput) window.resolveInput(userInput.value); }
-        userInput.addEventListener("keydown", e => { if (e.key === "Enter") submitInput(); });
+                function submitInput() { if (window.resolveInput) window.resolveInput(userInput.value); }
+                userInput.addEventListener("keydown", e => { if (e.key === "Enter") submitInput(); });
 
-        function toggleEditor() {
-            const ed = document.getElementById('editor');
-            ed.style.display = ed.style.display === "flex" ? "none" : "flex";
-        }
+                function toggleEditor() {
+                    const ed = document.getElementById('editor');
+                    ed.style.display = ed.style.display === "flex" ? "none" : "flex";
+                }
 
-        function runCode() {
-            clear();
-            choicesDiv.innerHTML = "";
-            const func = new Function('say', 'ask', 'choose', 'image', 'sound', 'clear', 'wait', 'createStory', 'add', 'subtract', 'addTo', 'has', 'die', 'win', 'inventory', 'gold', 'health', 'puzzle', code);
-            func(say, ask, choose, image, sound, clear, wait, createStory, add, subtract, addTo, has, die, win, inventory, () => gold, () => health, puzzle);
+                function runCode() {
+                    clear();
+                    choicesDiv.innerHTML = "";
+                    const func = new Function('say', 'ask', 'choose', 'image', 'sound', 'clear', 'wait', 'createStory', 'add', 'subtract', 'addTo', 'has', 'die', 'win', 'inventory', 'gold', 'health', 'puzzle', code);
+                    func(say, ask, choose, image, sound, clear, wait, createStory, add, subtract, addTo, has, die, win, inventory, () => gold, () => health, puzzle);
 
-            document.getElementById('debug').textContent='Playing...'
-        }
+                    document.getElementById('debug').textContent = 'Playing...'
+                }
 
-        function saveAndShare() {
-            const code = btoa(encodeURIComponent(document.getElementById('code').value));
-            const url = location.origin + location.pathname + "?s=" + code;
-            navigator.clipboard.writeText(url).then(() => {
-                alert("Link copied!\n" + url);
-            });
-        }
+                function saveAndShare() {
+                    const code = btoa(encodeURIComponent(document.getElementById('code').value));
+                    const url = location.origin + location.pathname + "?s=" + code;
+                    navigator.clipboard.writeText(url).then(() => {
+                        alert("Link copied!\n" + url);
+                    });
+                }
 
-        function loadExample(which) {
-            const examples = {
-                pirate: `createStory(async () => { say("Ahoy! Captain " + await ask("Name?")); add(50); let c = await choose("Raid","Treasure","Tavern"); if(c==="Raid") add(100); win("Rich pirate!"); });`,
-                space: `createStory(async () => { document.body.className='space'; say("Astronaut " + await ask("Name?")); subtract(20); await choose("Signal","Hide"); win("Space legend!"); });`,
-                treasure: `createStory(async () => { add(10); addTo(inventory,"torch"); let door = await choose("Wooden door","Iron door"); if(door.includes("Iron") && has("torch")) { add(500); win("Treasure!"); } else die("Darkness claims you!"); });`,
-                dungeon: `createStory(async () => {
+                function loadExample(which) {
+                    const examples = {
+                        pirate: `createStory(async () => { say("Ahoy! Captain " + await ask("Name?")); add(50); let c = await choose("Raid","Treasure","Tavern"); if(c==="Raid") add(100); win("Rich pirate!"); });`,
+                        space: `createStory(async () => { document.body.className='space'; say("Astronaut " + await ask("Name?")); subtract(20); await choose("Signal","Hide"); win("Space legend!"); });`,
+                        treasure: `createStory(async () => { add(10); addTo(inventory,"torch"); let door = await choose("Wooden door","Iron door"); if(door.includes("Iron") && has("torch")) { add(500); win("Treasure!"); } else die("Darkness claims you!"); });`,
+                        dungeon: `createStory(async () => {
   health = 100; gold = 0; inventory = [];
   say("Welcome to the endless dungeon...");
   while (health > 0) {
@@ -4101,7 +4119,7 @@ Function: runcodeGameJSHTML
   }
   die("The dungeon wins again...");
 });`,
-                puzzleExample: `createStory(async () => {
+                        puzzleExample: `createStory(async () => {
   say("Welcome to the Temple of Puzzles!");
   say("A massive stone door blocks the way.");
   addTo(inventory, "gold key");
@@ -4119,60 +4137,63 @@ Function: runcodeGameJSHTML
 
   win("You claimed the ancient treasure! You are a legend!");
 });`
-            };
-            document.getElementById('code').value = examples[which] || examples.treasure;
-            runCode();
-        }
+                    };
+                    document.getElementById('code').value = examples[which] || examples.treasure;
+                    runCode();
+                }
 
-        // Load shared or run default
-        const params = new URLSearchParams(location.search);
-        if (params.has('s')) {
-            try {
-                //document.getElementById('code').value = decodeURIComponent(atob(params.get('s')));
-                runCode();
-            } catch (e) { alert("Could not load shared story"); }
-        } else {
-            runCode();
-        }
-    </script>
-</body>
+                // Load shared or run default
+                const params = new URLSearchParams(location.search);
+                if (params.has('s')) {
+                    try {
+                        //document.getElementById('code').value = decodeURIComponent(atob(params.get('s')));
+                        runCode();
+                    } catch (e) { alert("Could not load shared story"); }
+                } else {
+                    runCode();
+                }
+            </script>
+        </body>
 
-</html>
+        </html>
 
-</template>
+    </template>
 
 
 
-<!-- 
+    <!-- 
 TEMPLATE
 Filetype: .js, ajmjs
 Filename: jshtmlscript.js, jshtmlscript.ajmjs
 Function: runcodeJSHTML
 -->
 
-<!-- blank html -->
-<template id="jshtml-template" type="text/html">
-    <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <style></style>
-    </head>
-    <body>
-<script src="https://dialectscript.github.io/core/src/core/transpiler.js" type="module"></script>
-        <!-- Custom Script Placeholder -->
-    <script src="js-extensions.js"></script>
-    </body>
-    </html>
+    <!-- blank html -->
+    <template id="jshtml-template" type="text/html">
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title></title>
+            <style></style>
+        </head>
+
+        <body>
+            <script src="https://dialectscript.github.io/core/src/core/transpiler.js" type="module"></script>
+            <!-- Custom Script Placeholder -->
+            <script src="js-extensions.js"></script>
+        </body>
+
+        </html>
     </template>
 
 
 
-<!-- this one with existing elements works -->
-<script id="jshtml-template1" type="text/html">
+    <!-- this one with existing elements works -->
+    <script id="jshtml-template1" type="text/html">
 <!DOCTYPE html>
 <html lang="en">
   <head>
