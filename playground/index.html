@@ -669,7 +669,7 @@
     <script src="https://dialectscript.github.io/core/src/ace_ajami/ajami_autocomplete_mappings.js"></script>
 
     <!--script src="app.js"></script-->
-    <script>
+   <script>
         // ==========================================
         // PART 0: AJAMI CUSTOM AUTOCOMPLETER
         // ==========================================
@@ -692,27 +692,16 @@
             }
         };
 
+
         // ==========================================
         // PART 1: GLOBAL STATE
         // ==========================================
-
-        // Get language from URL or default to Hausa
-        const urlParams = new URLSearchParams(window.location.search);
-        let currentLanguage = urlParams.get('lang') || 'ha';  // ← This is the line you wanted
-
-        // Optional: force only supported languages
-        if (!['en', 'yo', 'ha','ib'].includes(currentLanguage)) {
-            currentLanguage = 'ha';
-        }
-
-        // Set <html lang=""> correctly
-        document.documentElement.lang = currentLanguage;
-
-
-
-        //let currentLanguage = 'ha';
+        let currentLanguage = 'ha';
+        let currentLanguageFromUrl = getAndCleanLangFromUrl(['en', 'yo', 'ha', 'ib', 'ar', 'pg']);
         let CURRENT_TRANSLATIONS = {};
         let LESSON_DATA = null;
+
+        console.log(currentLanguageFromUrl)
 
         let isSandboxMode = false;
 
@@ -793,6 +782,35 @@
             }
         };
 
+        /**
+  * Gets the language from URL (?lang=xx), cleans the URL, and returns the code.
+  * @param {string[]} supportedLanguages - Array of valid language codes (e.g. ['en', 'yo', 'es', 'fr'])
+  * @param {string} [defaultLanguage=''] - What to return if no valid lang found (use '' for "no language")
+  * @returns {string} - The language code (e.g. 'yo') or empty string if none/not valid
+  */
+        function getAndCleanLangFromUrl(supportedLanguages = ['en', 'yo'], defaultLanguage = '') {
+            const params = new URLSearchParams(window.location.search);
+            const langFromUrl = params.get('lang');
+
+            // Clean the URL if ?lang= was present
+            if (params.has('lang')) {
+                params.delete('lang');
+                const cleanUrl = params.toString()
+                    ? `${window.location.pathname}?${params}${window.location.hash}`
+                    : `${window.location.pathname}${window.location.hash}`;
+
+                history.replaceState(null, '', cleanUrl);
+            }
+
+            // Return the language only if it's in the supported list
+            if (langFromUrl && supportedLanguages.includes(langFromUrl)) {
+                return langFromUrl;
+            }
+
+            // Otherwise return default (empty string in your case)
+            return defaultLanguage;
+        }
+
 
         // Initialize the python Web Worker
         const pythonWorker = new Worker('./python-runner.js'); // Initialize the Web Worker
@@ -803,6 +821,12 @@
         // ==========================================
         async function loadTranslations(lang) {
             //alert(lang)
+             if(currentLanguageFromUrl !== ''){
+            lang=currentLanguageFromUrl;
+            }
+             //console.log("currentLanguageFromUrl",lang)
+           
+
             try {
                 const response = await fetch(`./translations/${lang}.json`);
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
