@@ -299,6 +299,9 @@ function checkTasks_with_AST_JS(code, solution_key, current_lesson_translations)
 }
 
 function checkTasks_with_AST_AJAMI(code, solution_key, current_lesson_translations) {
+
+  return checkTasks_(code, solution_key, current_lesson_translations);
+  
   const solutionKey = solution_key;
   if (!solutionKey) return { passed: false, message_key: "No solution defined." };
 
