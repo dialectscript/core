@@ -151,7 +151,7 @@
   "AJMJS_BEGINNER_TASK_5_TITLE": "Kwatanta Shekaru",
   "AJMJS_BEGINNER_TASK_5_DESC": "Nemi kwamfuta ta kwatanta shekararta da taka sannan ta nuna saƙo.",
   "AJMJS_BEGINNER_TASK_5_INITIAL": "// TODO: Kwatanta shekaru\nmadadi sunankwamfuta = 'Komputer';\nmadadi shekararkwamfuta = 15;\nmadadi myshekara = 14;",
-  "AJMJS_BEGINNER_TASK_5_SOLUTION": "idan (shekararkwamfuta > myshekara) {\n    rubuta('Ni na fi ka girma!');\n} kokuma idan (shekararkwamfuta == myshekara) {\n    rubuta('Shekarunmu dai-dai ne!');\n} kokuma {\n    rubuta('Kai ka fi ni girma!');\n}",
+  "AJMJS_BEGINNER_TASK_5_SOLUTION": "madadi sunankwamfuta = 'Komputer';\nmadadi shekararkwamfuta = 15;\nmadadi myshekara = 14;idan (shekararkwamfuta > myshekara) {\n    rubuta('Ni na fi ka girma!');\n} kokuma idan (shekararkwamfuta == myshekara) {\n    rubuta('Shekarunmu dai-dai ne!');\n} kokuma {\n    rubuta('Kai ka fi ni girma!');\n}",
   "AJMJS_BEGINNER_TASK_5_HINT_1": "Yi amfani da idan, kokuma idan, kokuma don sharudda.",
   "AJMJS_BEGINNER_TASK_5_HINT_2": "Yi amfani da == don kwatanta daidai, ba = ba",
   "AJMJS_BEGINNER_TASK_5_HINT_3": "rubuta() na iya nuna saƙonni daban-daban gwargwadon shekaru.",

@@ -340,7 +340,7 @@ function checkTasks_with_AST_AJAMI(code, solution_key, current_lesson_translatio
   } catch (e) {
     // Only reaches here on actual syntax errors (Acorn parse failures)
     console.error("Syntax error in user code:", e);
-    return { passed: false, message_key: "Syntax error in your code." };
+    return { passed: false, message_key: "Syntax error in your codex.", code: code };
   }
 }
 
