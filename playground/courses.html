@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Dialect Script signature -->
+    <meta name="generator" content="Dialect Script v1.0 – Code in Hausa, Yorùbá, Igbo, Pidgin">
+
+    <!-- Essential -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description"
+        content="Write real JavaScript in Hausa, Yorùbá, Igbo and Pidgin. No English keywords needed. Works on any phone.">
+    <meta name="theme-color" content="#0066ff">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Dialect Script – Code in Your Mother Tongue">
+    <meta property="og:description"
+        content="Real JavaScript in Hausa, Yorùbá, Igbo and Pidgin. Works offline. No build step. Try it now.">
+    <meta property="og:image" content="https://dialectscript.github.io/core/website/assets/images/screenshot.png">
+    <meta property="og:url" content="https://dialectscript.github.io/core/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_NG">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dialect Script – Code in Hausa, Yorùbá, Igbo, Pidgin">
+    <meta name="twitter:description"
+        content="Kids in Nigeria just wrote their first program in pure mother tongue. No English. No tone marks needed.">
+    <meta name="twitter:image" content="https://dialectscript.github.io/core/website/assets/images/screenshot.png">
+    <meta name="twitter:url" content="https://dialectscript.github.io/core/website/">
+    <meta name="twitter:site" content="@CodeunitSITTE">
+
+    <!-- Favicon (replace later with real logo) -->
+    <link rel="icon" href="https://dialectscript.github.io/core/website/assets/images/apple-launch-640x1136.jpg"
+        type="image/x-icon">
+    <link rel="apple-touch-icon"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-640x1136.jpg">
+
+
+    <meta name="theme-color" content="#6592e6">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-640x1136.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-750x1334.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-1242x2208.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-1125x2436.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-1536x2048.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-1668x2224.jpg">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-2048x2732.jpg">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="">
+    <link rel="apple-touch-icon" href="https://dialectscript.github.io/core/website/assets/images/apple-touch-icon.jpg">
+    <link rel="icon" href="https://dialectscript.github.io/core/website/assets/images/apple-touch-icon.jpg">
+
+    <title>
+        Course Catalog  | Dialect Script – Code in Your Language
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!--style>
+        /* Basic Dark Theme Styling */
+        body {
+            background-color: #efe9e9ff;
+            color: #222121ff;
+            min-height: 100vh;
+        }
+        .course-card-hover {
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #333; /* Default border for contrast */
+        }
+        .course-card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            border-color: var(--ca-yellow, #ffd700); /* Highlight border on hover */
+        }
+        /* Custom Colors (MUST match your variables, e.g., defined in a separate CSS file) */
+        :root {
+            --ca-yellow: #ffd700;
+            --ca-blue: #007bff;
+            --ca-secondary: #6c757d;
+        }
+    </style-->
+
+    <style>
+        /* Custom Colors (The palette is defined here) */
+        :root {
+            /* Light Theme Primary Colors */
+            --ca-background: #ffffff; /* White background */
+            --ca-text: #212529;      /* Dark gray text */
+            --ca-card-bg: #f8f9fa;   /* Light gray card background */
+            --ca-header-bg: #343a40; /* Dark header retained for contrast */
+            
+            /* Accent Colors (Kept the same for visual cues) */
+            --ca-yellow: #ffd700;
+            --ca-blue: #007bff;
+            --ca-secondary: #6c757d;
+        }
+
+        /* Light Theme Styling */
+        body {
+            font-family: 'Arial','Roboto', sans-serif;
+            background-color: var(--ca-background);
+            color: var(--ca-text);
+            min-height: 100vh;
+        }
+
+        /* Course Card Styling */
+        .course-card-hover {
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #dee2e6; /* Light gray border */
+            cursor: pointer;
+        }
+        .course-card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-color: var(--ca-yellow); /* Highlight border on hover */
+        }
+        
+        /* Card Overrides for Light Theme */
+        .card-custom {
+            background-color: var(--ca-card-bg) !important;
+            color: var(--ca-text) !important;
+            border-color: #dee2e6 !important;
+        }
+
+        /* Card Text Overrides */
+        .card-custom .card-title {
+            color: var(--ca-text) !important;
+        }
+        .card-custom .card-text, .card-custom .text-muted-custom {
+            color: #6c757d !important; /* Muted text */
+        }
+
+        /* Progress Bar Color Adjustments */
+        .progress-bar-complete {
+            background-color: #198754; /* bg-success */
+        }
+        .progress-bar-in-progress {
+            background-color: #0dcaf0; /* bg-info */
+        }
+    </style>
+    
+    
+    </head>
+<body>
+
+    <header class="bg-light shadow-sm py-3 mb-5">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h5 class="text-dark mb-0 fw-bold">DialectScript</h5>
+            <!--div class="dropdown">
+                <button class="btn btn-outline-light btn-sm dropdown-toggle" type="button" 
+                        id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-globe me-1"></i> <span id="current-lang-display">HA</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="languageDropdown" id="lang-menu">
+                </ul>
+            </div-->
+        </div>
+    </header>
+
+    <div class="container py-0">
+        <h5 class="text-dark mb-2 fw-bold">Course Catalog</h5> 
+        <div class="dropdown mb-2">
+                <button class="btn btn-outline-dark btn-sm dropdown-toggle" type="button" 
+                        id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-globe me-1"></i> <span id="current-lang-display">HA</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="languageDropdown" id="lang-menu">
+                </ul>
+            </div>
+        
+        <div id="loading-status" class="text-dark fw-bold mb-4">Loading courses...</div>
+        <div id="course-list-container" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        </div>
+    </div>
+
+    <script>
+        // =================================================================
+        // == CONFIGURATION (Language and File Paths) ======================
+        // =================================================================
+        const MANIFEST_PATH = 'lessons/courses_manifest.json';
+        const USER_LANGUAGE_KEY = 'ajami_userLanguage';
+
+        // 1. DYNAMIC LANGUAGE STATE: Calculated immediately
+        let CURRENT_LANG = localStorage.getItem(USER_LANGUAGE_KEY) || 'en'; 
+        
+        // DOM ELEMENTS
+        const loadingStatusEl = document.getElementById('loading-status');
+        const container = document.getElementById('course-list-container');
+
+
+        // =================================================================
+        // == HELPER FUNCTIONS (Defined FIRST) =============================
+        // =================================================================
+
+        function getCourseProgressIndex(courseId) {
+            const key = `progress_${courseId}`;
+            const progressData = JSON.parse(localStorage.getItem(key)) || { currentTaskIndex: 0 };
+            return progressData.currentTaskIndex;
+        }
+
+        function calculateProgress(currentTaskIndex, totalTasks) {
+            if (totalTasks === 0) return 0;
+            let completedTasks = Math.max(0, currentTaskIndex);
+            if (completedTasks > totalTasks) completedTasks = totalTasks; 
+            return Math.round((completedTasks / totalTasks) * 100);
+        }
+
+        function getCourseIcon(id) {
+            if (id.startsWith('js')) return 'fa-js';
+            if (id.startsWith('python')) return 'fa-python';
+            if (id.startsWith('ajami') || id.startsWith('ajmjs')) return 'fa-js';
+            return 'fa-code';
+        }
+
+        function getCourseColor(id) {
+            if (id.startsWith('js')) return 'ca-yellow';
+            if (id.startsWith('python')) return 'ca-blue';
+            if (id.startsWith('ajami') || id.startsWith('ajmjs')) return 'ca-secondary';
+            return 'ca-secondary';
+        }
+        
+        function getDifficultyColorClass(difficulty) {
+            if (difficulty === 'beginner') return 'bg-success';
+            if (difficulty === 'intermediate') return 'bg-warning text-dark';
+            if (difficulty === 'advanced') return 'bg-danger';
+            return 'bg-secondary';
+        }
+        
+        // --- Language Helpers ---
+        function getLanguageName(code) {
+            const names = {
+                'en': 'English', 
+                'yo': 'Yoruba', 
+                'ha': 'Hausa', 
+                'ib': 'Igbo', 
+                'ar': 'Arabic', 
+                'pg': 'Pidgin'
+            };
+            return names[code] || code.toUpperCase();
+        }
+
+        /**
+         * Saves the selected language to local storage.
+         * @param {string} langCode 
+         */
+        function saveLanguage(langCode) {
+            localStorage.setItem(USER_LANGUAGE_KEY, langCode);
+        }
+
+
+        // =================================================================
+        // == 1. DATA FETCHING AND MERGING =================================
+        // =================================================================
+
+        async function fetchJson(url) {
+            const response = await fetch(url);
+            if (!response.ok) {
+                // Keep the loading status message removal here
+                if (loadingStatusEl) loadingStatusEl.remove(); 
+                container.innerHTML = `<div class="alert alert-danger">Error loading data from ${url}. Check console for details.</div>`;
+                throw new Error(`Failed to load ${url}: ${response.statusText}`);
+            }
+            return response.json();
+        }
+
+        /**
+         * Fetches manifest and language-specific translations.
+         * @param {string} lang - The language code to fetch translations for.
+         */
+        async function loadAndMergeCourseData(lang) {
+            // Construct the NEW translation path based on the provided language
+            const translationPath = `translations/${lang}_courses.json`;
+            
+            try {
+                // Fetch all data concurrently
+                const [manifest, translations] = await Promise.all([
+                    fetchJson(MANIFEST_PATH),
+                    fetchJson(translationPath)
+                ]);
+
+                // Merge static manifest data with dynamic translations
+                return manifest.map(course => ({
+                    id: course.id,
+                    title: translations[course.title_key] || `[Missing Title: ${course.title_key}]`,
+                    description: translations[course.description_key] || `[Missing Desc: ${course.description_key}]`,
+                    
+                    difficulty: course.difficulty,
+                    total_tasks: course.total_tasks || 0,
+                    estimated_time: course.estimated_time || 'N/A',
+                    is_new: course.is_new,// === true,
+                    is_active: course.is_active,
+                    
+                    progressIndex: getCourseProgressIndex(course.id)
+                }));
+
+            } catch (error) {
+                console.error("Failed to load course data:", error);
+                return [];
+            }
+        }
+
+
+        // =================================================================
+        // == 2. RENDERING LOGIC ===========================================
+        // =================================================================
+
+        function renderCourseCards(courseData) {
+            // Check for loading status element *before* removing it
+            const currentLoadingEl = document.getElementById('loading-status');
+            if (currentLoadingEl) currentLoadingEl.remove();
+            
+            if (courseData.length === 0) {
+                container.innerHTML = `<div class="alert alert-warning">No courses found.</div>`;
+                return;
+            }
+            
+            let cardsHtml = '';
+
+            courseData.forEach(course => {
+                if(course.is_active){
+                // --- PROGRESS CALCULATION ---
+                const progressPercent = calculateProgress(course.progressIndex, course.total_tasks);
+                const isComplete = progressPercent === 100;
+
+                // --- STYLING & TEXT ---
+                const iconClass = getCourseIcon(course.id);
+                const colorClass = getCourseColor(course.id);
+                const difficultyClass = getDifficultyColorClass(course.difficulty);
+                const progressLabel = isComplete ? 'Completed!' : `${progressPercent}% Complete`;
+                const progressBg = isComplete ? 'bg-success' : 'bg-info';
+                const cardBorder = isComplete ? 'border-success' : 'border-secondary';
+                
+                cardsHtml += `
+                    <div class="col">
+                        <div id="course-card-${course.id}" 
+                        data-course-id="${course.id}" 
+                        data-course-title="${course.title}" 
+                        data-course-file="${course.id}.json"
+                        class="card h-100 course-clickable">
+                            <div class="card h-100 p-3 shadow-lg ${cardBorder} bg-dark card-customx  text-white course-card-hover">
+                                
+                                <div class="progress mb-3" style="height: 5px;">
+                                    <div class="progress-bar ${progressBg}" 
+                                            role="progressbar" 
+                                            style="width: ${progressPercent}%;" 
+                                            aria-valuenow="${progressPercent}" 
+                                            aria-valuemin="0" 
+                                            aria-valuemax="100">
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="p-3 rounded-circle me-3 d-flex align-items-center justify-content-center" 
+                                            style="background-color: var(--${colorClass}); width: 50px; height: 50px;">
+                                        <i class="fa-brands ${iconClass} fa-lg text-dark"></i>
+                                    </div>
+                                    
+                                    <h5 class="card-title mb-0 fw-bold">
+                                        ${course.title}
+                                        ${course.is_new ? '<span class="badge bg-warning text-dark ms-2">NEW</span>' : ''}
+                                    </h5>
+                                </div>
+                                
+                                <div class="card-body p-0 mb-3">
+                                    <p class="card-text text-white-50">${course.description}</p>
+                                </div>
+                                
+                                <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-end p-0 pt-2">
+                                    
+                                    <small class="text-white-50 d-flex flex-column">
+                                        <span class="mb-1"><i class="fa-solid fa-list-ol fa-fw me-1"></i> ${course.total_tasks} Tasks</span>
+                                        <span><i class="fa-solid fa-clock fa-fw me-1"></i> ${course.estimated_time}</span>
+                                    </small>
+
+                                    <div class="text-end">
+                                        <span class="badge ${difficultyClass} mb-1">${course.difficulty.toUpperCase()}</span>
+                                        <div class="text-white-50 small mt-1">${progressLabel}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                }
+            });
+
+            container.innerHTML = cardsHtml;
+
+            // 2. Attach click handler for course navigation (using localStorage)
+            document.querySelectorAll('.course-clickable').forEach(card => {
+                card.addEventListener('click', function() {
+                    const courseId = this.dataset.courseId;
+                    const courseTitle = this.dataset.courseTitle;
+                    const courseFile = this.dataset.courseFile;
+
+                    const lessonMetadata = {
+                        id: courseId,
+                        file: courseFile,
+                        title: courseTitle 
+                    };
+
+                    // Save the metadata to Local Storage
+                    localStorage.setItem('ajami_selectedLessonMetadata', JSON.stringify(lessonMetadata));
+
+                    // Redirect synchronously
+                    window.location.href = 'index.php';
+                });
+            });
+
+        }
+
+        // --- Language Selector Logic ---
+
+        /**
+         * Triggers the fetching of the new translation file and re-renders the course cards.
+         * @param {string} lang - The new language code.
+         */
+        async function reloadCoursesAndRender(lang) {
+            // Update the global language tracker
+            CURRENT_LANG = lang;
+            
+            // Show loading status
+            if (loadingStatusEl) {
+                loadingStatusEl.textContent = `Loading courses in ${lang.toUpperCase()}...`;
+                loadingStatusEl.style.display = 'block';
+                // Temporarily clear old cards while loading
+                container.innerHTML = ''; 
+            }
+            
+            const mergedData = await loadAndMergeCourseData(lang);
+            renderCourseCards(mergedData);
+            
+            // Re-initialize the selector to update the active checkmark in the menu and display name
+            initializeLanguageSelector();
+        }
+
+
+        function initializeLanguageSelector() {
+            const supportedLangs = ['en', 'yo', 'ha', 'ib', 'ar', 'pg'];
+            const langMenu = document.getElementById('lang-menu');
+            const langDisplay = document.getElementById('current-lang-display');
+            // Use the updated CURRENT_LANG
+            const currentLang = CURRENT_LANG; 
+
+            if (!langMenu) return;
+
+            // A. Update Display and Clear Menu
+            langDisplay.textContent = currentLang.toUpperCase();
+            langMenu.innerHTML = ''; 
+
+            // B. Generate Menu Items
+            supportedLangs.forEach(lang => {
+                const isActive = lang === currentLang;
+                const langName = getLanguageName(lang); 
+
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <a class="dropdown-item ${isActive ? 'active' : ''}" 
+                        href="#" 
+                        data-lang="${lang}">
+                        ${langName}
+                        ${isActive ? '<i class="fa-solid fa-check ms-2"></i>' : ''}
+                    </a>
+                `;
+                langMenu.appendChild(listItem);
+            });
+
+            // C. Attach Event Listener
+            langMenu.addEventListener('click', (event) => {
+                const target = event.target.closest('a.dropdown-item');
+                if (target) {
+                    event.preventDefault(); // Prevents navigation from the '#' href
+                    const newLang = target.dataset.lang;
+                    
+                    if (newLang !== CURRENT_LANG) {
+                        // 1. Save the new language
+                        saveLanguage(newLang);
+                        
+                        // 2. Trigger the full data reload and rendering sequence (non-refreshing)
+                        reloadCoursesAndRender(newLang); 
+                    }
+                }
+            });
+        }
+
+
+        // =================================================================
+        // == PAGE INITIALIZATION ==========================================
+        // =================================================================
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            // 1. Load data based on the calculated CURRENT_LANG
+            await reloadCoursesAndRender(CURRENT_LANG); 
+            
+            // 2. The selector is initialized inside reloadCoursesAndRender, 
+            //    but calling it here ensures it runs even if the async load fails.
+            initializeLanguageSelector(); 
+        });
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

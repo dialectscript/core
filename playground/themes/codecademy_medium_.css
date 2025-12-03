@@ -1,0 +1,207 @@
+/* ====================================================================== */
+/* 1. ROOT VARIABLES - Define your color palette and core typography */
+/* ====================================================================== */
+:root {
+    --bs-font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --bs-body-bg: #1A1A1A; /* Darker than #121212, closer to Medium's dark mode */
+    --bs-body-color: #E0E0E0; /* Light gray text for readability on dark */
+
+    /* Medium-inspired Grayscale */
+    --bs-gray-900: #1A1A1A; /* Deepest dark */
+    --bs-gray-800: #2C2C2C;
+    --bs-gray-700: #424242;
+    --bs-gray-600: #5C5C5C;
+    --bs-gray-500: #757575;
+    --bs-gray-400: #AAAAAA;
+    --bs-gray-300: #CCCCCC;
+    --bs-gray-200: #E6E6E6;
+    --bs-gray-100: #F7F7F7;
+    --bs-white: #FFFFFF;
+
+    /* Primary Accent Color (Medium Green) */
+    --bs-primary: #1A8917; /* Medium's signature green */
+    --bs-primary-rgb: 26, 137, 23;
+
+    /* Your existing custom colors, remapped or retained */
+    --ca-yellow: #FFC017; /* Medium's logo yellow */
+    --ca-blue: #3E8EFF; /* A vibrant blue for Python, etc. */
+    
+    /* Bootstrap's info/success/warning for consistency */
+    --bs-info: #2B77CD; 
+    --bs-success: #1A8917; /* Using primary green for success */
+    --bs-warning: #FFC017; /* Using ca-yellow for warning */
+    --bs-danger: #D83333; /* A strong red */
+
+    /* Spacing & Borders */
+    --bs-border-color: rgba(255, 255, 255, 0.1); /* Subtle white border */
+    --bs-border-radius: 0.25rem; /* Standard subtle rounded corners */
+    --bs-card-cap-bg: var(--bs-gray-800); /* Card header background */
+}
+
+/* ====================================================================== */
+/* 2. BASE STYLES - Apply to common elements */
+/* ====================================================================== */
+body {
+    font-family: var(--bs-font-sans-serif);
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    line-height: 1.6; /* Medium uses generous line-height */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--bs-white); /* Headings stand out */
+    font-weight: 700; /* Bolder headings */
+}
+
+a {
+    color: var(--bs-primary); /* Links in Medium green */
+    text-decoration: none;
+}
+a:hover {
+    color: var(--bs-primary); /* Keep color on hover */
+    text-decoration: underline;
+}
+
+/* ====================================================================== */
+/* 3. BOOTSTRAP COMPONENT OVERRIDES - Tailor components */
+/* ====================================================================== */
+
+/* Cards (for course cards, lesson panels, etc.) */
+.card {
+    background-color: var(--bs-gray-900); /* Darker card background */
+    border-color: var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    overflow: hidden; /* Ensures borders/shadows are contained */
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: var(--bs-white);
+}
+.btn-primary:hover {
+    background-color: darken(var(--bs-primary), 10%); /* Slightly darker on hover */
+    border-color: darken(var(--bs-primary), 10%);
+}
+.btn-outline-light {
+    color: var(--bs-gray-200);
+    border-color: var(--bs-gray-500);
+}
+.btn-outline-light:hover {
+    color: var(--bs-white);
+    background-color: var(--bs-gray-700);
+    border-color: var(--bs-gray-700);
+}
+
+/* Footer Bar (Assuming it's dark like the header) */
+.footer-bar {
+    background-color: var(--bs-gray-900); /* Consistent dark background */
+    border-top: 1px solid var(--bs-border-color);
+}
+/* Specific button styles for footer tabs */
+.footer-bar .btn-link {
+    color: var(--bs-gray-400); /* Muted link color */
+}
+.footer-bar .btn-link:hover {
+    color: var(--bs-white); /* Brighter on hover */
+}
+/* Active tab indication */
+.footer-bar .btn.active {
+    color: var(--bs-white);
+    border-bottom: 2px solid var(--bs-primary); /* Highlight active tab with green */
+    padding-bottom: calc(var(--bs-btn-padding-y) - 2px); /* Adjust padding */
+}
+
+/* Progress Bars */
+.progress {
+    background-color: var(--bs-gray-800); /* Muted background for progress bar */
+    border-radius: var(--bs-border-radius);
+}
+.progress-bar {
+    background-color: var(--bs-primary); /* Primary accent for progress */
+}
+.progress-bar.bg-info { /* Override specific bg-info with a desired color */
+    background-color: var(--ca-blue) !important; 
+}
+
+
+/* Form Controls (Inputs, Textareas) */
+.form-control {
+    background-color: var(--bs-gray-800);
+    border-color: var(--bs-gray-700);
+    color: var(--bs-body-color);
+}
+.form-control:focus {
+    background-color: var(--bs-gray-800);
+    color: var(--bs-body-color);
+    border-color: var(--bs-primary); /* Primary accent on focus */
+    box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), .25);
+}
+
+
+/* Alerts */
+.alert {
+    background-color: var(--bs-gray-800);
+    border-color: var(--bs-gray-700);
+    color: var(--bs-body-color);
+}
+.alert-warning { /* Specific warning alert */
+    color: var(--ca-yellow);
+    background-color: rgba(var(--bs-warning-rgb), 0.15); /* Light yellow background */
+    border-color: rgba(var(--bs-warning-rgb), 0.3);
+}
+.alert-danger { /* Specific danger alert */
+    color: var(--bs-danger);
+    background-color: rgba(var(--bs-danger-rgb), 0.15); 
+    border-color: rgba(var(--bs-danger-rgb), 0.3);
+}
+
+
+/* Text Utilities (e.g. text-info, text-white-50) */
+.text-info { color: var(--bs-info) !important; }
+.text-white-50 { color: var(--bs-gray-400) !important; } /* Muted white */
+
+
+/* ====================================================================== */
+/* 4. CUSTOM ELEMENTS (e.g., Course Cards, Specific Layouts) */
+/* ====================================================================== */
+
+/* Course Card Specifics */
+.course-card-hover {
+    border: 1px solid var(--bs-gray-700); /* More subtle default border */
+}
+.course-card-hover:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-color: var(--bs-primary); /* Green border on hover */
+}
+.course-card-hover .card-footer {
+    border-top: 1px solid var(--bs-border-color); /* Subtle separator */
+}
+
+/* Example: Specific Ace Editor Theme Integration */
+/* If Ace Editor is also dark, ensure its background matches: */
+.ace_editor {
+    background-color: var(--bs-gray-900) !important;
+    color: var(--bs-body-color) !important;
+}
+.ace_gutter {
+    background-color: var(--bs-gray-800) !important;
+    color: var(--bs-gray-500) !important;
+}
+
+/* ====================================================================== */
+/* 5. UTILITIES (e.g., for responsiveness or specific gaps) */
+/* ====================================================================== */
+
+/* Generous spacing around main content areas */
+.container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+@media (min-width: 992px) { /* On desktop, maybe even more space */
+    .container {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}

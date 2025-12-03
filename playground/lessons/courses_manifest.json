@@ -1,0 +1,32 @@
+[
+  {
+    "id": "js_beginner",
+    "title_key": "JS_BEGINNER_TITLE",
+    "description_key": "JS_BEGINNER_DESC",
+    "difficulty": "beginner",
+    "total_tasks": 42,
+    "estimated_time": "3h 30m",
+    "is_new": true,
+    "is_active": true
+  },
+  {
+    "id": "jshtml_sandbox",
+    "title_key": "JSHTML_SANDBOX_TITLE",
+    "description_key": "JSHTML_SANDBOX_DESC",
+    "difficulty": "beginner",
+    "total_tasks": 30,
+    "estimated_time": "2h 00m",
+    "is_new": false,
+    "is_active": false
+  },
+  {
+    "id": "ajmjs_beginner",
+    "title_key": "AJMJS_BEGINNER_TITLE",
+    "description_key": "AJMJS_BEGINNER_DESC",
+    "difficulty": "beginner",
+    "total_tasks": 9,
+    "estimated_time": "1h",
+    "is_new": true,
+    "is_active": true
+  }
+]

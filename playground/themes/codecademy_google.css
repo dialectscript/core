@@ -1,0 +1,310 @@
+/* ============================================================
+   EDITOR THEME — GOOGLE (Material-inspired)
+   Drop-in override. No HTML edits needed.
+   ============================================================ */
+
+/* ----------------------------
+   1. BASE COLOR VARIABLES
+----------------------------- */
+:root {
+    --cc-bg: #ffffff;
+    --cc-sidebar: #f5f7fb;
+    --cc-editor-bg: #ffffff;
+    --cc-terminal-bg: #f7fbff;
+
+    --cc-text: #202124;             /* Google-style primary text */
+    --cc-text-light: #5f6368;
+    --cc-comment: #70757a;
+
+    --cc-accent: #1a73e8;           /* Google blue */
+    --cc-accent-soft: rgba(26,115,232,0.10);
+
+    --cc-keyword: #8e24aa;
+    --cc-string: #0f9d58;
+    --cc-constant: #4285f4;
+    --cc-function: #db4437;
+
+    --cc-selection: rgba(26,115,232,0.12);
+    --cc-border: #e6eef9;
+}
+
+/* ----------------------------
+   2. BODY
+----------------------------- */
+body {
+    background: var(--cc-bg) !important;
+    color: var(--cc-text) !important;
+    overflow: auto;
+}
+
+/* ----------------------------
+   3. LEFT PANEL (Instructions / Sidebar)
+----------------------------- */
+.panel-left {
+    background: var(--cc-sidebar) !important;
+    color: var(--cc-text) !important;
+    border-right: 1px solid var(--cc-border) !important;
+}
+
+.panel-left .card,
+.panel-left .list-group-item {
+    background: var(--cc-sidebar) !important;
+    color: var(--cc-text) !important;
+    border-color: var(--cc-border) !important;
+}
+
+.panel-left .card-header {
+    background: var(--cc-sidebar) !important;
+    border-color: var(--cc-border) !important;
+}
+
+.hint-card {
+    background: var(--cc-accent-soft) !important;
+    border-color: var(--cc-accent) !important;
+    color: var(--cc-text) !important;
+}
+
+/* ----------------------------
+   4. CENTER PANEL (Editor)
+----------------------------- */
+.panel-center {
+    background: var(--cc-editor-bg) !important;
+}
+
+.panel-center .bg-dark,
+.panel-center .border-bottom {
+    background: #ffffff !important;
+    border-color: var(--cc-border) !important;
+}
+
+#statusBar {
+    background: #ffffff !important;
+    color: var(--cc-text) !important;
+}
+
+/* ----------------------------
+   5. RIGHT PANEL (Terminal)
+----------------------------- */
+.panel-right {
+    background: var(--cc-terminal-bg) !important;
+    border-left: 1px solid var(--cc-border) !important;
+    color: var(--cc-text) !important;
+}
+
+/* ----------------------------
+   6. FOOTER / MOBILE BAR
+----------------------------- */
+.footer-bar {
+    background: #ffffff !important;
+    color: var(--cc-text) !important;
+}
+
+.footer-bar button {
+    background: var(--cc-accent-soft) !important;
+    color: var(--cc-text) !important;
+    border: 1px solid var(--cc-border) !important;
+}
+
+/* ----------------------------
+   7. NAVBAR
+----------------------------- */
+.navbar {
+    background: #ffffff !important;
+    border-bottom: 1px solid var(--cc-border) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link,
+.navbar .text-white {
+    color: var(--cc-text) !important;
+}
+
+.navbar .btn-outline-light {
+    border-color: var(--cc-border) !important;
+    color: var(--cc-text) !important;
+}
+
+.btn-round {
+    background: var(--cc-accent) !important;
+    color: white !important;
+}
+
+/* ----------------------------
+   8. BUTTONS
+----------------------------- */
+.btn,
+button {
+    border-radius: 4px !important;
+    background: #ffffff !important;
+    color: var(--cc-text) !important;
+    border: 1px solid var(--cc-border) !important;
+}
+
+.btn:hover,
+button:hover {
+    background: var(--cc-accent-soft) !important;
+}
+
+/* Run / Save buttons */
+#desktop-run-btn,
+#run-tab,
+button[onclick="manualSaveProgress()"] {
+    background: var(--cc-accent) !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+/* ----------------------------
+   9. ACE EDITOR
+----------------------------- */
+#main_codeeditor,
+.ace_editor,
+.ace_gutter {
+    background: var(--cc-editor-bg) !important;
+    color: var(--cc-text) !important;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace !important;
+}
+
+.ace_gutter {
+    background: var(--cc-sidebar) !important;
+    color: var(--cc-comment) !important;
+}
+
+.ace_gutter-active-line {
+    background: #eef6ff !important;
+}
+
+.ace_active-line {
+    background: var(--cc-selection) !important;
+}
+
+.ace_cursor {
+    color: var(--cc-accent) !important;
+}
+
+.ace_marker-layer .ace_selection {
+    background: var(--cc-selection) !important;
+}
+
+/* Syntax */
+.ace_keyword {
+    color: var(--cc-keyword) !important;
+}
+.ace_string {
+    color: var(--cc-string) !important;
+}
+.ace_constant,
+.ace_numeric {
+    color: var(--cc-constant) !important;
+}
+.ace_support.ace_function {
+    color: var(--cc-function) !important;
+}
+.ace_comment {
+    color: var(--cc-comment) !important;
+}
+
+/* ----------------------------
+   10. Highlight.js
+----------------------------- */
+.code-block {
+    background: var(--cc-editor-bg) !important;
+    border: 1px solid var(--cc-border) !important;
+}
+.code-block pre {
+    background: var(--cc-editor-bg) !important;
+    color: var(--cc-text) !important;
+}
+
+/* Copy button */
+.copy-btn {
+    background: var(--cc-accent) !important;
+    color: white !important;
+    border: none !important;
+}
+.copy-btn:hover {
+    opacity: .95;
+}
+
+/* ----------------------------
+   11. LIST GROUPS / DROPDOWNS / CARDS
+----------------------------- */
+.list-group-item {
+    background: var(--cc-sidebar) !important;
+    color: var(--cc-text) !important;
+    border-color: var(--cc-border) !important;
+}
+.dropdown-menu {
+    background: #ffffff !important;
+    border-color: var(--cc-border) !important;
+}
+.dropdown-item {
+    color: var(--cc-text) !important;
+}
+.dropdown-item:hover,
+.dropdown-item.active {
+    background: var(--cc-accent-soft) !important;
+}
+
+/* ----------------------------
+   12. Offcanvas
+----------------------------- */
+.offcanvas {
+    background: #ffffff !important;
+    color: var(--cc-text) !important;
+}
+.offcanvas-header {
+    border-bottom: 1px solid var(--cc-border) !important;
+}
+
+/* ----------------------------
+   13. Modals
+----------------------------- */
+.modal-content {
+    background: #ffffff !important;
+    color: var(--cc-text) !important;
+    border-color: var(--cc-border) !important;
+}
+.modal .btn-outline-secondary {
+    border-color: var(--cc-border) !important;
+    color: var(--cc-text) !important;
+}
+
+/* ----------------------------
+   14. SCROLLBARS
+----------------------------- */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #cfe3ff !important;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #ffffff !important;
+}
+
+/* ----------------------------
+   15. PRE FORMAT FIXES
+----------------------------- */
+pre {
+    display: block;
+    margin: 0 0 1rem 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: auto;
+    max-width: 100%;
+    font-size: .9em;
+    padding: 10px;
+}
+
+/* Round buttons */
+.btn-round {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+}

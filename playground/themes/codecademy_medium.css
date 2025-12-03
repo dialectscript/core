@@ -1,5 +1,5 @@
 /* ============================================================
-   CODECADEMY PRO DARK THEME — DEEP PURPLE VERSION
+   EDITOR THEME — MEDIUM.COM STYLE
    Drop-in override. No HTML edits needed.
    ============================================================ */
 
@@ -7,24 +7,25 @@
    1. BASE COLOR VARIABLES
 ----------------------------- */
 :root {
-    --cc-bg: #0e0a1a;               /* deep midnight purple */
-    --cc-sidebar: #1a132b;           /* slightly lighter for side panels */
-    --cc-editor-bg: #0e0a1a;
-    --cc-terminal-bg: #0e0a1a;
+    --cc-bg: #ffffff;                /* paper white */
+    --cc-sidebar: #f7f7f7;           /* very light gray */
+    --cc-editor-bg: #ffffff;
+    --cc-terminal-bg: #fafafa;
 
-    --cc-text: #ede9fe;              /* off-white with lavender tint */
-    --cc-text-light: #c4b5fd;        /* lighter text for secondary info */
-    --cc-comment: #6b5c99;           /* muted lavender comments */
+    --cc-text: #0f1720;              /* dark slate */
+    --cc-text-light: #475569;
+    --cc-comment: #6b7280;
 
-    /* Accent colors – Codecademy Pro Dark */
-    --cc-accent: #8b5cf6;            /* bright purple */
-    --cc-accent-light: #a78bfa;      /* lighter lavender accent */
-    --cc-accent-bg: rgba(139, 92, 246, 0.12);  /* translucent violet for cards/buttons */
+    --cc-accent: #0a84ff;            /* Medium uses subtle blue accents */
+    --cc-accent-soft: rgba(10,132,255,0.10);
 
-    --cc-green: #34d399;
-    --cc-blue: #60a5fa;
-    --cc-selection: rgba(139, 92, 246, 0.16);
-    --cc-border: #241a3d;            /* deep border purple */
+    --cc-keyword: #7c3aed;
+    --cc-string: #059669;
+    --cc-constant: #0ea5e9;
+    --cc-function: #b91c1c;
+
+    --cc-selection: rgba(10,132,255,0.12);
+    --cc-border: #e6e6e6;
 }
 
 /* ----------------------------
@@ -33,7 +34,7 @@
 body {
     background: var(--cc-bg) !important;
     color: var(--cc-text) !important;
-    overflow: hidden;
+    overflow: auto;
 }
 
 /* ----------------------------
@@ -58,7 +59,7 @@ body {
 }
 
 .hint-card {
-    background: var(--cc-accent-bg) !important;
+    background: var(--cc-accent-soft) !important;
     border-color: var(--cc-accent) !important;
     color: var(--cc-text) !important;
 }
@@ -68,16 +69,17 @@ body {
 ----------------------------- */
 .panel-center {
     background: var(--cc-editor-bg) !important;
+    color: var(--cc-text) !important;
 }
 
 .panel-center .bg-dark,
 .panel-center .border-bottom {
-    background: #1a132b !important;
+    background: #ffffff !important;
     border-color: var(--cc-border) !important;
 }
 
 #statusBar {
-    background: #1a132b !important;
+    background: #ffffff !important;
     color: var(--cc-text) !important;
 }
 
@@ -94,21 +96,21 @@ body {
    6. FOOTER / MOBILE BAR
 ----------------------------- */
 .footer-bar {
-    background: #1a132b !important;
+    background: #ffffff !important;
     color: var(--cc-text) !important;
 }
 
 .footer-bar button {
-    background: var(--cc-accent-bg) !important;
+    background: var(--cc-accent-soft) !important;
     color: var(--cc-text) !important;
-    border: none !important;
+    border: 1px solid var(--cc-border) !important;
 }
 
 /* ----------------------------
    7. NAVBAR
 ----------------------------- */
 .navbar {
-    background: #1a132b !important;
+    background: #ffffff !important;
     border-bottom: 1px solid var(--cc-border) !important;
 }
 
@@ -124,7 +126,7 @@ body {
 }
 
 .btn-round {
-    background: var(--cc-accent-bg) !important;
+    background: var(--cc-accent-soft) !important;
     color: var(--cc-text) !important;
 }
 
@@ -134,14 +136,16 @@ body {
 .btn,
 button {
     border-radius: 6px !important;
-    background: #241a3d !important;
+    background: #ffffff !important;
     color: var(--cc-text) !important;
     border: 1px solid var(--cc-border) !important;
+    transition: background .12s ease, border-color .12s ease;
 }
 
 .btn:hover,
 button:hover {
-    background: #3f2e77 !important;
+    background: var(--cc-accent-soft) !important;
+    border-color: var(--cc-accent) !important;
 }
 
 /* Run / Save buttons */
@@ -149,7 +153,7 @@ button:hover {
 #run-tab,
 button[onclick="manualSaveProgress()"] {
     background: var(--cc-accent) !important;
-    color: #0e0a1a !important;
+    color: #fff !important;
     border: none !important;
 }
 
@@ -161,15 +165,16 @@ button[onclick="manualSaveProgress()"] {
 .ace_gutter {
     background: var(--cc-editor-bg) !important;
     color: var(--cc-text) !important;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace !important;
 }
 
 .ace_gutter {
-    background: #1a132b !important;
+    background: var(--cc-sidebar) !important;
     color: var(--cc-comment) !important;
 }
 
 .ace_gutter-active-line {
-    background: #241a3d !important;
+    background: #f2f5ff !important;
 }
 
 .ace_active-line {
@@ -184,22 +189,22 @@ button[onclick="manualSaveProgress()"] {
     background: var(--cc-selection) !important;
 }
 
-/* Syntax colors (premium dark look) */
+/* Syntax mapping */
 .ace_keyword {
-    color: var(--cc-accent) !important;
+    color: var(--cc-keyword) !important;
 }
 
 .ace_string {
-    color: var(--cc-green) !important;
+    color: var(--cc-string) !important;
 }
 
 .ace_constant,
 .ace_numeric {
-    color: var(--cc-blue) !important;
+    color: var(--cc-constant) !important;
 }
 
 .ace_support.ace_function {
-    color: var(--cc-accent-light) !important;
+    color: var(--cc-function) !important;
 }
 
 .ace_comment {
@@ -221,26 +226,27 @@ button[onclick="manualSaveProgress()"] {
 
 /* Copy button */
 .copy-btn {
-    background: #241a3d !important;
+    background: #ffffff !important;
     color: var(--cc-text) !important;
+    border: 1px solid var(--cc-border) !important;
 }
 
 .copy-btn:hover {
     background: var(--cc-accent) !important;
-    color: #0e0a1a !important;
+    color: white !important;
 }
 
 /* ----------------------------
    11. LIST GROUPS / DROPDOWNS / CARDS
 ----------------------------- */
 .list-group-item {
-    background: #1a132b !important;
+    background: var(--cc-sidebar) !important;
     color: var(--cc-text) !important;
     border-color: var(--cc-border) !important;
 }
 
 .dropdown-menu {
-    background: #0e0a1a !important;
+    background: #ffffff !important;
     border-color: var(--cc-border) !important;
 }
 
@@ -250,14 +256,15 @@ button[onclick="manualSaveProgress()"] {
 
 .dropdown-item:hover,
 .dropdown-item.active {
-    background: #241a3d !important;
+    background: var(--cc-accent-soft) !important;
+    color: var(--cc-text) !important;
 }
 
 /* ----------------------------
    12. Offcanvas
 ----------------------------- */
 .offcanvas {
-    background: #1a132b !important;
+    background: #ffffff !important;
     color: var(--cc-text) !important;
 }
 
@@ -269,7 +276,7 @@ button[onclick="manualSaveProgress()"] {
    13. Modals
 ----------------------------- */
 .modal-content {
-    background: var(--cc-bg) !important;
+    background: #ffffff !important;
     color: var(--cc-text) !important;
     border-color: var(--cc-border) !important;
 }
@@ -286,11 +293,11 @@ button[onclick="manualSaveProgress()"] {
     width: 10px;
 }
 ::-webkit-scrollbar-thumb {
-    background: #3f2e77 !important;
+    background: #cfd8ff !important;
     border-radius: 6px;
 }
 ::-webkit-scrollbar-track {
-    background: #0e0a1a !important;
+    background: #ffffff !important;
 }
 
 .text-dark {
@@ -324,9 +331,4 @@ pre {
     display: flex;
     justify-content: center !important;
     align-items: center !important;
-}
-
-
-.text-muted {
-  color: rgba(160, 164, 169, 0.75) !important;
 }
