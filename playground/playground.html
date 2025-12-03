@@ -1,60 +1,84 @@
-<?php 
-include_once('../website/ini.php');
-$use_cdn = false;
-?>
 <!DOCTYPE html>
 <html lang="en">
-<!-- Complete: Python+JS+Course Menu+PHP+HTML+Ajami+RunOnServerDockerAjax+JS/AJAMI AST+Dynamic Hint+Enhance Task Nav+Regex+ui/ux+Sandbox+jshtmlscript+url+p5.js-->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Dialect Script signature -->
+    <meta name="generator" content="Dialect Script v1.0 – Code in Hausa, Yorùbá, Igbo, Pidgin">
+
+    <!-- Essential -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description"
+        content="Write real JavaScript in Hausa, Yorùbá, Igbo and Pidgin. No English keywords needed. Works on any phone.">
+    <meta name="theme-color" content="#0066ff">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Dialect Script – Code in Your Mother Tongue">
+    <meta property="og:description"
+        content="Real JavaScript in Hausa, Yorùbá, Igbo and Pidgin. Works offline. No build step. Try it now.">
+    <meta property="og:image" content="https://dialectscript.github.io/core/website/assets/images/screenshot.png">
+    <meta property="og:url" content="https://dialectscript.github.io/core/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_NG">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dialect Script – Code in Hausa, Yorùbá, Igbo, Pidgin">
+    <meta name="twitter:description"
+        content="Kids in Nigeria just wrote their first program in pure mother tongue. No English. No tone marks needed.">
+    <meta name="twitter:image" content="https://dialectscript.github.io/core/website/assets/images/screenshot.png">
+    <meta name="twitter:url" content="https://dialectscript.github.io/core/website/">
+    <meta name="twitter:site" content="@CodeunitSITTE">
+
+    <!-- Favicon (replace later with real logo) -->
+    <link rel="icon" href="https://dialectscript.github.io/core/website/assets/images/apple-launch-640x1136.jpg"
+        type="image/x-icon">
+    <link rel="apple-touch-icon"
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-640x1136.jpg">
+
+    <title>Dialect Script – Code in Your Language</title>
+
+
+    <meta name="theme-color" content="#6592e6">
+    <link rel="manifest" href="manifest.json">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="apple-touch-startup-image"
         media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-        href="assets/images/apple-launch-640x1136.jpg">
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-640x1136.jpg">
     <link rel="apple-touch-startup-image"
         media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-        href="assets/images/apple-launch-750x1334.jpg">
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-750x1334.jpg">
     <link rel="apple-touch-startup-image"
         media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-        href="assets/images/apple-launch-1242x2208.jpg">
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-1242x2208.jpg">
     <link rel="apple-touch-startup-image"
         media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-        href="assets/images/apple-launch-1125x2436.jpg">
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-1125x2436.jpg">
     <link rel="apple-touch-startup-image"
         media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-        href="assets/images/apple-launch-1536x2048.jpg">
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-1536x2048.jpg">
     <link rel="apple-touch-startup-image"
         media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-        href="assets/images/apple-launch-1668x2224.jpg">
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-1668x2224.jpg">
     <link rel="apple-touch-startup-image"
         media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-        href="assets/images/apple-launch-2048x2732.jpg">
+        href="https://dialectscript.github.io/core/website/assets/images/apple-launch-2048x2732.jpg">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="">
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.jpg">
-    <link rel="icon" href="assets/images/apple-touch-icon.jpg">
-    <title>
-        <?php echo APP_FULLNAME;?>
-    </title>
+    <link rel="apple-touch-icon" href="https://dialectscript.github.io/core/website/assets/images/apple-touch-icon.jpg">
+    <link rel="icon" href="https://dialectscript.github.io/core/website/assets/images/apple-touch-icon.jpg">
 
-    <?php if($use_cdn==true){?>
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <?php }else{ ?>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="vendors/bootstrap-5.2.0/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="vendors/bootstrap-icons-1.9.1/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <?php }?>
-    
     <style>
         :root {
             /* The Codecademy Palette */
@@ -72,7 +96,7 @@ $use_cdn = false;
         body {
             min-height: 100vh;
             overflow: hidden;
-            font-family: 'Arial','Segoe UI', system-ui, sans-serif;
+            font-family: 'Segoe UI', system-ui, sans-serif;
             /* Add padding bottom for mobile footer */
             padding-bottom: 0;
         }
@@ -182,13 +206,6 @@ $use_cdn = false;
         }
 
 
-        #hint-card-injected {
-            /*border-left: 4px solid #0d6efd !important;
-            background-color: #f8f9fa !important;
-            border-radius: 8px;
-            animation: fadeIn 0.4s ease-out;
-            */
-        }
 
         @keyframes fadeIn {
             from {
@@ -204,13 +221,13 @@ $use_cdn = false;
 
 
         /*   .ace_editor .ace_cursor {
-            border-left: 2px solid #0d6efd !important;
-            animation: blink 1s steps(1) infinite;
-        }
+    border-left: 2px solid #0d6efd !important;
+    animation: blink 1s steps(1) infinite;
+}
 
-        @keyframes blink {
-            50% { opacity: 0; }
-        }*/
+@keyframes blink {
+    50% { opacity: 0; }
+}*/
     </style>
 
     <!-- Highlight.js CSS (choose a theme you like) -->
@@ -239,7 +256,6 @@ $use_cdn = false;
             margin: 0 !important;
             padding: 1.2em !important;
             overflow-x: auto;
-            background-color: black !important;
         }
 
         /* ----------------------------
@@ -312,21 +328,11 @@ pre {
 
     <!--link rel="stylesheet" href="vscode_theme.css"-->
     <!--link rel="stylesheet" href="vscode_light_theme.css"-->
-    <!--link rel="stylesheet" href="codecademy_light.css"-->
-    <!--link rel="stylesheet" href="codecademy_pro_light.css"-->
-
     <!--link rel="stylesheet" href="sublime_text_default.css"-->
     <!--link rel="stylesheet" href="codecademy.css"-->
-    <!--link rel="stylesheet" href="codecademy_google.css"-->
-    <!--link rel="stylesheet" href="codecademy_medium.css"-->
-    <!--link rel="stylesheet" href="codecademy_playcode_gray.css"-->
-    <!--link rel="stylesheet" href="codecademy_playcode_light.css"-->
-
-    <!--link rel="stylesheet" href="themes/codecademy_medium_.css"-->
-
-    <link rel="stylesheet" href="themes/codecademy_pro_dark.css">
-    <!--link rel="stylesheet" href="codecademy_playcode_dark.css"-->
-
+    <!--link rel="stylesheet" href="codecademy_light.css"-->
+    <!--link rel="stylesheet" href="codecademy_pro_light.css"-->
+    <link rel="stylesheet" href="codecademy_pro_dark.css?v=2">
 
 
 
@@ -334,7 +340,8 @@ pre {
     <script src="https://unpkg.com/acorn@8.11.3/dist/acorn.js"></script>
     <script src="checktasks.js"></script>
     <script src="js-extensions.js"></script>
-    <script src="../src/core/transpiler_console.js" type="module"></script>
+    <script src="https://dialectscript.github.io/core/src/core/transpiler_console.js" type="module">
+    </script>
 </head>
 
 <body>
@@ -371,7 +378,7 @@ pre {
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="toolsDropdown">
 
                     <li>
-                        <a href="courses.php" class="dropdown-item" >
+                        <a href="index.html" class="dropdown-item" >
     <i class="fa-solid fa-layer-group me-2"></i> Courses
 </a>
                     </li>
@@ -391,7 +398,7 @@ pre {
                         </li>
                         <li><a class="dropdown-item text-danger" id="btn-reset-lesson"><i
                                     class="fa-solid fa-rotate-left me-2"></i>Reset Workspace</a></li>
-                        <li><a href="../website/logout.php" class="dropdown-item text-danger" id="btn-logout"><i
+                        <li><a href="../website/" class="dropdown-item text-danger" id="btn-logout"><i
                                     class="fa-solid fa-rotate-left me-2"></i>Log out</a></li>
                     </ul>
                 </div>
@@ -672,32 +679,20 @@ pre {
         </div>
     </div>
 
-    <?php if($use_cdn==true) { ?>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.7/ace.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.7/ext-language_tools.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.7/ext-statusbar.js"></script>
 
-    <?php }else{?>
 
-    <!-- Bootstrap JS and dependencies (Popper.js) -->
-    <script src="vendors/bootstrap-5.2.0/js/bootstrap.bundle.min.js"></script>
-    <!-- Ace Editor -->
-    <script src="vendors/ace.js/ace.js"></script>
-    <script src="vendors/ace.js/ext-statusbar.js"></script>
-    <script src="vendors/ace.js/ext-language_tools.js"></script>
-
-    <?php } ?>
-
-
-    <script src="../src/ace_ajami/ajami_highlight_rules.js"></script>
-    <script src="../src/ace_ajami/ajami_mode.js"></script>
-    <script src="../src/ace_ajami/ajami_autocomplete_mappings.js"></script>
+    <script src="https://dialectscript.github.io/core/src/ace_ajami/ajami_highlight_rules.js"></script>
+    <script src="https://dialectscript.github.io/core/src/ace_ajami/ajami_mode.js"></script>
+    <script src="https://dialectscript.github.io/core/src/ace_ajami/ajami_autocomplete_mappings.js"></script>
 
     <!--script src="app.js"></script-->
-
-    <script>
+   <script>
         // ==========================================
         // PART 0: AJAMI CUSTOM AUTOCOMPLETER
         // ==========================================
@@ -3788,50 +3783,6 @@ function getLessonMetadataFromStorage() {
             hljs.highlightElement(codeEl);
         }
 
-// ================ USAGE EXAMPLES ================
-
-// Example 1: With target element + explicit language
-/*
-displayCode(`
-let total = price * plates;
-console.log(total);
-`, '#my-code', 'javascript');
-
-// Example 2: Auto-detect, no element → auto-appends to body
-displayCode(`<?php
-/*
-echo "Hello World";
-for($i=0; $i<5; $i++) {
-    echo $i;
-}*/
-?> `, null, 'php');
-
-// Example 3: Python code
-displayCode(`def greet(name):
-        return f"Hello, {name}!"
-
-        print(greet("World"))
-`, document.body, 'python');
-*/
-    </script>
-
-
-    <script defer>
-fetch("../website/sessionInfo.php", {
-  method: "GET",
-  credentials: "include" // must send session cookie!
-})
-  .then(res => res.json())
-  .then(data => {
-    if (!data.authenticated) {
-      console.warn("Not authenticated:", data.error);
-      toggleSandboxMode()
-      return;
-    }
-
-    console.log("Authenticated user:", data.user);
-  });
-
     </script>
 
 
@@ -4069,235 +4020,235 @@ Function: runcodeGameJSHTML
             <button id="play-again" onclick="runCode()">Play Again</button>
 
             <script>
-        // === v1.5 STATE & HELPERS (100% optional, zero breakage) ===
-        window.labari = window.labari || { gold: 0, health: 100, inventory: [] };
-        let gold = 0, health = 100, inventory = [];
-        const status = document.getElementById('status');
+                // === v1.5 STATE & HELPERS (100% optional, zero breakage) ===
+                window.labari = window.labari || { gold: 0, health: 100, inventory: [] };
+                let gold = 0, health = 100, inventory = [];
+                const status = document.getElementById('status');
 
-        let code = '';
+                let code = '';
 
-        function updateStatus() {
-            status.textContent = `Gold: ${ gold } | Health: ${ health } | Inventory: ${ inventory.length ? inventory.join(", ") : "—" } `;
-        }
+                function updateStatus() {
+                    status.textContent = `Gold: ${gold} | Health: ${health} | Inventory: ${inventory.length ? inventory.join(", ") : "—"}`;
+                }
 
-        function add(amount) { gold += amount; updateStatus(); say(`+ ${ amount } gold! Total: ${ gold } `); }
-        function subtract(amount) { health -= amount; updateStatus(); say(`- ${ amount } health!(${ health } left)`); if (health <= 0) die("You have fallen..."); }
+                function add(amount) { gold += amount; updateStatus(); say(`+${amount} gold! Total: ${gold}`); }
+                function subtract(amount) { health -= amount; updateStatus(); say(`-${amount} health! (${health} left)`); if (health <= 0) die("You have fallen..."); }
 
-        function addTo(list, item) {
-            if (list === inventory) {
-                console.log("addTo called with:", item);
-                console.log("Before push, inventory:", inventory);
-                inventory.push(item);
-                updateStatus();
-                console.log("After push, inventory:", inventory);
-            }
-        }
-
-        function has(item) {
-            console.log("has() called for:", item);
-            console.log("Current inventory in has():", inventory);
-            const result = inventory.includes(item);
-            console.log("has() result:", result);
-            return result;
-        }
-
-
-        function die(msg = "Game Over") { say(`Death: ${ msg } `); }
-        function win(msg = "Victory!") { say(`Victory: ${ msg } `); }
-        // === FIXED PUZZLE MODE v1.6 — waits properly now! ===
-        async function puzzle(description, requirement) {
-            say(description);
-
-            // Case 1: Need a specific item → "item:gold key"
-            if (typeof requirement === "string" && requirement.startsWith("item:")) {
-                const needed = requirement.slice(5).trim();
-
-                while (!has(needed)) {
-                    say(`(You need: "${needed}" to pass)`);
-                    const choice = await choose("Search for " + needed, "Try anyway");
-                    if (choice.includes("Try anyway")) {
-                        say("It doesn't work without the " + needed + "...");
+                function addTo(list, item) {
+                    if (list === inventory) {
+                        console.log("addTo called with:", item);
+                        console.log("Before push, inventory:", inventory);
+                        inventory.push(item);
+                        updateStatus();
+                        console.log("After push, inventory:", inventory);
                     }
                 }
-                say(`The ${ needed } fits perfectly! The way opens.`);
-            }
 
-            // Case 2: Need X of something → {item:"log", count:4}
-            else if (requirement && requirement.item && requirement.count) {
-                const item = requirement.item;
-                const needed = requirement.count;
-                let current = inventory.filter(i => i === item).length;
-
-                while (current < needed) {
-                    say(`(You need ${ needed } × ${ item } — you have only ${ current })`);
-                    await choose("Look for more " + item + "s", "Try anyway");
-                    current = inventory.filter(i => i === item).length;
+                function has(item) {
+                    console.log("has() called for:", item);
+                    console.log("Current inventory in has():", inventory);
+                    const result = inventory.includes(item);
+                    console.log("has() result:", result);
+                    return result;
                 }
 
-                // Auto-remove the used items
-                for (let i = 0; i < needed; i++) {
-                    const idx = inventory.indexOf(item);
-                    if (idx > -1) inventory.splice(idx, 1);
-                }
-                updateStatus();
-                say(`You used ${ needed } × ${ item }. It works!`);
-            }
 
-            // Case 3: Riddle / password → just a string like "echo"
-            else if (typeof requirement === "string") {
-                let answer;
-                do {
-                    answer = await ask("Your answer?");
-                    if (!answer.toLowerCase().includes(requirement.toLowerCase())) {
-                        say("Wrong! Try again...");
+                function die(msg = "Game Over") { say(`Death: ${msg}`); }
+                function win(msg = "Victory!") { say(`Victory: ${msg}`); }
+                // === FIXED PUZZLE MODE v1.6 — waits properly now! ===
+                async function puzzle(description, requirement) {
+                    say(description);
+
+                    // Case 1: Need a specific item → "item:gold key"
+                    if (typeof requirement === "string" && requirement.startsWith("item:")) {
+                        const needed = requirement.slice(5).trim();
+
+                        while (!has(needed)) {
+                            say(`(You need: "${needed}" to pass)`);
+                            const choice = await choose("Search for " + needed, "Try anyway");
+                            if (choice.includes("Try anyway")) {
+                                say("It doesn't work without the " + needed + "...");
+                            }
+                        }
+                        say(`The ${needed} fits perfectly! The way opens.`);
                     }
-                } while (!answer.toLowerCase().includes(requirement.toLowerCase()));
-                say("Correct! The guardian steps aside.");
-            }
-        }
 
-        // === ORIGINAL v1 CODE (unchanged) ===
-        const output = document.getElementById('output');
-        const inputArea = document.getElementById('input-area');
-        const userInput = document.getElementById('user-input');
-        const choicesDiv = document.getElementById('choices');
-        const playAgainBtn = document.getElementById('play-again');
-        let resolveInput;
+                    // Case 2: Need X of something → {item:"log", count:4}
+                    else if (requirement && requirement.item && requirement.count) {
+                        const item = requirement.item;
+                        const needed = requirement.count;
+                        let current = inventory.filter(i => i === item).length;
 
-        function say(text) {
-            const p = document.createElement('p');
-            p.innerHTML = text.replace(/\n/g, '<br>');
-            output.appendChild(p);
-            output.scrollTop = output.scrollHeight;
-        }
-        function image(url) {
-            const img = document.createElement('img');
-            img.src = url; img.className = "image";
-            img.onerror = () => say("[Image failed to load]");
-            output.appendChild(img);
-            output.scrollTop = output.scrollHeight;
-        }
-        function sound(url) { new Audio(url).play().catch(() => { }); }
+                        while (current < needed) {
+                            say(`(You need ${needed} × ${item} — you have only ${current})`);
+                            await choose("Look for more " + item + "s", "Try anyway");
+                            current = inventory.filter(i => i === item).length;
+                        }
 
-        async function ask(question) {
-            say(question);
-            inputArea.style.display = "flex";
-            userInput.focus();
-            return new Promise(res => {
-                window.resolveInput = val => {
-                    inputArea.style.display = "none";
-                    userInput.value = "";
-                    res(val);
-                };
-            });
-        }
+                        // Auto-remove the used items
+                        for (let i = 0; i < needed; i++) {
+                            const idx = inventory.indexOf(item);
+                            if (idx > -1) inventory.splice(idx, 1);
+                        }
+                        updateStatus();
+                        say(`You used ${needed} × ${item}. It works!`);
+                    }
 
-        async function choose(...options) {
-            return new Promise(res => {
-                choicesDiv.innerHTML = "";
-                options.forEach(opt => {
-                    const btn = document.createElement('button');
-                    btn.className = "choice-btn";
-                    if (opt.includes("Fight") || opt.includes("Shoot")) btn.classList.add('danger');
-                    if (opt.includes("Wave") || opt.includes("Talk")) btn.classList.add('safe');
-                    btn.textContent = opt;
-                    btn.onclick = () => {
+                    // Case 3: Riddle / password → just a string like "echo"
+                    else if (typeof requirement === "string") {
+                        let answer;
+                        do {
+                            answer = await ask("Your answer?");
+                            if (!answer.toLowerCase().includes(requirement.toLowerCase())) {
+                                say("Wrong! Try again...");
+                            }
+                        } while (!answer.toLowerCase().includes(requirement.toLowerCase()));
+                        say("Correct! The guardian steps aside.");
+                    }
+                }
+
+                // === ORIGINAL v1 CODE (unchanged) ===
+                const output = document.getElementById('output');
+                const inputArea = document.getElementById('input-area');
+                const userInput = document.getElementById('user-input');
+                const choicesDiv = document.getElementById('choices');
+                const playAgainBtn = document.getElementById('play-again');
+                let resolveInput;
+
+                function say(text) {
+                    const p = document.createElement('p');
+                    p.innerHTML = text.replace(/\n/g, '<br>');
+                    output.appendChild(p);
+                    output.scrollTop = output.scrollHeight;
+                }
+                function image(url) {
+                    const img = document.createElement('img');
+                    img.src = url; img.className = "image";
+                    img.onerror = () => say("[Image failed to load]");
+                    output.appendChild(img);
+                    output.scrollTop = output.scrollHeight;
+                }
+                function sound(url) { new Audio(url).play().catch(() => { }); }
+
+                async function ask(question) {
+                    say(question);
+                    inputArea.style.display = "flex";
+                    userInput.focus();
+                    return new Promise(res => {
+                        window.resolveInput = val => {
+                            inputArea.style.display = "none";
+                            userInput.value = "";
+                            res(val);
+                        };
+                    });
+                }
+
+                async function choose(...options) {
+                    return new Promise(res => {
                         choicesDiv.innerHTML = "";
-                        res(opt);
+                        options.forEach(opt => {
+                            const btn = document.createElement('button');
+                            btn.className = "choice-btn";
+                            if (opt.includes("Fight") || opt.includes("Shoot")) btn.classList.add('danger');
+                            if (opt.includes("Wave") || opt.includes("Talk")) btn.classList.add('safe');
+                            btn.textContent = opt;
+                            btn.onclick = () => {
+                                choicesDiv.innerHTML = "";
+                                res(opt);
+                            };
+                            choicesDiv.appendChild(btn);
+                        });
+                    });
+                }
+
+                function clear() { output.innerHTML = ""; }
+                function wait(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+                async function createStory(fn) {
+                    playAgainBtn.style.display = 'none';
+                    clear();
+                    gold = 0; health = 100; inventory.length = 0; updateStatus();  // ← THIS IS THE KEY //inventory = []; updateStatus();
+                    try { await fn(); }
+                    catch (e) { say("Story error: " + e.message); }
+                    finally { playAgainBtn.style.display = 'block'; }
+                }
+
+                function submitInput() { if (window.resolveInput) window.resolveInput(userInput.value); }
+                userInput.addEventListener("keydown", e => { if (e.key === "Enter") submitInput(); });
+
+                function toggleEditor() {
+                    const ed = document.getElementById('editor');
+                    ed.style.display = ed.style.display === "flex" ? "none" : "flex";
+                }
+
+                function runCode() {
+                    clear();
+                    choicesDiv.innerHTML = "";
+                    const func = new Function('say', 'ask', 'choose', 'image', 'sound', 'clear', 'wait', 'createStory', 'add', 'subtract', 'addTo', 'has', 'die', 'win', 'inventory', 'gold', 'health', 'puzzle', code);
+                    func(say, ask, choose, image, sound, clear, wait, createStory, add, subtract, addTo, has, die, win, inventory, () => gold, () => health, puzzle);
+
+                    document.getElementById('debug').textContent = 'Playing...'
+                }
+
+                function saveAndShare() {
+                    const code = btoa(encodeURIComponent(document.getElementById('code').value));
+                    const url = location.origin + location.pathname + "?s=" + code;
+                    navigator.clipboard.writeText(url).then(() => {
+                        alert("Link copied!\n" + url);
+                    });
+                }
+
+                function loadExample(which) {
+                    const examples = {
+                        pirate: `createStory(async () => { say("Ahoy! Captain " + await ask("Name?")); add(50); let c = await choose("Raid","Treasure","Tavern"); if(c==="Raid") add(100); win("Rich pirate!"); });`,
+                        space: `createStory(async () => { document.body.className='space'; say("Astronaut " + await ask("Name?")); subtract(20); await choose("Signal","Hide"); win("Space legend!"); });`,
+                        treasure: `createStory(async () => { add(10); addTo(inventory,"torch"); let door = await choose("Wooden door","Iron door"); if(door.includes("Iron") && has("torch")) { add(500); win("Treasure!"); } else die("Darkness claims you!"); });`,
+                        dungeon: `createStory(async () => {
+  health = 100; gold = 0; inventory = [];
+  say("Welcome to the endless dungeon...");
+  while (health > 0) {
+    say("Health: " + health + " | Gold: " + gold);
+    let act = await choose("Fight goblin (-25 HP, +15 gold)", "Open chest (+30 gold)", "Rest (+30 HP)", "Flee");
+    if (act.includes("Flee")) { win("You escaped with " + gold + " gold!"); return; }
+    if (act.includes("goblin")) { subtract(25); add(15); }
+    else if (act.includes("chest")) add(30);
+    else if (act.includes("Rest")) { health = Math.min(100, health + 30); say("You feel stronger."); }
+  }
+  die("The dungeon wins again...");
+});`,
+                        puzzleExample: `createStory(async () => {
+  say("Welcome to the Temple of Puzzles!");
+  say("A massive stone door blocks the way.");
+  addTo(inventory, "gold key");
+  await puzzle("The door needs a GOLD key!", "item:gold key");
+
+  say("Next, a broken bridge...");
+  addTo(inventory, "log");
+  addTo(inventory, "log");
+  addTo(inventory, "log");
+  addTo(inventory, "log");
+  await puzzle("You need 4 logs to cross the chasm!", {item:"log", count:4});
+
+  say("Finally, the stone guardian speaks:");
+  await puzzle("I speak without a mouth and hear without ears. What am I?", "echo");
+
+  win("You claimed the ancient treasure! You are a legend!");
+});`
                     };
-                    choicesDiv.appendChild(btn);
-                });
-            });
-        }
+                    document.getElementById('code').value = examples[which] || examples.treasure;
+                    runCode();
+                }
 
-        function clear() { output.innerHTML = ""; }
-        function wait(ms) { return new Promise(r => setTimeout(r, ms)); }
-
-        async function createStory(fn) {
-            playAgainBtn.style.display = 'none';
-            clear();
-            gold = 0; health = 100; inventory.length = 0; updateStatus();  // ← THIS IS THE KEY //inventory = []; updateStatus();
-            try { await fn(); }
-            catch (e) { say("Story error: " + e.message); }
-            finally { playAgainBtn.style.display = 'block'; }
-        }
-
-        function submitInput() { if (window.resolveInput) window.resolveInput(userInput.value); }
-        userInput.addEventListener("keydown", e => { if (e.key === "Enter") submitInput(); });
-
-        function toggleEditor() {
-            const ed = document.getElementById('editor');
-            ed.style.display = ed.style.display === "flex" ? "none" : "flex";
-        }
-
-        function runCode() {
-            clear();
-            choicesDiv.innerHTML = "";
-            const func = new Function('say', 'ask', 'choose', 'image', 'sound', 'clear', 'wait', 'createStory', 'add', 'subtract', 'addTo', 'has', 'die', 'win', 'inventory', 'gold', 'health', 'puzzle', code);
-            func(say, ask, choose, image, sound, clear, wait, createStory, add, subtract, addTo, has, die, win, inventory, () => gold, () => health, puzzle);
-
-            document.getElementById('debug').textContent='Playing...'
-        }
-
-        function saveAndShare() {
-            const code = btoa(encodeURIComponent(document.getElementById('code').value));
-            const url = location.origin + location.pathname + "?s=" + code;
-            navigator.clipboard.writeText(url).then(() => {
-                alert("Link copied!\n" + url);
-            });
-        }
-
-        function loadExample(which) {
-            const examples = {
-                pirate: `createStory(async () => { say("Ahoy! Captain " + await ask("Name?")); add(50); let c = await choose("Raid", "Treasure", "Tavern"); if (c === "Raid") add(100); win("Rich pirate!"); }); `,
-                space: `createStory(async () => { document.body.className = 'space'; say("Astronaut " + await ask("Name?")); subtract(20); await choose("Signal", "Hide"); win("Space legend!"); }); `,
-                treasure: `createStory(async () => { add(10); addTo(inventory, "torch"); let door = await choose("Wooden door", "Iron door"); if (door.includes("Iron") && has("torch")) { add(500); win("Treasure!"); } else die("Darkness claims you!"); }); `,
-                dungeon: `createStory(async () => {
-                    health = 100; gold = 0; inventory = [];
-                    say("Welcome to the endless dungeon...");
-                    while (health > 0) {
-                        say("Health: " + health + " | Gold: " + gold);
-                        let act = await choose("Fight goblin (-25 HP, +15 gold)", "Open chest (+30 gold)", "Rest (+30 HP)", "Flee");
-                        if (act.includes("Flee")) { win("You escaped with " + gold + " gold!"); return; }
-                        if (act.includes("goblin")) { subtract(25); add(15); }
-                        else if (act.includes("chest")) add(30);
-                        else if (act.includes("Rest")) { health = Math.min(100, health + 30); say("You feel stronger."); }
-                    }
-                    die("The dungeon wins again...");
-                }); `,
-                puzzleExample: `createStory(async () => {
-                    say("Welcome to the Temple of Puzzles!");
-                    say("A massive stone door blocks the way.");
-                    addTo(inventory, "gold key");
-                    await puzzle("The door needs a GOLD key!", "item:gold key");
-
-                    say("Next, a broken bridge...");
-                    addTo(inventory, "log");
-                    addTo(inventory, "log");
-                    addTo(inventory, "log");
-                    addTo(inventory, "log");
-                    await puzzle("You need 4 logs to cross the chasm!", { item: "log", count: 4 });
-
-                    say("Finally, the stone guardian speaks:");
-                    await puzzle("I speak without a mouth and hear without ears. What am I?", "echo");
-
-                    win("You claimed the ancient treasure! You are a legend!");
-                });`
-            };
-            document.getElementById('code').value = examples[which] || examples.treasure;
-            runCode();
-        }
-
-        // Load shared or run default
-        const params = new URLSearchParams(location.search);
-        if (params.has('s')) {
-            try {
-                //document.getElementById('code').value = decodeURIComponent(atob(params.get('s')));
-                runCode();
-            } catch (e) { alert("Could not load shared story"); }
-        } else {
-            runCode();
-        }
+                // Load shared or run default
+                const params = new URLSearchParams(location.search);
+                if (params.has('s')) {
+                    try {
+                        //document.getElementById('code').value = decodeURIComponent(atob(params.get('s')));
+                        runCode();
+                    } catch (e) { alert("Could not load shared story"); }
+                } else {
+                    runCode();
+                }
             </script>
         </body>
 
@@ -4328,11 +4279,9 @@ Function: runcodeJSHTML
         </head>
 
         <body>
-            <!--script src="../src/core/transpiler.js" type="module"></script-->
+            <!--script src="https://dialectscript.github.io/core/src/core/transpiler.js" type="module"></script-->
             <!-- Custom Script Placeholder -->
             <script src="js-extensions.js"></script>
-
-            <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
         </body>
 
         </html>
@@ -4440,7 +4389,7 @@ body {
     </div>
 
     <!-- Custom Script Placeholder -->
-    <script src="../src/core/transpiler.js" type="module"></script>
+    <script src="https://dialectscript.github.io/core/src/core/transpiler.js" type="module"></script>
 </body>
 
 </html>
